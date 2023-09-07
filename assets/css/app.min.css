@@ -572,7 +572,8 @@
     padding: .625rem 1.5rem;
     color: var(--vz-vertical-menu-item-color);
     font-size: .925rem;
-    font-family: Rubik, sans-serif
+    font-family: Rubik, sans-serif;
+    text-transform: capitalize;
 }
 
 .navbar-menu .navbar-nav .nav-link.active {
