@@ -9,17 +9,22 @@
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
+    
+    <!-- Layout config Js -->
+    <script src="assets/js/layout.js"></script>
 
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
     <!-- jsvectormap css -->
     <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
-
+    
     <!--Swiper slider css-->
     <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
 
-    <!-- Layout config Js -->
-    <script src="assets/js/layout.js"></script>
-    <!-- Bootstrap Css -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+     <!-- gridjs css -->
+     <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css">
+
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
@@ -791,82 +796,293 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Expense Claim</h4>
+                                <h4 class="mb-sm-0">Employee List</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
-                                        <li class="breadcrumb-item active">Expense claim</li>
+                                        <li class="breadcrumb-item active">Employee list</li>
                                     </ol>
                                 </div>
 
                             </div>
                         </div>
                     </div>
-                    <form action="#">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title mb-0 flex-grow-1">Details of Expense</h4>
-                                    </div><!-- end card header -->
-                                    
-                                    <div class="card-body">
-                                        <div class="mt-4">
-                                            <div class="row">
-                                                <div class="col-xl-6">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Expense type</label>
-                                                        <select class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">Chitralekha Biswas</option>
-                                                            <option value="2">Ankit</option>
-                                                            <option value="3">Sneha</option>
-                                                        </select>
-                                                    </div>
+                    
+                    <div class="row">
+                        
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title mb-0 flex-grow-1">Details of employees</h4>
+                                </div><!-- end card header -->
 
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-6">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Title</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div><!-- end col -->
-
+                                <div class="card-body">
+                                    <div id="table-gridjs">
+                                        <div role="complementary" class="gridjs gridjs-container" style="width: 100%;">
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <div class="gridjs-search">
+                                                    <input type="search" placeholder="Type a keyword..." aria-label="Type a keyword..." class="gridjs-input gridjs-search-input">
+                                                </div>
+                                                <div>
+                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2 mb-1" data-text="Download"><span>Download</span></button>                                                                                                   
+                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2 mb-1" data-text="Show 10 rows"><span>Show 10 rows</span></button>
+                                                </div>
+                                            </div>
+                                            <div class="gridjs-wrapper" style="height: auto;">
+                                                <table role="grid" class="gridjs-table" style="height: auto;">
+                                                    <thead class="gridjs-thead">
+                                                        <tr class="gridjs-tr">
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 100px;">
+                                                                <div class="gridjs-th-content">Check <br/>
+                                                                    <input class="form-check-input" type="checkbox">
+                                                                </div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 70px;">
+                                                                <div class="gridjs-th-content">Sr No.</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                                <div class="gridjs-th-content">Emp code</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                                <div class="gridjs-th-content">Name</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 250px;">
+                                                                <div class="gridjs-th-content">Email</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                                <div class="gridjs-th-content">Phone</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                                <div class="gridjs-th-content">Alt. phone</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                                <div class="gridjs-th-content">Type</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                                <div class="gridjs-th-content">Designation</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                                <div class="gridjs-th-content">Department<br> head</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                                <div class="gridjs-th-content">Date of birth</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                                <div class="gridjs-th-content">Date of joining</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                                <div class="gridjs-th-content">ID proof</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                                <div class="gridjs-th-content">Profile upload</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                                <div class="gridjs-th-content">Status</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                                <div class="gridjs-th-content">Action</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                        
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="gridjs-tbody">
+                                                        <tr class="gridjs-tr">
+                                                            <td  class="gridjs-td">
+                                                                <input class="form-check-input" type="checkbox">
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                1
+                                                            </td>
+                                                            <td class="gridjs-td">
+                                                                281119
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                Sujay
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                sujay@ceebeedesignstudio.com
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                8240754952
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                8653508478
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                PROJECT
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                Project Coordinator
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                YES
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                27-11-1993
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                21-01-2015
+                                                            </td>
+                                                            <td  class="gridjs-td text-center">
+                                                                <button type="button" class="bg-transparent border-0">
+                                                                    <img src="./assets/icons/download.png" alt="download"> Download
+                                                                </button>
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                <button type="button" class="bg-transparent border-0">
+                                                                    <img src="./assets/icons/download.png" alt="download"> Download
+                                                                </button>
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                <button type="button" class="bg-transparent border-0" data-bs-toggle="modal"
+                                                                        data-bs-target="#zoomInModal">
+                                                                    <img src="./assets/icons/active.png" alt="edit">Active
+                                                                    </button>
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                <div class="d-flex align-items-center">
+                                                                    <button type="button" class="bg-transparent border-0" data-bs-toggle="modal"
+                                                                        data-bs-target="#zoomInModal">
+                                                                    <img src="./assets/icons/edit.png" alt="edit"> Edit
+                                                                    </button>
+                                                                    <div class="mini-horizontal-line"></div>
+                                                                    <button type="button" class="bg-transparent border-0">
+                                                                        <img src="./assets/icons/eye.png" alt="view"> View
+                                                                    </button>
+                                                                </div>
+                                                            </td>
                                                 
-                                                <div class="col-xl-6">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Claim Amount (INR)</label>
-                                                        <input type="text" class="form-control">
+                                                        </tr>
+                                                        <tr class="gridjs-tr">
+                                                            <td  class="gridjs-td">
+                                                                <input class="form-check-input" type="checkbox">
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                2
+                                                            </td>
+                                                            <td class="gridjs-td">
+                                                                281119
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                Manas
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                Manas@ceebeedesignstudio.com
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                8240754952
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                8653508478
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                PROJECT
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                Project Coordinator
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                YES
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                27-11-1993
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                21-01-2015
+                                                            </td>
+                                                            <td  class="gridjs-td text-center">
+                                                                <button type="button" class="bg-transparent border-0">
+                                                                    <img src="./assets/icons/download.png" alt="download"> Download
+                                                                </button>
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                <button type="button" class="bg-transparent border-0">
+                                                                    <img src="./assets/icons/download.png" alt="download"> Download
+                                                                </button>
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                <button type="button" class="bg-transparent border-0" data-bs-toggle="modal"
+                                                                        data-bs-target="#zoomInModal">
+                                                                    <img src="./assets/icons/deactive.png" alt="deactive">Deactive
+                                                                    </button>
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                <div class="d-flex align-items-center">
+                                                                    <button type="button" class="bg-transparent border-0" data-bs-toggle="modal"
+                                                                        data-bs-target="#zoomInModal">
+                                                                    <img src="./assets/icons/edit.png" alt="edit"> Edit
+                                                                    </button>
+                                                                    <div class="mini-horizontal-line"></div>
+                                                                    <button type="button" class="bg-transparent border-0">
+                                                                        <img src="./assets/icons/eye.png" alt="view"> View
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="gridjs-footer">
+                                                <div class="gridjs-pagination">
+                                                    <div role="status" aria-live="polite" class="gridjs-summary" title="Page 1 of 2">
+                                                        Showing <b>1</b> to <b>5</b> of <b>10</b> results
                                                     </div>
-                                                </div><!-- end col -->
-                                                <div class="col-xl-6">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">File</label>
-                                                        <input type="file" class="form-control">
-                                                    </div>
-                                                </div><!-- end col -->
-                                                <div class="col-lg-12">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Description</label>
-                                                        <textarea class="form-control" aria-label="With textarea" rows="2" style="height: 126px;"></textarea>
+                                                    <div class="gridjs-pages">
+                                                        <button tabindex="0" role="button" disabled="" title="Previous" aria-label="Previous" class="">
+                                                            Previous
+                                                        </button>
+                                                        <button tabindex="0" role="button" class="gridjs-currentPage" title="Page 1" aria-label="Page 1">
+                                                            1
+                                                        </button>
+                                                        <button tabindex="0" role="button" class="" title="Page 2" aria-label="Page 2">
+                                                            2
+                                                        </button>
+                                                        <button tabindex="0" role="button" title="Next" aria-label="Next" class="">
+                                                            Next
+                                                        </button>
                                                     </div>
                                                 </div>
-                                               
-                                            </div><!-- end row -->
+                                            </div>
+                                            <div id="gridjs-temp" class="gridjs-temp"></div>
                                         </div>
-                                    </div><!-- end card-body -->
-                                </div><!-- end card -->
-                                <div class="mb-3 ms-1 d-flex">
-                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2" data-text="Save"><span>Save</span></button>
-                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light" data-text="Cancel"><span>Cancel</span></button>
-                                </div>
-                            </div>
-                            <!-- end col -->
+                                    </div>
+                                </div><!-- end card-body -->
+                            </div><!-- end card -->
                         </div>
-                    </form>
+                        <!-- end col -->
+                    </div>
+                    
                 </div>
                 <!-- container-fluid -->
             </div>
@@ -1606,21 +1822,21 @@
      <script src="assets/libs/feather-icons/feather.min.js"></script>
      <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
      <script src="assets/js/plugins.js"></script>
- 
-     <!-- apexcharts -->
-     <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
- 
-     <!-- Vector map-->
-     <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
-     <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
- 
-     <!--Swiper slider js-->
-     <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
- 
-     <!-- Dashboard init -->
-     <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>
- 
-     <!-- App js -->
-     <script src="assets/js/app.js"></script>
+
+     <!-- gridjs js -->
+    <script src="assets/libs/gridjs/gridjs.umd.js"></script>
+    <!-- gridjs init -->
+    <script src="assets/js/pages/gridjs.init.js"></script>
+    <!-- apexcharts -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+    <!-- Vector map-->
+    <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
+    <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
+    <!--Swiper slider js-->
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+    <!-- Dashboard init -->
+    <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
 </body>
 </html>

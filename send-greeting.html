@@ -16,6 +16,11 @@
     <!--Swiper slider css-->
     <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
 
+    <!-- quill css -->
+    <link href="assets/libs/quill/quill.core.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/quill/quill.bubble.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/quill/quill.snow.css" rel="stylesheet" type="text/css" />
+
     <!-- Layout config Js -->
     <script src="assets/js/layout.js"></script>
     <!-- Bootstrap Css -->
@@ -791,12 +796,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Expense Claim</h4>
+                                <h4 class="mb-sm-0">Send Greetings</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
-                                        <li class="breadcrumb-item active">Expense claim</li>
+                                        <li class="breadcrumb-item active">Send greetings</li>
                                     </ol>
                                 </div>
 
@@ -809,51 +814,69 @@
                                 
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4 class="card-title mb-0 flex-grow-1">Details of Expense</h4>
+                                        <h4 class="card-title mb-0 flex-grow-1">Details of greetings</h4>
                                     </div><!-- end card header -->
                                     
                                     <div class="card-body">
                                         <div class="mt-4">
                                             <div class="row">
-                                                <div class="col-xl-6">
+                                                <div class="col-xl-4">
                                                     <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Expense type</label>
+                                                        <label for="cleave-time" class="form-label">Clients (To)</label>
                                                         <select class="form-select mb-3" aria-label="Default select example">
                                                             <option selected>Select</option>
-                                                            <option value="1">Chitralekha Biswas</option>
-                                                            <option value="2">Ankit</option>
-                                                            <option value="3">Sneha</option>
                                                         </select>
                                                     </div>
-
                                                 </div><!-- end col -->
 
-                                                <div class="col-xl-6">
+                                                <div class="col-xl-4">
                                                     <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Title</label>
-                                                        <input type="text" class="form-control">
+                                                        <label for="cleave-time" class="form-label">Employee (To)</label>
+                                                        <select class="form-select mb-3" aria-label="Default select example">
+                                                            <option selected>Select</option>
+                                                        </select>
                                                     </div>
                                                 </div><!-- end col -->
-
                                                 
+                                                <div class="col-xl-4">
+                                                    <div class="mb-3">
+                                                        <label for="cleave-time-format" class="form-label">Custom Email (To)</label>
+                                                        <input type="text" class="form-control">
+                                                        <button type="button" class="btn btn-ghost-primary waves-effect waves-light d-block ms-auto">+ Add more</button>
+                                                    </div>
+                                                </div><!-- end col -->
                                                 <div class="col-xl-6">
                                                     <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Claim Amount (INR)</label>
+                                                        <label for="cleave-time-format" class="form-label">Email from</label>
+                                                        <input type="text" class="form-control" value="connect@ceebeedesignstudio.com" disabled>
+                                                        <small>Mentioned valid email domain, Like xxxx@ceebeedesignstudio.com</small>
+                                                    </div>
+                                                </div><!-- end col -->
+                                                <div class="col-xl-6">
+                                                    <div class="mb-3">
+                                                        <label for="cleave-time-format" class="form-label">Email subject</label>
                                                         <input type="text" class="form-control">
                                                     </div>
                                                 </div><!-- end col -->
-                                                <div class="col-xl-6">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">File</label>
-                                                        <input type="file" class="form-control">
-                                                    </div>
-                                                </div><!-- end col -->
+                                            
                                                 <div class="col-lg-12">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Description</label>
-                                                        <textarea class="form-control" aria-label="With textarea" rows="2" style="height: 126px;"></textarea>
-                                                    </div>
+
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <h4 class="card-title mb-0">Description</h4>
+                                                        </div><!-- end card header -->
+                        
+                                                        <div class="card-body">
+                                                        
+                                                            <div class="snow-editor" style="height: 300px;">
+                                                                
+                        
+                                                            </div> <!-- end Snow-editor-->
+                                                        </div><!-- end card-body -->
+                                                    </div><!-- end card -->
+                        
                                                 </div>
+                                                
                                                
                                             </div><!-- end row -->
                                         </div>
@@ -1616,6 +1639,15 @@
  
      <!--Swiper slider js-->
      <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+
+     <!-- ckeditor -->
+    <script src="assets/libs/%40ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
+
+    <!-- quill js -->
+    <script src="assets/libs/quill/quill.min.js"></script>
+
+    <!-- init js -->
+    <script src="assets/js/pages/form-editor.init.js"></script>
  
      <!-- Dashboard init -->
      <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>

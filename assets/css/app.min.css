@@ -18284,3 +18284,14 @@ span.flatpickr-weekday {
         width: 180vh;
     }
 }
+
+
+.mini-horizontal-line{
+    width: 2px; 
+    height: 20px; 
+    background-color: #b3b3b3;
+}
+.form-multi-select-options{
+    height: 200px;
+    overflow: scroll;
+}

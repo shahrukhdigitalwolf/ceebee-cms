@@ -9,17 +9,24 @@
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
+    
+    <!-- Layout config Js -->
+    <script src="assets/js/layout.js"></script>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.3/dist/css/coreui.min.css">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
     <!-- jsvectormap css -->
     <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
-
+    
     <!--Swiper slider css-->
     <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
 
-    <!-- Layout config Js -->
-    <script src="assets/js/layout.js"></script>
-    <!-- Bootstrap Css -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+     <!-- gridjs css -->
+     <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css">
+
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
@@ -791,82 +798,289 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Expense Claim</h4>
+                                <h4 class="mb-sm-0">Expense Type List</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
-                                        <li class="breadcrumb-item active">Expense claim</li>
+                                        <li class="breadcrumb-item active">Expense type list</li>
                                     </ol>
                                 </div>
 
                             </div>
                         </div>
                     </div>
-                    <form action="#">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title mb-0 flex-grow-1">Details of Expense</h4>
-                                    </div><!-- end card header -->
-                                    
-                                    <div class="card-body">
-                                        <div class="mt-4">
-                                            <div class="row">
-                                                <div class="col-xl-6">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Expense type</label>
-                                                        <select class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">Chitralekha Biswas</option>
-                                                            <option value="2">Ankit</option>
-                                                            <option value="3">Sneha</option>
-                                                        </select>
+                    
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title mb-0 flex-grow-1">Details of expense type list</h4>
+                                </div><!-- end card header -->
+                    
+                                <div class="card-body">
+                                    <div id="table-gridjs">
+                                        <form action="#">
+                                            <div class="live-preview mt-0 mb-3">
+                                                <div>
+                                                    <div class="hstack gap-2 flex-wrap">
+                                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                            data-bs-target="#flipModal">Add expense type</button>
                                                     </div>
-
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-6">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Title</label>
-                                                        <input type="text" class="form-control">
+                    
+                                                    <!-- Modal flip -->
+                                                    <div id="flipModal" class="modal fade flip" tabindex="-1"
+                                                        aria-labelledby="flipModalLabel" aria-hidden="true" style="display: none;">
+                                                        <div class="modal-dialog modal-dialog-centered">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title" id="flipModalLabel">Add expense type list</h5>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-12">
+                                                                            <div class="mb-3">
+                                                                                <label for="cleave-time-format" class="form-label">Name</label>
+                                                                                <input type="text" class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-12">
+                                                                            <div class="mb-3">
+                                                                                <label for="cleave-time-format" class="form-label">First approval users</label>
+                                                                                <select class="form-multi-select" id="ms1" multiple data-coreui-search="true">
+                                                                                    <option value="0">Angular</option>
+                                                                                    <option value="1">Bootstrap</option>
+                                                                                    <option value="2">React.js</option>
+                                                                                    <option value="3">Vue.js</option>
+                                                                                    <optgroup label="backend">
+                                                                                        <option value="4">Django</option>
+                                                                                        <option value="5">Laravel</option>
+                                                                                        <option value="6">Node.js</option>
+                                                                                    </optgroup>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-12">
+                                                                            <div class="mb-3">
+                                                                                <label for="cleave-time-format" class="form-label">Final approval users</label>
+                                                                                <select class="form-multi-select" id="ms1" multiple data-coreui-search="true">
+                                                                                    <option value="0">Angular</option>
+                                                                                    <option value="1">Bootstrap</option>
+                                                                                    <option value="2">React.js</option>
+                                                                                    <option value="3">Vue.js</option>
+                                                                                    <optgroup label="backend">
+                                                                                        <option value="4">Django</option>
+                                                                                        <option value="5">Laravel</option>
+                                                                                        <option value="6">Node.js</option>
+                                                                                    </optgroup>
+                                                                                    <optgroup label="backend">
+                                                                                        <option value="4">Django</option>
+                                                                                        <option value="5">Laravel</option>
+                                                                                        <option value="6">Node.js</option>
+                                                                                    </optgroup>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-light"
+                                                                        data-bs-dismiss="modal">Close</button>
+                                                                    <button type="button" class="btn btn-primary ">Save</button>
+                                                                </div>
+                    
+                                                            </div><!-- /.modal-content -->
+                                                        </div><!-- /.modal-dialog -->
+                                                    </div><!-- /.modal -->
+                    
+                                                    <!-- Modal Blur -->
+                                                    <div id="zoomInModal" class="modal fade zoomIn" tabindex="-1"
+                                                        aria-labelledby="zoomInModalLabel" aria-hidden="true" style="display: none;">
+                                                        <div class="modal-dialog modal-dialog-centered">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title" id="zoomInModalLabel">Edit expense type</h5>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-12">
+                                                                            <div class="mb-3">
+                                                                                <label for="cleave-time-format" class="form-label">Name</label>
+                                                                                <input type="text" class="form-control" value="Ankit">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-12">
+                                                                            <div class="mb-3">
+                                                                                <label for="cleave-time-format" class="form-label">First approval users</label>
+                                                                                <select class="form-multi-select" id="ms1" multiple data-coreui-search="true">
+                                                                                    <option value="0">Angular</option>
+                                                                                    <option value="1">Bootstrap</option>
+                                                                                    <option value="2">React.js</option>
+                                                                                    <option value="3">Vue.js</option>
+                                                                                    <optgroup label="backend">
+                                                                                        <option value="4">Django</option>
+                                                                                        <option value="5">Laravel</option>
+                                                                                        <option value="6">Node.js</option>
+                                                                                    </optgroup>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-12">
+                                                                            <div class="mb-3">
+                                                                                <label for="cleave-time-format" class="form-label">Final approval users</label>
+                                                                                <select class="form-multi-select" id="ms1" multiple data-coreui-search="true">
+                                                                                    <option value="0">Angular</option>
+                                                                                    <option value="1">Bootstrap</option>
+                                                                                    <option value="2">React.js</option>
+                                                                                    <option value="3">Vue.js</option>
+                                                                                    <optgroup label="backend">
+                                                                                        <option value="4">Django</option>
+                                                                                        <option value="5">Laravel</option>
+                                                                                        <option value="6">Node.js</option>
+                                                                                    </optgroup>
+                                                                                    <optgroup label="backend">
+                                                                                        <option value="4">Django</option>
+                                                                                        <option value="5">Laravel</option>
+                                                                                        <option value="6">Node.js</option>
+                                                                                    </optgroup>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-light"
+                                                                        data-bs-dismiss="modal">Close</button>
+                                                                    <button type="button" class="btn btn-primary ">Save Changes</button>
+                                                                </div>
+                    
+                                                            </div><!-- /.modal-content -->
+                                                        </div><!-- /.modal-dialog -->
+                                                    </div><!-- /.modal -->
+                    
+                    
+                                                </div>
+                                            </div>
+                                            <div class="d-none code-view">
+                                                <pre class="language-markup">
+                                                    <code>&lt;div class=&quot;modal flip&quot;&gt;...&lt;/div&gt;</code>
+                                                    <code>&lt;div class=&quot;modal zoomIn&quot;&gt;...&lt;/div&gt;</code>
+                                                </pre>
+                                            </div>
+                    
+                                        </form>
+                                        <div role="complementary" class="gridjs gridjs-container" style="width: 100%;">
+                                            <div class="d-lg-flex justify-content-between mb-3">
+                                                <div class="gridjs-search mb-3">
+                                                    <input type="search" placeholder="Type a keyword..." aria-label="Type a keyword..."
+                                                        class="gridjs-input gridjs-search-input">
+                                                </div>
+                                                <div>
+                                                    <button type="button"
+                                                        class="btn btn-primary btn-animation waves-effect waves-light me-2 mb-1"
+                                                        data-text="Download"><span>Download</span></button>
+                                                    <button type="button"
+                                                        class="btn btn-primary btn-animation waves-effect waves-light me-2 mb-1"
+                                                        data-text="Show 10 rows"><span>Show 10 rows</span></button>
+                                                </div>
+                                            </div>
+                                            <div class="gridjs-wrapper" style="height: auto;">
+                                                <table role="grid" class="gridjs-table" style="height: auto;">
+                                                    <thead class="gridjs-thead">
+                                                        <tr class="gridjs-tr">
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 70px;">
+                                                                <div class="gridjs-th-content">Sr No.</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending"
+                                                                    title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 100px;">
+                                                                <div class="gridjs-th-content">Expense type</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending"
+                                                                    title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                                <div class="gridjs-th-content">First approve user</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending"
+                                                                    title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 100px;">
+                                                                <div class="gridjs-th-content">Final approve user</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending"
+                                                                    title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 80px;">
+                                                                <div class="gridjs-th-content">Action</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending"
+                                                                    title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                    </thead>
+                                                    <tbody class="gridjs-tbody">
+                                                        <tr class="gridjs-tr">
+                                                            <td class="gridjs-td">
+                                                                1
+                                                            </td>
+                                                            <td class="gridjs-td">
+                                                                Swapna Roy
+                                                            </td>
+                                                            <td class="gridjs-td">
+                                                                Sagar, Swapna Roy,
+                                                            </td>
+                                                            <td class="gridjs-td">
+                                                                Shadu K, Snehangshu,
+                                                            </td>
+                                                            <td class="gridjs-td">
+                                                                <div class="d-flex align-items-center">
+                                                                    <button type="button" class="bg-transparent border-0" data-bs-toggle="modal"
+                                                                        data-bs-target="#zoomInModal">
+                                                                        <img src="./assets/icons/edit.png" alt="edit">
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="gridjs-footer">
+                                                <div class="gridjs-pagination">
+                                                    <div role="status" aria-live="polite" class="gridjs-summary" title="Page 1 of 2">
+                                                        Showing <b>1</b> to <b>5</b> of <b>10</b> results
                                                     </div>
-                                                </div><!-- end col -->
-
-                                                
-                                                <div class="col-xl-6">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Claim Amount (INR)</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div><!-- end col -->
-                                                <div class="col-xl-6">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">File</label>
-                                                        <input type="file" class="form-control">
-                                                    </div>
-                                                </div><!-- end col -->
-                                                <div class="col-lg-12">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Description</label>
-                                                        <textarea class="form-control" aria-label="With textarea" rows="2" style="height: 126px;"></textarea>
+                                                    <div class="gridjs-pages">
+                                                        <button tabindex="0" role="button" disabled="" title="Previous"
+                                                            aria-label="Previous" class="">
+                                                            Previous
+                                                        </button>
+                                                        <button tabindex="0" role="button" class="gridjs-currentPage" title="Page 1"
+                                                            aria-label="Page 1">
+                                                            1
+                                                        </button>
+                                                        <button tabindex="0" role="button" class="" title="Page 2" aria-label="Page 2">
+                                                            2
+                                                        </button>
+                                                        <button tabindex="0" role="button" title="Next" aria-label="Next" class="">
+                                                            Next
+                                                        </button>
                                                     </div>
                                                 </div>
-                                               
-                                            </div><!-- end row -->
+                                            </div>
+                                            <div id="gridjs-temp" class="gridjs-temp"></div>
                                         </div>
-                                    </div><!-- end card-body -->
-                                </div><!-- end card -->
-                                <div class="mb-3 ms-1 d-flex">
-                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2" data-text="Save"><span>Save</span></button>
-                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light" data-text="Cancel"><span>Cancel</span></button>
-                                </div>
-                            </div>
-                            <!-- end col -->
+                                    </div>
+                                </div><!-- end card-body -->
+                            </div><!-- end card -->
                         </div>
-                    </form>
+                        <!-- end col -->
+                    </div>
+                    
                 </div>
                 <!-- container-fluid -->
             </div>
@@ -1606,21 +1820,25 @@
      <script src="assets/libs/feather-icons/feather.min.js"></script>
      <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
      <script src="assets/js/plugins.js"></script>
- 
-     <!-- apexcharts -->
-     <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
- 
-     <!-- Vector map-->
-     <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
-     <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
- 
-     <!--Swiper slider js-->
-     <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
- 
-     <!-- Dashboard init -->
-     <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>
- 
-     <!-- App js -->
-     <script src="assets/js/app.js"></script>
+
+     <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.3/dist/js/coreui.bundle.min.js"></script>
+
+     <!-- gridjs js -->
+    <script src="assets/libs/gridjs/gridjs.umd.js"></script>
+    <!-- gridjs init -->
+    <script src="assets/js/pages/gridjs.init.js"></script>
+    <!-- apexcharts -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+    <!-- Vector map-->
+    <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
+    <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
+    <!--Swiper slider js-->
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+    <!-- Dashboard init -->
+    <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>
+     <!-- Modal Js -->
+    <script src="assets/js/pages/modal.init.js"></script>
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
