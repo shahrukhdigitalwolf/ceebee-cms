@@ -16,6 +16,9 @@
     <!--Swiper slider css-->
     <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
 
+     <!-- gridjs css -->
+     <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css">
+
     <!-- Layout config Js -->
     <script src="assets/js/layout.js"></script>
     <!-- Bootstrap Css -->
@@ -26,24 +29,6 @@
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
-
-    <style>
-        #project3dBody{
-            display: none;
-        }
-        #project2dBody{
-            display: none;
-        }
-        #otherBudget{
-            display: none;
-        }
-        #meetingDate{
-            display: none;
-        }
-        #momFile{
-            display: none;
-        }
-    </style>
 
 </head>
 <body>
@@ -809,666 +794,807 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Add Clients Detals</h4>
+                                <h4 class="mb-sm-0">Add Calender</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
-                                        <li class="breadcrumb-item active">Clients details</li>
+                                        <li class="breadcrumb-item active">Calender</li>
                                     </ol>
                                 </div>
 
                             </div>
                         </div>
                     </div>
-                    <form action="#">
                     <div class="row">
                         <div class="col-lg-12">
+                            
+                            <div class="card">
+                                <form action="#">
+                                    <div class="card-body">
+                                        <div class="mt-1">
+                                            <div class="row">
+                                                <div class="col-xl-6">
+                                                    <div class="mb-3">
+                                                        <div>
+                                                            <label for="cleave-time-format" class="form-label">Client name</label>
+                                                            <select class="form-select mb-3" aria-label="Default select example">
+                                                                <option selected>Select</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- end col -->
+                                                <div class="col-xl-6">
+                                                    <div class="mb-3">
+                                                        <div>
+                                                            <label for="cleave-time-format" class="form-label">Date</label>
+                                                            <input type="date" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div><!-- end col -->
+                                            </div><!-- end row -->
+                                        </div>
+                                    </div><!-- end card-body -->
+                                </form>
+                            </div><!-- end card -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+                   
+                    <div class="row">
+                        <div class="col-lg-12">
+                            
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title mb-0">Personal Information</h4>
+                                    <h4 class="card-title mb-0 flex-grow-1">Details of calender</h4>
                                 </div><!-- end card header -->
-
+                                
                                 <div class="card-body">
-                                   
-                                        <div>
-                                            <!-- <h5 class="fs-14 mb-3 text-muted">Date Formatting</h5> -->
-                                            <div class="row">
-                                                <div class="col-xl-6">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-date" class="form-label">Client Category</label>
-                                                        <select class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
-                                                        </select>
-                                                    </div>
-
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-6">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-date" class="form-label">Lead Status</label>
-                                                        <select class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">2D</option>
-                                                            <option value="2">3D</option>
-                                                            <option value="3">3D Hold</option>
-                                                        </select>
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-12 d-xl-flex justify-content-between">
-                                                    <div class="mb-3">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" id="formCheck2" checked="">
-                                                            <label class="form-check-label" for="formCheck2">
-                                                                Send Status Related Mails
-                                                            </label>
+                                    <div class="mt-3 mb-3">
+                                        <ul class="nav nav-pills nav-customs nav-danger mb-3" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link active" data-bs-toggle="tab" href="#border-navs-home" role="tab" aria-selected="true">3D Token</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#border-navs-profile" role="tab" aria-selected="false" tabindex="-1">3D Project</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#border-navs-messages" role="tab" aria-selected="false" tabindex="-1">CBDS Home</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#border-navs-settings" role="tab" aria-selected="false" tabindex="-1">Site Execution</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content text-muted">
+                                            <div class="tab-pane active show" id="border-navs-home" role="tabpanel">
+                                                <div class="">
+                                                    <div id="table-gridjs">
+                                                        <div role="complementary" class="gridjs gridjs-container" style="width: 100%;">
+                                                            
+                                                            <div class="mt-0 mb-3">
+                                                                <div class="row">
+                                                                    <div class="col-lg-3">
+                                                                        <p class=" mt-4">
+                                                                            Total No. of days: <span style="font-weight: 900;">0</span>
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="col-lg-3">
+                                                                        <p class=" mt-4">
+                                                                            Total No. of lapse days: <span style="font-weight: 900;">0</span>
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="col-lg-2  mt-4">
+                                                                        <label class="form-check-label" for="formCheck1">
+                                                                            Red flag
+                                                                        </label>
+                                                                        <input class="form-check-input" type="checkbox" id="formCheck1">
+                                                                    </div>
+                                                                    <div class="col-lg-4">
+                                                                        <label for="cleave-time-format" class="form-label">3D/Token payment date</label>
+                                                                        <input type="date" class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                           
+                                                            <div class="gridjs-wrapper" style="height: auto;">
+                                                                <table role="grid" class="gridjs-table" style="height: auto;">
+                                                                    <thead class="gridjs-thead">
+                                                                        <tr class="gridjs-tr">
+                                                                        
+                                                                            <th data-column-id="id" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 80px;">
+                                                                                <div class="gridjs-th-content">Sr No.</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="name" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Particulars</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="email" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 180px;">
+                                                                                <div class="gridjs-th-content">Ideal time</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="position" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Forecast</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="company" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Actual</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="country" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 150px;">
+                                                                                <div class="gridjs-th-content">Status</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="actions" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Assigned to</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="actions" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Remarks</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="actions" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">	Lapse days</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="actions" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 100px;">
+                                                                                <div class="gridjs-th-content">Action</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody class="gridjs-tbody">
+                                                                        <tr class="gridjs-tr">
+                                                                           
+                                                                            <td data-column-id="id" class="gridjs-td">
+                                                                                <span><span class="fw-semibold">01</span></span>
+                                                                            </td>
+                                                                            <td data-column-id="name" class="gridjs-td">
+                                                                                3D Payment- Site measurement
+                                                                            </td>
+                                                                            <td data-column-id="email" class="gridjs-td">
+                                                                                <input type="time" class="form-control">
+                                                                            </td>
+                                                                            <td data-column-id="position" class="gridjs-td">
+                                                                                <input type="date" class="form-control">
+                                                                            </td>
+                                                                            <td data-column-id="company" class="gridjs-td">
+                                                                                <input type="text" class="form-control">
+                                                                            </td>
+                                                                            <td data-column-id="country" class="gridjs-td">
+                                                                                <select class="form-select mb-3" aria-label="Default select example">
+                                                                                    <option selected>Select</option>
+                                                                                </select>
+                                                                            </td>
+                                                                            <td data-column-id="actions" class="gridjs-td">
+                                                                                <select class="form-select mb-3" aria-label="Default select example">
+                                                                                    <option selected>Select</option>
+                                                                                </select>
+                                                                            </td>
+                                                                            <td data-column-id="actions" class="gridjs-td">
+                                                                                <input type="text" class="form-control">
+                                                                            </td>
+                                                                            <td data-column-id="actions" class="gridjs-td">
+                                                                                <input type="text" class="form-control">
+                                                                            </td>
+                                                                        
+                                                                            <td data-column-id="actions" class="gridjs-td">
+                                                                                <button type="button" class="btn btn-soft-primary waves-effect waves-light">Update</button>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="gridjs-footer">
+                                                                <div class="gridjs-pagination">
+                                                                    <div role="status" aria-live="polite" class="gridjs-summary" title="Page 1 of 2">
+                                                                        Showing <b>1</b> to<b>5</b> of <b>10</b> results
+                                                                    </div>
+                                                                    <div class="gridjs-pages">
+                                                                        <button tabindex="0" role="button" disabled="" title="Previous" aria-label="Previous" class="">Previous</button>
+                                                                        <button tabindex="0" role="button" class="gridjs-currentPage" title="Page 1" aria-label="Page 1">1</button>
+                                                                        <button tabindex="0" role="button" class="" title="Page 2" aria-label="Page 2">2</button>
+                                                                        <button tabindex="0" role="button" title="Next" aria-label="Next" class="">Next</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="gridjs-temp" class="gridjs-temp"></div>
                                                         </div>
                                                     </div>
-                                                    <div class="mb-3">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" id="formCheck2" checked="">
-                                                            <label class="form-check-label" for="formCheck2">
-                                                                Send Soft Closure Email
-                                                            </label>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="border-navs-profile" role="tabpanel">
+                                                <div class="">
+                                                    <div id="table-gridjs">
+                                                        <div role="complementary" class="gridjs gridjs-container" style="width: 100%;">
+                                                            
+                                                            <div class="mt-0 mb-3">
+                                                                <div class="row">
+                                                                    <div class="col-lg-3">
+                                                                        <p class=" mt-4">
+                                                                            Total No. of days: <span style="font-weight: 900;">0</span>
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="col-lg-3">
+                                                                        <p class=" mt-4">
+                                                                            Total No. of lapse days: <span style="font-weight: 900;">0</span>
+                                                                        </p>
+                                                                    </div>
+                                                                   
+                                                                    <div class="col-lg-3">
+                                                                        <label for="cleave-time-format" class="form-label">3D/Token payment date</label>
+                                                                        <input type="date" class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                           
+                                                            <div class="gridjs-wrapper" style="height: auto;">
+                                                                <table role="grid" class="gridjs-table" style="height: auto;">
+                                                                    <thead class="gridjs-thead">
+                                                                        <tr class="gridjs-tr">
+                                                                        
+                                                                            <th data-column-id="id" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 80px;">
+                                                                                <div class="gridjs-th-content">Sr No.</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="name" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Particulars</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="email" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 180px;">
+                                                                                <div class="gridjs-th-content">Ideal time</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="position" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Forecast</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="company" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Actual</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="country" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 150px;">
+                                                                                <div class="gridjs-th-content">Status</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="actions" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Assigned to</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="actions" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Remarks</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="actions" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">	Lapse days</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="actions" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 100px;">
+                                                                                <div class="gridjs-th-content">Action</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody class="gridjs-tbody">
+                                                                        <tr class="gridjs-tr">
+                                                                           
+                                                                            <td data-column-id="id" class="gridjs-td">
+                                                                                <span><span class="fw-semibold">01</span></span>
+                                                                            </td>
+                                                                            <td data-column-id="name" class="gridjs-td">
+                                                                                3D Payment- Site measurement
+                                                                            </td>
+                                                                            <td data-column-id="email" class="gridjs-td">
+                                                                                <input type="time" class="form-control">
+                                                                            </td>
+                                                                            <td data-column-id="position" class="gridjs-td">
+                                                                                <input type="date" class="form-control">
+                                                                            </td>
+                                                                            <td data-column-id="company" class="gridjs-td">
+                                                                                <input type="text" class="form-control">
+                                                                            </td>
+                                                                            <td data-column-id="country" class="gridjs-td">
+                                                                                <select class="form-select mb-3" aria-label="Default select example">
+                                                                                    <option selected>Select</option>
+                                                                                </select>
+                                                                            </td>
+                                                                            <td data-column-id="actions" class="gridjs-td">
+                                                                                <select class="form-select mb-3" aria-label="Default select example">
+                                                                                    <option selected>Select</option>
+                                                                                </select>
+                                                                            </td>
+                                                                            <td data-column-id="actions" class="gridjs-td">
+                                                                                <input type="text" class="form-control">
+                                                                            </td>
+                                                                            <td data-column-id="actions" class="gridjs-td">
+                                                                                <input type="text" class="form-control">
+                                                                            </td>
+                                                                        
+                                                                            <td data-column-id="actions" class="gridjs-td">
+                                                                                <button type="button" class="btn btn-soft-primary waves-effect waves-light">Update</button>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="gridjs-footer">
+                                                                <div class="gridjs-pagination">
+                                                                    <div role="status" aria-live="polite" class="gridjs-summary" title="Page 1 of 2">
+                                                                        Showing <b>1</b> to<b>5</b> of <b>10</b> results
+                                                                    </div>
+                                                                    <div class="gridjs-pages">
+                                                                        <button tabindex="0" role="button" disabled="" title="Previous" aria-label="Previous" class="">Previous</button>
+                                                                        <button tabindex="0" role="button" class="gridjs-currentPage" title="Page 1" aria-label="Page 1">1</button>
+                                                                        <button tabindex="0" role="button" class="" title="Page 2" aria-label="Page 2">2</button>
+                                                                        <button tabindex="0" role="button" title="Next" aria-label="Next" class="">Next</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="gridjs-temp" class="gridjs-temp"></div>
                                                         </div>
                                                     </div>
-                                                    <div class="mb-3">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" id="formCheck2" checked="">
-                                                            <label class="form-check-label" for="formCheck2">
-                                                                Send Commercial Email
-                                                            </label>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="border-navs-messages" role="tabpanel">
+                                                <div class="">
+                                                    <div id="table-gridjs">
+                                                        <div role="complementary" class="gridjs gridjs-container" style="width: 100%;">
+                                                            
+                                                            <div class="mt-0 mb-3">
+                                                                <div class="row">
+                                                                    <div class="col-lg-3">
+                                                                        <p class="mt-4">
+                                                                            Total No. of days: <span style="font-weight: 900;">0</span>
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="col-lg-3">
+                                                                        <p class="mt-4">
+                                                                            Total No. of lapse days: <span style="font-weight: 900;">0</span>
+                                                                        </p>
+                                                                    </div>
+                                                                   
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            <div class="mt-0 mb-3">
+                                                                <div class="row">
+                                                                    
+                                                                    <div class="col-lg-4">
+                                                                        <div class="mb-3">
+                                                                            <label for="cleave-time-format" class="form-label">3D payment date</label>
+                                                                            <input type="date" class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-lg-4">
+                                                                        <div class="mb-3">
+                                                                            <label for="cleave-time-format" class="form-label">Tiles and sanitary selection</label>
+                                                                            <input type="date" class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-lg-4">
+                                                                        <div class="mb-3">
+                                                                            <label for="cleave-time-format" class="form-label">Kitchen and accessories meeting</label>
+                                                                            <input type="date" class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-lg-4">
+                                                                        <div class="mb-3">
+                                                                            <label for="cleave-time-format" class="form-label">Appliances, ceiling light and switch board selection</label>
+                                                                            <input type="date" class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-lg-4">
+                                                                        <div class="mb-3">
+                                                                            <label for="cleave-time-format" class="form-label">Decoratives and movable furniture selection</label>
+                                                                            <input type="date" class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                           
+                                                            <div class="gridjs-wrapper" style="height: auto;">
+                                                                <table role="grid" class="gridjs-table" style="height: auto;">
+                                                                    <thead class="gridjs-thead">
+                                                                        <tr class="gridjs-tr">
+                                                                        
+                                                                            <th data-column-id="id" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 80px;">
+                                                                                <div class="gridjs-th-content">Sr No.</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="name" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Particulars</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="email" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 180px;">
+                                                                                <div class="gridjs-th-content">Ideal time</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="position" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Forecast</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="company" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Actual</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="country" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 150px;">
+                                                                                <div class="gridjs-th-content">Status</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="actions" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Assigned to</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="actions" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Remarks</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="actions" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">	Lapse days</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="actions" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 100px;">
+                                                                                <div class="gridjs-th-content">Action</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody class="gridjs-tbody">
+                                                                        <tr class="gridjs-tr">
+                                                                           
+                                                                            <td data-column-id="id" class="gridjs-td">
+                                                                                <span><span class="fw-semibold">01</span></span>
+                                                                            </td>
+                                                                            <td data-column-id="name" class="gridjs-td">
+                                                                                3D Payment- Site measurement
+                                                                            </td>
+                                                                            <td data-column-id="email" class="gridjs-td">
+                                                                                <input type="time" class="form-control">
+                                                                            </td>
+                                                                            <td data-column-id="position" class="gridjs-td">
+                                                                                <input type="date" class="form-control">
+                                                                            </td>
+                                                                            <td data-column-id="company" class="gridjs-td">
+                                                                                <input type="text" class="form-control">
+                                                                            </td>
+                                                                            <td data-column-id="country" class="gridjs-td">
+                                                                                <select class="form-select mb-3" aria-label="Default select example">
+                                                                                    <option selected>Select</option>
+                                                                                </select>
+                                                                            </td>
+                                                                            <td data-column-id="actions" class="gridjs-td">
+                                                                                <select class="form-select mb-3" aria-label="Default select example">
+                                                                                    <option selected>Select</option>
+                                                                                </select>
+                                                                            </td>
+                                                                            <td data-column-id="actions" class="gridjs-td">
+                                                                                <input type="text" class="form-control">
+                                                                            </td>
+                                                                            <td data-column-id="actions" class="gridjs-td">
+                                                                                <input type="text" class="form-control">
+                                                                            </td>
+                                                                        
+                                                                            <td data-column-id="actions" class="gridjs-td">
+                                                                                <button type="button" class="btn btn-soft-primary waves-effect waves-light">Update</button>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="gridjs-footer">
+                                                                <div class="gridjs-pagination">
+                                                                    <div role="status" aria-live="polite" class="gridjs-summary" title="Page 1 of 2">
+                                                                        Showing <b>1</b> to<b>5</b> of <b>10</b> results
+                                                                    </div>
+                                                                    <div class="gridjs-pages">
+                                                                        <button tabindex="0" role="button" disabled="" title="Previous" aria-label="Previous" class="">Previous</button>
+                                                                        <button tabindex="0" role="button" class="gridjs-currentPage" title="Page 1" aria-label="Page 1">1</button>
+                                                                        <button tabindex="0" role="button" class="" title="Page 2" aria-label="Page 2">2</button>
+                                                                        <button tabindex="0" role="button" title="Next" aria-label="Next" class="">Next</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="gridjs-temp" class="gridjs-temp"></div>
                                                         </div>
                                                     </div>
-                                                    <div class="mb-3">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" id="formCheck2" checked="">
-                                                            <label class="form-check-label" for="formCheck2">
-                                                                Send Purchase Email
-                                                            </label>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="border-navs-settings" role="tabpanel">
+                                                <div class="">
+                                                    <div id="table-gridjs">
+                                                        <div role="complementary" class="gridjs gridjs-container" style="width: 100%;">
+                                                            
+                                                            <div class="mt-0 mb-3">
+                                                                <div class="row">
+                                                                    
+                                                                    <div class="col-lg-3">
+                                                                        <p class=" mt-4">
+                                                                            Total No. of days: <span style="font-weight: 900;">0</span>
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="col-lg-3">
+                                                                        <p class=" mt-4">
+                                                                            Total No. of lapse days: <span style="font-weight: 900;">0</span>
+                                                                        </p>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                           
+                                                            <div class="gridjs-wrapper" style="height: auto;">
+                                                                <table role="grid" class="gridjs-table" style="height: auto;">
+                                                                    <thead class="gridjs-thead">
+                                                                        <tr class="gridjs-tr">
+                                                                        
+                                                                            <th data-column-id="id" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 80px;">
+                                                                                <div class="gridjs-th-content">Sr No.</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="name" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Particulars</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="email" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 180px;">
+                                                                                <div class="gridjs-th-content">Ideal time</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="position" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Forecast</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="company" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Actual</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="country" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 150px;">
+                                                                                <div class="gridjs-th-content">Status</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="actions" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Assigned to</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="actions" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">Remarks</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="actions" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 250px;">
+                                                                                <div class="gridjs-th-content">	Lapse days</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            <th data-column-id="actions" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                                style="width: 100px;">
+                                                                                <div class="gridjs-th-content">Action</div>
+                                                                                <button tabindex="-1"
+                                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                                </button>
+                                                                            </th>
+                                                                            
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody class="gridjs-tbody">
+                                                                        <tr class="gridjs-tr">
+                                                                           
+                                                                            <td data-column-id="id" class="gridjs-td">
+                                                                                <span><span class="fw-semibold">01</span></span>
+                                                                            </td>
+                                                                            <td data-column-id="name" class="gridjs-td">
+                                                                                3D Payment- Site measurement
+                                                                            </td>
+                                                                            <td data-column-id="email" class="gridjs-td">
+                                                                                <input type="time" class="form-control">
+                                                                            </td>
+                                                                            <td data-column-id="position" class="gridjs-td">
+                                                                                <input type="date" class="form-control">
+                                                                            </td>
+                                                                            <td data-column-id="company" class="gridjs-td">
+                                                                                <input type="text" class="form-control">
+                                                                            </td>
+                                                                            <td data-column-id="country" class="gridjs-td">
+                                                                                <select class="form-select mb-3" aria-label="Default select example">
+                                                                                    <option selected>Select</option>
+                                                                                </select>
+                                                                            </td>
+                                                                            <td data-column-id="actions" class="gridjs-td">
+                                                                                <select class="form-select mb-3" aria-label="Default select example">
+                                                                                    <option selected>Select</option>
+                                                                                </select>
+                                                                            </td>
+                                                                            <td data-column-id="actions" class="gridjs-td">
+                                                                                <input type="text" class="form-control">
+                                                                            </td>
+                                                                            <td data-column-id="actions" class="gridjs-td">
+                                                                                <input type="text" class="form-control">
+                                                                            </td>
+                                                                        
+                                                                            <td data-column-id="actions" class="gridjs-td">
+                                                                                <button type="button" class="btn btn-soft-primary waves-effect waves-light">Update</button>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="gridjs-footer">
+                                                                <div class="gridjs-pagination">
+                                                                    <div role="status" aria-live="polite" class="gridjs-summary" title="Page 1 of 2">
+                                                                        Showing <b>1</b> to<b>5</b> of <b>10</b> results
+                                                                    </div>
+                                                                    <div class="gridjs-pages">
+                                                                        <button tabindex="0" role="button" disabled="" title="Previous" aria-label="Previous" class="">Previous</button>
+                                                                        <button tabindex="0" role="button" class="gridjs-currentPage" title="Page 1" aria-label="Page 1">1</button>
+                                                                        <button tabindex="0" role="button" class="" title="Page 2" aria-label="Page 2">2</button>
+                                                                        <button tabindex="0" role="button" title="Next" aria-label="Next" class="">Next</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="gridjs-temp" class="gridjs-temp"></div>
                                                         </div>
                                                     </div>
-                                                    <div class="mb-3">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" id="formCheck2" checked="">
-                                                            <label class="form-check-label" for="formCheck2">
-                                                                Send Residential Email
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col -->
-                                            </div><!-- end row -->
+                                                </div>
+                                            </div>
                                         </div>
-
-                                        <div class="border mt-3 border-dashed"></div>
-
-                                        <div class="mt-4">
-                                            <div class="row">
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Client Name</label>
-                                                        <input type="text" class="form-control" placeholder="Enter client name" id="cleave-time">
-                                                    </div>
-
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Address</label>
-                                                        <input type="text" class="form-control" placeholder="Enter residencial address" id="cleave-time-format">
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Country</label>
-                                                        <input type="text" class="form-control" placeholder="Country of residence" id="cleave-time-format">
-                                                    </div>
-                                                </div><!-- end col -->
-                                            
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Owner</label>
-                                                        <select class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">Chitralekha Biswas</option>
-                                                            <option value="2">Ankit</option>
-                                                            <option value="3">Sneha</option>
-                                                        </select>
-                                                    </div>
-
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Add Interior Team Member</label>
-                                                        <select class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">Super Admin</option>
-                                                            <option value="1">Chitralekha Biswas</option>
-                                                            <option value="2">Ankit</option>
-                                                            <option value="3">Sneha</option>
-                                                            <option value="3">Sujoy</option>
-                                                        </select>
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Add Home Consultant</label>
-                                                        <select class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">Super Admin</option>
-                                                            <option value="1">Chitralekha Biswas</option>
-                                                            <option value="2">Ankit</option>
-                                                            <option value="3">Sneha</option>
-                                                            <option value="3">Sujoy</option>
-                                                        </select>
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Add 3D Designer Team Member</label>
-                                                        <select class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">Super Admin</option>
-                                                            <option value="1">Chitralekha Biswas</option>
-                                                            <option value="2">Ankit</option>
-                                                            <option value="3">Sneha</option>
-                                                            <option value="3">Sujoy</option>
-                                                        </select>
-                                                    </div>
-                                                </div><!-- end col -->
-                                            
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Team Leader</label>
-                                                        <select class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">Chitralekha Biswas</option>
-                                                            <option value="2">Ankit</option>
-                                                            <option value="3">Sneha</option>
-                                                        </select>
-                                                    </div>
-
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Property Name</label>
-                                                        <input type="text" class="form-control" placeholder="Enter property name" id="cleave-time-format">
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Lead Source</label>
-                                                        <select class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">CMS</option>
-                                                            <option value="1">Direct Call</option>
-                                                            <option value="2">Email</option>
-                                                            <option value="3">Facebook</option>
-                                                            <option value="3">Google Adwords</option>
-                                                        </select>
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Source Name</label>
-                                                        <input type="text" class="form-control" placeholder="Referral source name" id="cleave-time-format">
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Date Created</label>
-                                                        <input type="date" class="form-control" id="exampleInputdate">
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Complete Project Handover Date</label>
-                                                        <input type="date" class="form-control" id="exampleInputdate">
-                                                    </div>
-                                                </div><!-- end col -->
-                                           
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Property Location</label>
-                                                        <select class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">Bnahalore</option>
-                                                            <option value="1">Kolkata</option>
-                                                            <option value="2">Hyderabad</option>
-                                                            <option value="3">Goa</option>
-                                                            <option value="3">Others</option>
-                                                        </select>
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Initial Client Call Sheet</label>
-                                                        <input class="form-control" type="file" id="formFile">
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">3D Proposal File</label>
-                                                        <input class="form-control" type="file" id="formFile">
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                            </div><!-- end row -->
-                                        </div>
-
-                                        <div class="mt-4">
-                                            <div class="row">
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" id="project3d">
-                                                                <label class="form-check-label" for="formCheck2">
-                                                                    3D/Consultation Project Information
-                                                                </label>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" id="project2d">
-                                                            <label class="form-check-label" for="formCheck2">
-                                                                2D/Consultation Project Information
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                            </div><!-- end row -->
-                                        </div>
-
-                                        <div class="mt-4">
-                                            <div class="row">
-                                                <div class="col-xl-4">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Budget</label>
-                                                        <select onchange="budget1(this)" id="budget" class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">Not yet decided</option>
-                                                            <option value="2">Below 10 Lakhs</option>
-                                                            <option value="3">10 Lakhs</option>
-                                                            <option value="4">10 - 20 Lakhs</option>
-                                                            <option value="5">20 Lakhs Or Above</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="mb-3" id="otherBudget">
-                                                        <label for="cleave-time-format" class="form-label">Enter Your Budget</label>
-                                                        <input type="text" class="form-control" placeholder="" id="cleave-time-format">
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-4">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Meeting Status</label>
-                                                        <select onchange="meetStatus(this)" id="meetingStatus" class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">Not yet decided</option>
-                                                            <option value="2">Yes</option>
-                                                            <option value="3">No</option>
-                                                            <option value="4">NA/Outsource</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="mb-3" id="meetingDate">
-                                                        <label for="cleave-time-format" class="form-label">Meeting Date</label>
-                                                        <input type="date" class="form-control" id="exampleInputdate">
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-4">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">MOM</label>
-                                                        <select class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">Yes</option>
-                                                            <option value="2">No</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="mb-3" id="momFile">
-                                                        <label for="cleave-time-format" class="form-label">MOM Upload File</label>
-                                                        <input class="form-control" type="file" id="formFile"> 
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                            </div><!-- end row -->
-                                        </div>
+                                    </div>
+                                    
                                 </div><!-- end card-body -->
                             </div><!-- end card -->
                         </div>
-
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title mb-0">Site Information</h4>
-                                </div><!-- end card header -->
-                        
-                                <div class="card-body">
-                                    <div class="mt-4">
-                                        <div class="row">
-                                            <div class="col-xl-12">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time" class="form-label">Site Address</label>
-                                                    <input type="text" class="form-control" placeholder="Enter site address" id="cleave-time">
-                                                </div>
-                        
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-4">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">City</label>
-                                                    <input type="text" class="form-control" placeholder="Enter city name"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-4">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Phone Number</label>
-                                                    <input type="text" class="form-control" placeholder="Enter phone number"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-4">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Alt. Number <span class="text-muted">(optional)</span></label>
-                                                    <input type="text" class="form-control" placeholder="phone number"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-4">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">WhatsApp</label>
-                                                    <input type="text" class="form-control" placeholder="Enter WhatsApp number"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-4">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Email Address</label>
-                                                    <input type="text" class="form-control" placeholder="Email id"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-4">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Email Address <span class="text-muted">(optional)</span></label>
-                                                    <input type="text" class="form-control" placeholder="Email id"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-                                        </div><!-- end row -->
-                                    </div>
-                                </div><!-- end card -->
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        
-                        <div class="col-lg-12" id="project3dBody">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title mb-0">3D/Consultation Project Information</h4>
-                                </div><!-- end card header -->
-                        
-                                <div class="card-body">
-                                    <h5 class="fs-14 mb-3 text-muted">3D/Consultation Project Information</h5>
-                                    <div class="mt-4">
-                                        <div class="row">
-                                            <div class="col-xl-4">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time" class="form-label">Project type</label>
-                                                    <select class="form-select mb-3" aria-label="Default select example">
-                                                        <option selected>Select</option>
-                                                        <option value="1">Yes</option>
-                                                        <option value="2">No</option>
-                                                    </select>
-                                                </div>
-                        
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-4">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Site Status</label>
-                                                    <select class="form-select mb-3" aria-label="Default select example">
-                                                        <option selected>Select</option>
-                                                        <option value="1">Yes</option>
-                                                        <option value="2">No</option>
-                                                    </select>
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-4">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Add Team</label>
-                                                    <select class="form-select mb-3" aria-label="Default select example">
-                                                        <option selected>Select</option>
-                                                        <option value="1">Super Admin</option>
-                                                        <option value="1">Chitralekha Biswas</option>
-                                                        <option value="2">Ankit</option>
-                                                        <option value="3">Sneha</option>
-                                                        <option value="3">Sujoy</option>
-                                                    </select>
-                                                </div>
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">3D Project Value</label>
-                                                    <input type="text" class="form-control" placeholder="Value"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Token Amount Paid</label>
-                                                    <input type="text" class="form-control" placeholder="Amount"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-
-
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Date of Birth</label>
-                                                    <input type="date" class="form-control" id="exampleInputdate">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Date of Anniversary</label>
-                                                    <input type="date" class="form-control" id="exampleInputdate">
-                                                </div>
-                                            </div><!-- end col -->
-                                        </div><!-- end row -->
-                                    </div>
-                                </div><!-- end card -->
-
-                                <div class="card-body">
-                                    <h5 class="fs-14 mb-3 text-muted">3D Project Accounts Department</h5>
-                                    <div class="mt-4">
-                                        <div class="row">
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time" class="form-label">Payment Date</label>
-                                                    <input type="date" class="form-control" id="exampleInputdate">
-                                                </div>
-                        
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">xyz</label>
-                                                    <input type="text" class="form-control" placeholder="Amount"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-                                        </div><!-- end row -->
-                                        <div>
-                                            <button type="button" class="btn btn-ghost-primary waves-effect waves-light">+ Add Row</button>
-                                        </div>
-                                    </div>
-                                </div><!-- end card -->
-
-                                <div class="card-body">
-                                    <h5 class="fs-14 mb-3 text-muted">3D Project Documentation Department</h5>
-                                    <div class="mt-4">
-                                        <div class="row">
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <input class="form-control" type="file" id="formFile">
-                                                </div>
-                                            </div><!-- end col -->
-                                        </div><!-- end row -->
-                                        <div>
-                                            <button type="button" class="btn btn-ghost-primary waves-effect waves-light">+ Add Row</button>
-                                        </div>
-                                    </div>
-                                </div><!-- end card -->
-                            </div>
-                            <!-- end col -->
-                        </div>
-
-                        <div class="col-lg-12" id="project2dBody">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title mb-0">2D/Consultation Project Information</h4>
-                                </div><!-- end card header -->
-                        
-                                <div class="card-body">
-                                    <h5 class="fs-14 mb-3 text-muted">2D/Consultation Project Information</h5>
-                                    <div class="mt-4">
-                                        <div class="row">
-                                            <div class="col-xl-4">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time" class="form-label">Project type</label>
-                                                    <select class="form-select mb-3" aria-label="Default select example">
-                                                        <option selected>Select</option>
-                                                        <option value="1">Yes</option>
-                                                        <option value="2">No</option>
-                                                    </select>
-                                                </div>
-                        
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-4">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Site Status</label>
-                                                    <select class="form-select mb-3" aria-label="Default select example">
-                                                        <option selected>Select</option>
-                                                        <option value="1">Yes</option>
-                                                        <option value="2">No</option>
-                                                    </select>
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-4">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Add Team</label>
-                                                    <select class="form-select mb-3" aria-label="Default select example">
-                                                        <option selected>Select</option>
-                                                        <option value="1">Super Admin</option>
-                                                        <option value="1">Chitralekha Biswas</option>
-                                                        <option value="2">Ankit</option>
-                                                        <option value="3">Sneha</option>
-                                                        <option value="3">Sujoy</option>
-                                                    </select>
-                                                </div>
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">3D Project Value</label>
-                                                    <input type="text" class="form-control" placeholder="Value"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Token Amount Paid</label>
-                                                    <input type="text" class="form-control" placeholder="Amount"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-                                        </div><!-- end row -->
-                                    </div>
-                                </div><!-- end card -->
-
-                                <div class="card-body">
-                                    <h5 class="fs-14 mb-3 text-muted">2D Project Accounts Department</h5>
-                                    <div class="mt-4">
-                                        <div class="row">
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time" class="form-label">Payment Date</label>
-                                                    <input type="date" class="form-control" id="exampleInputdate">
-                                                </div>
-                        
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">xyz</label>
-                                                    <input type="text" class="form-control" placeholder="Amount"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-                                        </div><!-- end row -->
-                                        <div>
-                                            <button type="button" class="btn btn-ghost-primary waves-effect waves-light">+ Add Row</button>
-                                        </div>
-                                    </div>
-                                </div><!-- end card -->
-
-                                <div class="card-body">
-                                    <h5 class="fs-14 mb-3 text-muted">2D Project Documentation Department</h5>
-                                    <div class="mt-4">
-                                        <div class="row">
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <input class="form-control" type="file" id="formFile">
-                                                </div>
-                                            </div><!-- end col -->
-                                        </div><!-- end row -->
-                                        <div>
-                                            <button type="button" class="btn btn-ghost-primary waves-effect waves-light">+ Add Row</button>
-                                        </div>
-                                    </div>
-                                </div><!-- end card -->
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <div class="mb-3 ms-1 d-flex">
-                            <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2" data-text="Save"><span>Save</span></button>
-                            <button type="button" class="btn btn-primary btn-animation waves-effect waves-light" data-text="Cancel"><span>Cancel</span></button>
-                        </div>
+                        <!-- end col -->
                     </div>
-                    </form><!-- end form -->
+                    
+                </div>
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
@@ -1477,11 +1603,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Cee Bee Design Studio.
+                            <script>document.write(new Date().getFullYear())</script> © Velzon.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Digitalwolf
+                                Design & Develop by Themesbrand
                             </div>
                         </div>
                     </div>
@@ -2200,8 +2326,6 @@
         </div>
     </div>
 
-
-
      <!-- JAVASCRIPT -->
      <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
      <script src="assets/libs/simplebar/simplebar.min.js"></script>
@@ -2209,6 +2333,11 @@
      <script src="assets/libs/feather-icons/feather.min.js"></script>
      <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
      <script src="assets/js/plugins.js"></script>
+
+     <!-- gridjs js -->
+    <script src="assets/libs/gridjs/gridjs.umd.js"></script>
+    <!-- gridjs init -->
+    <script src="assets/js/pages/gridjs.init.js"></script>
  
      <!-- apexcharts -->
      <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
@@ -2225,22 +2354,5 @@
  
      <!-- App js -->
      <script src="assets/js/app.js"></script>
-     <script>
-        var project3d = document.getElementById('project3d').onchange = function(){
-            var project3dBody = document.getElementById('project3dBody').style.display = this.checked ? 'block' : 'none';
-        };
-        var project2d = document.getElementById('project2d').onchange = function(){
-            var project2dBody = document.getElementById('project2dBody').style.display = this.checked ? 'block' : 'none';
-        };
-
-        function budget1(select){
-            document.getElementById('otherBudget').style.display = select.value !== '2' ? 'none' : 'block';
-        }
-
-        function meetStatus(select){
-            document.getElementById('meetingDate').style.display = select.value == '3' ? 'block' : 'none';
-            document.getElementById('momFile').style.display = select.value == '2' ? 'block' : 'none';
-        }
-     </script>
 </body>
 </html>
