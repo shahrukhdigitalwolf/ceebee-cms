@@ -10,12 +10,6 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-    <!-- core ui -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.3/dist/css/coreui.min.css">
-
-    <!-- jsvectormap css -->
-    <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
-
     <!--Swiper slider css-->
     <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
 
@@ -799,12 +793,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Add Memo</h4>
+                                <h4 class="mb-sm-0">Add Proposal</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
-                                        <li class="breadcrumb-item active">Add memo</li>
+                                        <li class="breadcrumb-item active">Add proposal</li>
                                     </ol>
                                 </div>
 
@@ -817,34 +811,47 @@
                                 
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4 class="card-title mb-0 flex-grow-1">Details of memo</h4>
+                                        <h4 class="card-title mb-0 flex-grow-1">Details of proposal</h4>
                                     </div><!-- end card header -->
                                     
                                     <div class="card-body">
                                         <div class="mt-4">
                                             <div class="row">
-                                                <div class="col-xl-6">
+                                                
+                                                <div class="col-xl-3">
                                                     <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Department</label>
-                                                        <select class="form-multi-select" id="ms1" multiple data-coreui-search="true">
-                                                            <option value="0">Angular</option>
-                                                            <option value="1">Bootstrap</option>
-                                                            <option value="2">React.js</option>
-                                                            <option value="3">Vue.js</option>
-                                                            <optgroup label="backend">
-                                                                <option value="4">Django</option>
-                                                                <option value="5">Laravel</option>
-                                                                <option value="6">Node.js</option>
-                                                            </optgroup>
+                                                        <label for="cleave-time-format" class="form-label">Proposal type</label>
+                                                        <select class="form-select mb-3" aria-label="Default select example">
+                                                            <option selected>Select</option>
+                                                            <option value="2D">2D</option>
+                                                            <option value="3D">3D</option>
+                                                            <option value="Design & Consultation">Design & Consultation</option>
+                                                            <option value="Token Proposal">Token Proposal</option>
                                                         </select>
                                                     </div>
-
                                                 </div><!-- end col -->
-                                                
-                                                <div class="col-xl-6">
+
+                                                <div class="col-xl-3">
                                                     <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Title</label>
+                                                        <label for="cleave-time-format" class="form-label">Location</label>
+                                                        <select class="form-select mb-3" aria-label="Default select example">
+                                                            <option selected>Select</option>
+                                                            <option value="Kolkata">Kolkata</option>
+                                                            <option value="Bangalore">Bangalore</option>
+                                                        </select>
+                                                    </div>
+                                                </div><!-- end col -->
+                                                <div class="col-xl-3">
+                                                    <div class="mb-3">
+                                                        <label for="cleave-time-format" class="form-label">Client</label>
                                                         <input type="text" class="form-control">
+                                                    </div>
+                                                </div><!-- end col -->
+
+                                                <div class="col-xl-3">
+                                                    <div class="mb-3">
+                                                        <label for="cleave-time-format" class="form-label">Site address</label>
+                                                        <textarea class="form-control" aria-label="With textarea" rows="2" style="height: 30px;"></textarea>
                                                     </div>
                                                 </div><!-- end col -->
                                             
@@ -857,7 +864,7 @@
                         
                                                         <div class="card-body">
                                                         
-                                                            <div class="snow-editor" style="height: 300px;">
+                                                            <div class="snow-editor" style="height: 250px;">
                                                                 
                         
                                                             </div> <!-- end Snow-editor-->
@@ -1619,15 +1626,6 @@
      <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
      <script src="assets/js/plugins.js"></script>
  
-     <!-- apexcharts -->
-     <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-
-      <!-- core ui -->
-      <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.3/dist/js/coreui.bundle.min.js"></script>
- 
-     <!-- Vector map-->
-     <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
-     <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
  
      <!--Swiper slider js-->
      <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
@@ -1640,9 +1638,6 @@
 
     <!-- init js -->
     <script src="assets/js/pages/form-editor.init.js"></script>
- 
-     <!-- Dashboard init -->
-     <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>
  
      <!-- App js -->
      <script src="assets/js/app.js"></script>

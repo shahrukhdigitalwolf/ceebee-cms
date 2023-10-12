@@ -10,19 +10,11 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-    <!-- core ui -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.3/dist/css/coreui.min.css">
-
     <!-- jsvectormap css -->
     <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
 
     <!--Swiper slider css-->
     <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
-
-    <!-- quill css -->
-    <link href="assets/libs/quill/quill.core.css" rel="stylesheet" type="text/css" />
-    <link href="assets/libs/quill/quill.bubble.css" rel="stylesheet" type="text/css" />
-    <link href="assets/libs/quill/quill.snow.css" rel="stylesheet" type="text/css" />
 
     <!-- Layout config Js -->
     <script src="assets/js/layout.js"></script>
@@ -799,12 +791,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Add Memo</h4>
+                                <h4 class="mb-sm-0">Add BuyOut Quotation</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
-                                        <li class="breadcrumb-item active">Add memo</li>
+                                        <li class="breadcrumb-item active">Add BuyOut Quotation</li>
                                     </ol>
                                 </div>
 
@@ -812,74 +804,286 @@
                         </div>
                     </div>
                     <form action="#">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title mb-0 flex-grow-1">Details of memo</h4>
-                                    </div><!-- end card header -->
-                                    
-                                    <div class="card-body">
-                                        <div class="mt-4">
-                                            <div class="row">
-                                                <div class="col-xl-6">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Department</label>
-                                                        <select class="form-multi-select" id="ms1" multiple data-coreui-search="true">
-                                                            <option value="0">Angular</option>
-                                                            <option value="1">Bootstrap</option>
-                                                            <option value="2">React.js</option>
-                                                            <option value="3">Vue.js</option>
-                                                            <optgroup label="backend">
-                                                                <option value="4">Django</option>
-                                                                <option value="5">Laravel</option>
-                                                                <option value="6">Node.js</option>
-                                                            </optgroup>
-                                                        </select>
-                                                    </div>
-
-                                                </div><!-- end col -->
-                                                
-                                                <div class="col-xl-6">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Title</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div><!-- end col -->
-                                            
-                                                <div class="col-lg-12">
-
-                                                    <div class="card">
-                                                        <div class="card-header">
-                                                            <h4 class="card-title mb-0">Description</h4>
-                                                        </div><!-- end card header -->
-                        
-                                                        <div class="card-body">
-                                                        
-                                                            <div class="snow-editor" style="height: 300px;">
-                                                                
-                        
-                                                            </div> <!-- end Snow-editor-->
-                                                        </div><!-- end card-body -->
-                                                    </div><!-- end card -->
-                        
-                                                </div>
-                                                
-                                               
-                                            </div><!-- end row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-xl-4">
+                                            <div class="mb-3">
+                                                <label for="cleave-date" class="form-label">Location:</label>
+                                                <select class="form-select mb-3" aria-label="Default select example">
+                                                    <option selected>Select</option>
+                                                    <option value="1">Kolkata</option>
+                                                    <option value="2">Bangalore</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                    </div><!-- end card-body -->
+                                        <div class="col-xl-8 d-flex justify-content-center flex-column">
+                                            <h4 class="text-end card-title mb-2">Cee Bee Design Studio</h4>
+                                            <p class="text-end text-muted">3045,Rajdanga main road,Kolkata-700107</p>
+                                            <p class="text-end text-muted">Door No-18, 3rd B Cross,Domlur II Stage,Bengaluru-560071</p>
+                                        </div>
+                                    </div>
+                                    
+                                </div><!-- end card header -->
+
+                                <div class="card-body">
+                                   
+                                        <div>
+                                            <!-- <h5 class="fs-14 mb-3 text-muted">Date Formatting</h5> -->
+                                
+                                            <div class="mt-2">
+                                                <div class="row">
+                                                    <div class="col-xl-3">
+                                                        <div class="mb-3">
+                                                            <label for="cleave-date" class="form-label">Client Name</label>
+                                                            <select class="form-select mb-3" aria-label="Default select example">
+                                                                <option selected>Select</option>
+                                                                <option value="1">Amit Pal</option>
+                                                                <option value="2">Madhu Sudha</option>
+                                                                <option value="2">Ayan Dutta</option>
+                                                            </select>
+                                                        </div>
+                                                    </div><!-- end col -->
+                                                    <div class="col-xl-3">
+                                                        <div class="mb-3">
+                                                            <label for="cleave-date" class="form-label">Date</label>
+                                                            <input type="date" class="form-control" id="exampleInputdate">
+                                                        </div>
+                                                    </div><!-- end col -->
+                                                    <div class="col-xl-3">
+                                                        <div class="mb-3">
+                                                            <label for="cleave-date" class="form-label">Code</label>
+                                                            <input type="text" class="form-control" id="exampleInputdate">
+                                                        </div>
+                                                    </div><!-- end col -->
+                                                    <div class="col-xl-3">
+                                                        <div class="mb-3">
+                                                            <label for="cleave-date" class="form-label">Create By</label>
+                                                            <input type="text" class="form-control" id="exampleInputdate" value="Nitin Kumar" disabled>
+                                                        </div>
+                                                    </div><!-- end col -->
+                                                    <div class="col-xl-3">
+                                                        <div class="mb-3 d-flex">
+                                                            <label for="cleave-date" class="form-label">Site Address :-</label>
+                                                            <p class="text-muted ms-3">47/1 kjh road 700021 kolkata.</p>
+                                                        </div>
+                                                    </div><!-- end col -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                </div><!-- end card-body -->
+                            </div><!-- end card -->
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title mb-0">Quotation Details</h4>
+                                </div><!-- end card header -->
+                        
+                                <div class="card-body">
+                                    <div class="mt-4"  style="overflow-x:scroll;">
+                                        <div class="d-flex" style="width: 400vh; padding: 10px;">
+                                            <div class="me-2 col-xl-1">
+                                                <div class="mb-3">
+                                                    <label for="cleave-time" class="form-label">Category</label>
+                                                    <select class="form-select mb-3" aria-label="Default select example">
+                                                        <option selected>Select</option>
+                                                        <option value="1">Amit Pal</option>
+                                                        <option value="2">Madhu Sudha</option>
+                                                        <option value="2">Ayan Dutta</option>
+                                                    </select>
+                                                </div>
+                        
+                                            </div><!-- end col -->
+                        
+                                            <div class="me-2 col-xl-1">
+                                                <div class="mb-3">
+                                                    <label for="cleave-time-format" class="form-label">Products</label>
+                                                    <select class="form-select mb-3" aria-label="Default select example">
+                                                        <option selected>Select</option>
+                                                        <option value="1">Amit Pal</option>
+                                                        <option value="2">Madhu Sudha</option>
+                                                        <option value="2">Ayan Dutta</option>
+                                                    </select>
+                                                </div>
+                                            </div><!-- end col -->
+                        
+                                            <div class="me-2">
+                                                <div class="mb-3">
+                                                    <label for="cleave-time-format" class="form-label">Brand</label>
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div><!-- end col -->
+
+                                            <div class="me-2">
+                                                <div class="mb-3">
+                                                    <label for="cleave-time-format" class="form-label">Specification</label>
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div><!-- end col -->
+
+                                            <div class="me-2">
+                                                <div class="mb-3">
+                                                    <label for="cleave-time-format" class="form-label">Descrption</label>
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div><!-- end col -->
+
+                                            <div class="me-2">
+                                                <div class="mb-3">
+                                                    <label for="cleave-time-format" class="form-label">HSN Code</label>
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div><!-- end col -->
+
+                                            <div class="me-2">
+                                                <div class="mb-3">
+                                                    <label for="cleave-time-format" class="form-label">Unit</label>
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div><!-- end col -->
+                                            <div class="me-2">
+                                                <div class="mb-3">
+                                                    <label for="cleave-time-format" class="form-label">Qty</label>
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div><!-- end col -->
+                                            <div class="me-2">
+                                                <div class="mb-3">
+                                                    <label for="cleave-time-format" class="form-label">MRP</label>
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div><!-- end col -->
+                                            <div class="me-2">
+                                                <div class="mb-3">
+                                                    <label for="cleave-time-format" class="form-label">Price</label>
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div><!-- end col -->
+                                            <div class="me-2">
+                                                <div class="mb-3">
+                                                    <label for="cleave-time-format" class="form-label">Amount</label>
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div><!-- end col -->
+                                            <div class="me-2">
+                                                <div class="mb-3">
+                                                    <label for="cleave-time-format" class="form-label">CGST %</label>
+                                                    <select class="form-select mb-3" aria-label="Default select example">
+                                                        <option selected>Select</option>
+                                                        <option value="1">0%</option>
+                                                        <option value="2">2.5%</option>
+                                                        <option value="3">6%</option>
+                                                        <option value="4">9%</option>
+                                                        <option value="5">12.5%</option>
+                                                        <option value="6">14%</option>
+                                                    </select>
+                                                </div>
+                                            </div><!-- end col -->
+                                            <div class="me-2">
+                                                <div class="mb-3">
+                                                    <label for="cleave-time-format" class="form-label">CGST Amount</label>
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div><!-- end col -->
+                                            <div class="me-2">
+                                                <div class="mb-3">
+                                                    <label for="cleave-time-format" class="form-label">SGST %</label>
+                                                    <select class="form-select mb-3" aria-label="Default select example">
+                                                        <option selected>Select</option>
+                                                        <option value="1">0%</option>
+                                                        <option value="2">2.5%</option>
+                                                        <option value="3">6%</option>
+                                                        <option value="4">9%</option>
+                                                        <option value="5">12.5%</option>
+                                                        <option value="6">14%</option>
+                                                    </select>
+                                                </div>
+                                            </div><!-- end col -->
+                                             <div class="me-2">
+                                                <div class="mb-3">
+                                                    <label for="cleave-time-format" class="form-label">SGST Amount</label>
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div><!-- end col -->
+                                            
+                                            <div class="me-2">
+                                                <div class="mb-3">
+                                                    <label for="cleave-time-format" class="form-label">IGST %</label>
+                                                    <select class="form-select mb-3" aria-label="Default select example">
+                                                        <option selected>Select</option>
+                                                        <option value="1">0%</option>
+                                                        <option value="2">2.5%</option>
+                                                        <option value="3">6%</option>
+                                                        <option value="4">9%</option>
+                                                        <option value="5">12.5%</option>
+                                                        <option value="6">14%</option>
+                                                    </select>
+                                                </div>
+                                            </div><!-- end col -->
+                                             <div class="me-2">
+                                                <div class="mb-3">
+                                                    <label for="cleave-time-format" class="form-label">IGST Amount</label>
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div><!-- end col -->
+                                             <div class="me-2">
+                                                <div class="mb-3">
+                                                    <label for="cleave-time-format" class="form-label">Total Amount</label>
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div><!-- end col -->
+                                             <div class="me-2">
+                                                <div class="mb-3">
+                                                    <label for="cleave-time-format" class="form-label">Link</label>
+                                                    <input type="text" class="form-control" placeholder="">
+                                                </div>
+                                            </div><!-- end col -->
+                                        </div><!-- end row -->
+                                    </div>
+                                    <div>
+                                        <button type="button" class="btn btn-ghost-primary waves-effect waves-light d-block ms-auto">+ Add Row</button>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div>
+                                            <div class="mb-3 d-lg-flex justify-content-between align-items-center border p-2">
+                                                <h6 class="mb-lg-0">Total</h6>
+                                                <input type="text" class="form-control" placeholder="" style=" max-width:100%; width: 300px;">
+                                            </div>
+                                            <div class="mb-3 d-lg-flex justify-content-between align-items-center border p-2">
+                                                <h6 class="mb-lg-0">Total CGST Amount</h6>
+                                                <input type="text" class="form-control" placeholder="" style=" max-width:100%; width: 300px;">
+                                            </div>
+                                            <div class="mb-3 d-lg-flex justify-content-between align-items-center border p-2">
+                                                <h6 class="mb-lg-0">Total SGST Amount</h6>
+                                                <input type="text" class="form-control" placeholder="" style=" max-width:100%; width: 300px;">
+                                            </div>
+                                            <div class="mb-3 d-lg-flex justify-content-between align-items-center border p-2">
+                                                <h6 class="mb-lg-0">Total IGST Amount</h6>
+                                                <input type="text" class="form-control" placeholder="" style=" max-width:100%; width: 300px;">
+                                            </div>
+                                            <div class="mb-3 d-lg-flex justify-content-between align-items-center border p-2">
+                                                <h6 class="mb-lg-0">Grand Total</h6>
+                                                <input type="text" class="form-control" placeholder="" style=" max-width:100%; width: 300px;">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div><!-- end card -->
-                                <div class="mb-3 ms-1 d-flex">
-                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2" data-text="Save"><span>Save</span></button>
-                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light" data-text="Cancel"><span>Cancel</span></button>
-                                </div>
                             </div>
                             <!-- end col -->
                         </div>
-                    </form>
-                </div>
+                        </div>
+                        <div class="mb-3 ms-1 d-lg-flex">
+                            <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2 mb-2 mb-lg-0 w-100" data-text="Save"><span>Save</span></button>
+                            <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2 mb-2 mb-lg-0 w-100" data-text="Save & Send Approve Request"><span>Save & Send Approve Request</span></button>
+                            <button type="button" class="btn btn-primary btn-animation waves-effect waves-light w-100" data-text="Cancel"><span>Cancel</span></button>
+                        </div>
+                    </div>
+                    </form><!-- end form -->
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
@@ -888,11 +1092,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Velzon.
+                            <script>document.write(new Date().getFullYear())</script> © Cee Bee Design Studio.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Themesbrand
+                                Design & Develop by Digitalwolf
                             </div>
                         </div>
                     </div>
@@ -1611,6 +1815,9 @@
         </div>
     </div>
 
+
+
+
      <!-- JAVASCRIPT -->
      <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
      <script src="assets/libs/simplebar/simplebar.min.js"></script>
@@ -1621,9 +1828,6 @@
  
      <!-- apexcharts -->
      <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-
-      <!-- core ui -->
-      <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.3/dist/js/coreui.bundle.min.js"></script>
  
      <!-- Vector map-->
      <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
@@ -1631,15 +1835,6 @@
  
      <!--Swiper slider js-->
      <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
-
-     <!-- ckeditor -->
-    <script src="assets/libs/%40ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
-
-    <!-- quill js -->
-    <script src="assets/libs/quill/quill.min.js"></script>
-
-    <!-- init js -->
-    <script src="assets/js/pages/form-editor.init.js"></script>
  
      <!-- Dashboard init -->
      <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>

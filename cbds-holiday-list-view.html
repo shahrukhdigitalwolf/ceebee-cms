@@ -10,19 +10,11 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-    <!-- core ui -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.3/dist/css/coreui.min.css">
-
     <!-- jsvectormap css -->
     <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
 
     <!--Swiper slider css-->
     <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
-
-    <!-- quill css -->
-    <link href="assets/libs/quill/quill.core.css" rel="stylesheet" type="text/css" />
-    <link href="assets/libs/quill/quill.bubble.css" rel="stylesheet" type="text/css" />
-    <link href="assets/libs/quill/quill.snow.css" rel="stylesheet" type="text/css" />
 
     <!-- Layout config Js -->
     <script src="assets/js/layout.js"></script>
@@ -799,12 +791,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Add Memo</h4>
+                                <h4 class="mb-sm-0">View Holiday</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
-                                        <li class="breadcrumb-item active">Add memo</li>
+                                        <li class="breadcrumb-item active">View holiday</li>
                                     </ol>
                                 </div>
 
@@ -817,64 +809,67 @@
                                 
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4 class="card-title mb-0 flex-grow-1">Details of memo</h4>
+                                        <h4 class="card-title mb-0 flex-grow-1">Details of holiday</h4>
                                     </div><!-- end card header -->
                                     
                                     <div class="card-body">
                                         <div class="mt-4">
                                             <div class="row">
-                                                <div class="col-xl-6">
+                                                <div class="col-xl-3">
                                                     <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Department</label>
-                                                        <select class="form-multi-select" id="ms1" multiple data-coreui-search="true">
-                                                            <option value="0">Angular</option>
-                                                            <option value="1">Bootstrap</option>
-                                                            <option value="2">React.js</option>
-                                                            <option value="3">Vue.js</option>
-                                                            <optgroup label="backend">
-                                                                <option value="4">Django</option>
-                                                                <option value="5">Laravel</option>
-                                                                <option value="6">Node.js</option>
-                                                            </optgroup>
+                                                        <label for="cleave-time" class="form-label">Type</label>
+                                                        <select class="form-select mb-3" aria-label="Default select example">
+                                                            <option selected>Select</option>
+                                                            <option value="Kolkata">Kolkata</option>
+                                                            <option value="Bangalore">Bangalore</option>
+                                                            <option value="Goa">Goa</option>
+                                                            <option value="Hyderabad">Hyderabad</option>
                                                         </select>
                                                     </div>
 
                                                 </div><!-- end col -->
-                                                
-                                                <div class="col-xl-6">
+
+                                                <div class="col-xl-2">
                                                     <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Title</label>
+                                                        <label for="cleave-time-format" class="form-label">Holiday year</label>
+                                                        <select class="form-select mb-3" aria-label="Default select example">
+                                                            <option selected>Select</option>
+                                                            <option value="2023">2023</option>
+                                                           
+                                                        </select>
+                                                    </div>
+                                                </div><!-- end col -->
+
+                                                
+                                                <div class="col-xl-2">
+                                                    <div class="mb-3">
+                                                        <label for="cleave-time-format" class="form-label">Holiday start date</label>
+                                                        <input type="date" class="form-control">
+                                                    </div>
+                                                </div><!-- end col -->
+                                                <div class="col-xl-2">
+                                                    <div class="mb-3">
+                                                        <label for="cleave-time-format" class="form-label">Holiday end date</label>
+                                                        <input type="date" class="form-control">
+                                                    </div>
+                                                </div><!-- end col -->
+                                                <div class="col-xl-3">
+                                                    <div class="mb-3">
+                                                        <label for="cleave-time-format" class="form-label">Holiday title</label>
                                                         <input type="text" class="form-control">
                                                     </div>
                                                 </div><!-- end col -->
-                                            
-                                                <div class="col-lg-12">
-
-                                                    <div class="card">
-                                                        <div class="card-header">
-                                                            <h4 class="card-title mb-0">Description</h4>
-                                                        </div><!-- end card header -->
-                        
-                                                        <div class="card-body">
-                                                        
-                                                            <div class="snow-editor" style="height: 300px;">
-                                                                
-                        
-                                                            </div> <!-- end Snow-editor-->
-                                                        </div><!-- end card-body -->
-                                                    </div><!-- end card -->
-                        
-                                                </div>
                                                 
-                                               
+                                                <div class="col-lg-12">
+                                                    <div class="mb-3">
+                                                        <label for="cleave-time-format" class="form-label">Holiday reason</label>
+                                                        <textarea class="form-control" aria-label="With textarea" rows="2" style="height: 126px;"></textarea>
+                                                    </div>
+                                                </div>
                                             </div><!-- end row -->
                                         </div>
                                     </div><!-- end card-body -->
                                 </div><!-- end card -->
-                                <div class="mb-3 ms-1 d-flex">
-                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2" data-text="Save"><span>Save</span></button>
-                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light" data-text="Cancel"><span>Cancel</span></button>
-                                </div>
                             </div>
                             <!-- end col -->
                         </div>
@@ -1621,9 +1616,6 @@
  
      <!-- apexcharts -->
      <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-
-      <!-- core ui -->
-      <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.3/dist/js/coreui.bundle.min.js"></script>
  
      <!-- Vector map-->
      <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
@@ -1631,15 +1623,6 @@
  
      <!--Swiper slider js-->
      <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
-
-     <!-- ckeditor -->
-    <script src="assets/libs/%40ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
-
-    <!-- quill js -->
-    <script src="assets/libs/quill/quill.min.js"></script>
-
-    <!-- init js -->
-    <script src="assets/js/pages/form-editor.init.js"></script>
  
      <!-- Dashboard init -->
      <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>

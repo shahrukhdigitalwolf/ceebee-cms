@@ -9,25 +9,22 @@
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
+   
+    <script src="assets/js/layout.js"></script>
 
-    <!-- core ui -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.3/dist/css/coreui.min.css">
-
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
     <!-- jsvectormap css -->
     <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
 
+    
     <!--Swiper slider css-->
     <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
 
-    <!-- quill css -->
-    <link href="assets/libs/quill/quill.core.css" rel="stylesheet" type="text/css" />
-    <link href="assets/libs/quill/quill.bubble.css" rel="stylesheet" type="text/css" />
-    <link href="assets/libs/quill/quill.snow.css" rel="stylesheet" type="text/css" />
+     <!-- gridjs css -->
+     <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css">
 
-    <!-- Layout config Js -->
-    <script src="assets/js/layout.js"></script>
-    <!-- Bootstrap Css -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
@@ -799,90 +796,350 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Add Memo</h4>
+                                <h4 class="mb-sm-0">Tepantar client list</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
-                                        <li class="breadcrumb-item active">Add memo</li>
+                                        <li class="breadcrumb-item active">Tepantar client list</li>
                                     </ol>
                                 </div>
 
                             </div>
                         </div>
                     </div>
-                    <form action="#">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title mb-0 flex-grow-1">Details of memo</h4>
-                                    </div><!-- end card header -->
-                                    
-                                    <div class="card-body">
-                                        <div class="mt-4">
-                                            <div class="row">
-                                                <div class="col-xl-6">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Department</label>
-                                                        <select class="form-multi-select" id="ms1" multiple data-coreui-search="true">
-                                                            <option value="0">Angular</option>
-                                                            <option value="1">Bootstrap</option>
-                                                            <option value="2">React.js</option>
-                                                            <option value="3">Vue.js</option>
-                                                            <optgroup label="backend">
-                                                                <option value="4">Django</option>
-                                                                <option value="5">Laravel</option>
-                                                                <option value="6">Node.js</option>
-                                                            </optgroup>
-                                                        </select>
-                                                    </div>
+                    
+                    <div class="row">
+                        
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title mb-0 flex-grow-1">Details of Tepantar client list</h4>
+                                </div><!-- end card header -->
 
-                                                </div><!-- end col -->
-                                                
-                                                <div class="col-xl-6">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Title</label>
-                                                        <input type="text" class="form-control">
+                                <div class="card-body">
+                                    <div id="table-gridjs">
+                                        <div role="complementary" class="gridjs gridjs-container" style="width: 100%;">
+                                            <div class="mb-3">
+                                                <div class="row gy-3">
+                                                    <div class="col-lg-6">
+                                                        <button type="button" class="btn btn-primary btn-animation waves-effect waves-light mb-3" data-text="+ Add New Section" data-bs-toggle="modal" data-bs-target="#zoomInModal"><span>+ Add New Section</span></button>
                                                     </div>
-                                                </div><!-- end col -->
-                                            
-                                                <div class="col-lg-12">
-
-                                                    <div class="card">
-                                                        <div class="card-header">
-                                                            <h4 class="card-title mb-0">Description</h4>
-                                                        </div><!-- end card header -->
-                        
-                                                        <div class="card-body">
-                                                        
-                                                            <div class="snow-editor" style="height: 300px;">
-                                                                
-                        
-                                                            </div> <!-- end Snow-editor-->
-                                                        </div><!-- end card-body -->
-                                                    </div><!-- end card -->
-                        
                                                 </div>
+                                            </div>
+                                            <div class="border mb-3 border-dashed"></div>
+                                            
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <div class="gridjs-search">
+                                                    <input type="search" placeholder="Type a keyword..." aria-label="Type a keyword..." class="gridjs-input gridjs-search-input">
+                                                </div>
+                                                <div>
+                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2" data-text="Download"><span>Download</span></button>                                                                                                   
+                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light" id="dropdownMenuOffset"
+                                                        data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+                                                        Show 10 row
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset" style="min-width: 50px; text-align: center;">
+                                                        <li><a class="dropdown-item" href="#">10</a></li>
+                                                        <div class="dropdown-divider"></div>
+                                                        <li><a class="dropdown-item" href="#">20</a></li>
+                                                        <div class="dropdown-divider"></div>
+                                                        <li><a class="dropdown-item" href="#">50</a></li>
+                                                        <div class="dropdown-divider"></div>
+                                                        <li><a class="dropdown-item" href="#">Show All</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="gridjs-wrapper" style="height: auto;">
+                                                <table role="grid" class="gridjs-table" style="height: auto;">
+                                                    <thead class="gridjs-thead">
+                                                        <tr class="gridjs-tr">
+                                                           
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 70px;">
+                                                                <div class="gridjs-th-content">Sr no.</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                                <div class="gridjs-th-content">Location</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 250px;">
+                                                                <div class="gridjs-th-content">Section key</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 250px;">
+                                                                <div class="gridjs-th-content">Section display</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 250px;">
+                                                                <div class="gridjs-th-content">Status</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 350px;">
+                                                                <div class="gridjs-th-content">Action</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="gridjs-tbody">
+                                                        <tr class="gridjs-tr">
+                                                           
+                                                            <td  class="gridjs-td">
+                                                                1
+                                                            </td>
+                                                            <td class="gridjs-td">
+                                                                kolkata
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                Living_Room
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                Living Room
+                                                            </td>
+                                                           
+                                                            <td  class="gridjs-td">
+                                                                <button type="button" class="btn btn-ghost-secondary waves-effect">
+                                                                        <img src="./assets/icons/active.png" alt="edit"> Active
+                                                                </button>
+                                                                <button type="button" class="btn btn-ghost-secondary waves-effect">
+                                                                        <img src="./assets/icons/deactive.png" alt="edit"> Deactive
+                                                                </button>
+                                                            </td>
+                                                           
+                                                            <td  class="gridjs-td">
+                                                                <div class="d-flex align-items-center">
+                                                                 
+                                                                    <button type="button" class="btn btn-ghost-secondary waves-effect" data-bs-toggle="modal" data-bs-target="#zoomInModal1">
+                                                                        <img src="./assets/icons/edit.png" alt="edit"> Edit
+                                                                    </button>
+                                                                    <div class="mini-horizontal-line"></div>
+                                                                    <a href="interior-template-generateForm.html" type="button" class="btn btn-ghost-secondary waves-effect">
+                                                                       Generate Form
+                                                                    </a>
+                                                                    <div class="mini-horizontal-line"></div>
+                                                                    <button type="button" class="btn btn-ghost-secondary waves-effect" data-bs-toggle="modal" data-bs-target="#zoomInModal2">
+                                                                       Clone Form
+                                                                    </button>
+                                                                    
+                                                                </div> 
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr class="gridjs-tr">
+                                                           
+                                                            <td  class="gridjs-td">
+                                                                2
+                                                            </td>
+                                                            <td class="gridjs-td">
+                                                                kolkata
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                Living_Room
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                Living Room
+                                                            </td>
+                                                           
+                                                            <td  class="gridjs-td">
+                                                                <button type="button" class="btn btn-ghost-secondary waves-effect">
+                                                                        <img src="./assets/icons/active.png" alt="edit"> Active
+                                                                </button>
+                                                                <button type="button" class="btn btn-ghost-secondary waves-effect">
+                                                                        <img src="./assets/icons/deactive.png" alt="edit"> Deactive
+                                                                </button>
+                                                            </td>
+                                                           
+                                                            <td  class="gridjs-td">
+                                                                <div class="d-flex align-items-center">
+                                                                 
+                                                                    <button type="button" class="btn btn-ghost-secondary waves-effect" data-bs-toggle="modal" data-bs-target="#zoomInModal1">
+                                                                        <img src="./assets/icons/edit.png" alt="edit"> Edit
+                                                                    </button>
+                                                                    <div class="mini-horizontal-line"></div>
+                                                                    <a href="interior-template-generateForm.html" type="button" class="btn btn-ghost-secondary waves-effect">
+                                                                       Generate Form
+                                                                    </a>
+                                                                    <div class="mini-horizontal-line"></div>
+                                                                    <button type="button" class="btn btn-ghost-secondary waves-effect" data-bs-toggle="modal" data-bs-target="#zoomInModal2">
+                                                                       Clone Form
+                                                                    </button>
+                                                                    
+                                                                </div> 
+                                                            </td>
+
+                                                        </tr>
                                                 
-                                               
-                                            </div><!-- end row -->
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="gridjs-footer">
+                                                <div class="gridjs-pagination">
+                                                    <div role="status" aria-live="polite" class="gridjs-summary" title="Page 1 of 2">
+                                                        Showing <b>1</b> to <b>5</b> of <b>10</b> results
+                                                    </div>
+                                                    <div class="gridjs-pages">
+                                                        <button tabindex="0" role="button" disabled="" title="Previous" aria-label="Previous" class="">
+                                                            Previous
+                                                        </button>
+                                                        <button tabindex="0" role="button" class="gridjs-currentPage" title="Page 1" aria-label="Page 1">
+                                                            1
+                                                        </button>
+                                                        <button tabindex="0" role="button" class="" title="Page 2" aria-label="Page 2">
+                                                            2
+                                                        </button>
+                                                        <button tabindex="0" role="button" title="Next" aria-label="Next" class="">
+                                                            Next
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="gridjs-temp" class="gridjs-temp"></div>
                                         </div>
-                                    </div><!-- end card-body -->
-                                </div><!-- end card -->
-                                <div class="mb-3 ms-1 d-flex">
-                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2" data-text="Save"><span>Save</span></button>
-                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light" data-text="Cancel"><span>Cancel</span></button>
-                                </div>
-                            </div>
-                            <!-- end col -->
+                                    </div>
+                                </div><!-- end card-body -->
+                            </div><!-- end card -->
                         </div>
-                    </form>
+                        <!-- end col -->
+                    </div>
+                    
                 </div>
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
+
+            <div id="zoomInModal2" class="modal fade zoomIn" tabindex="-1" aria-labelledby="zoomInModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="zoomInModalLabel">Add Section</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                           <form action="#">
+                            <div class="row gy-3">                  
+                                <div class="col-lg-12">
+                                    <label for="cleave-time-format" class="form-label">Location</label>
+                                    <select class="form-select mb-3" aria-label="Default select example">
+                                        <option value="select" selected>Select</option>
+                                        <option value="Kolkata">Kolkata</option>
+                                        <option value="Bangalore">Bangalore</option>
+                                        <option value="Hyderabad">Hyderabad</option>
+                                        <option value="Goa">Goa</option>
+                                    </select>                                        
+                                </div>
+                                <div class="col-lg-12">
+                                    <label for="cleave-time-format" class="form-label">Section display name</label>
+                                    <input type="text" class="form-control" />
+                                </div>
+                                <div class="col-lg-12">
+                                    <label for="cleave-time-format" class="form-label">Section key</label>
+                                    <input type="text" class="form-control" />
+                                </div>
+                            </div>
+                           </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary ">Save</button>
+                        </div>
+
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <div id="zoomInModal1" class="modal fade zoomIn" tabindex="-1" aria-labelledby="zoomInModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="zoomInModalLabel">Edit Section</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                           <form action="#">
+                            <div class="row gy-3">                  
+                                <div class="col-lg-12">
+                                    <label for="cleave-time-format" class="form-label">Location</label>
+                                    <select class="form-select mb-3" aria-label="Default select example">
+                                        <option value="Kolkata" selected>Kolkata</option>
+                                        <option value="Bangalore">Bangalore</option>
+                                        <option value="Hyderabad">Hyderabad</option>
+                                        <option value="Goa">Goa</option>
+                                    </select>                                       
+                                </div>
+                                <div class="col-lg-12">
+                                    <label for="cleave-time-format" class="form-label">Section display name</label>
+                                    <input type="text" class="form-control" value="Living Room" />
+                                </div>
+                                <div class="col-lg-12">
+                                    <label for="cleave-time-format" class="form-label">Section key</label>
+                                    <input type="text" class="form-control" value="Living_Room" disabled/>
+                                </div>
+                            </div>
+                           </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary ">Update Section</button>
+                        </div>
+
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <div id="zoomInModal" class="modal fade zoomIn" tabindex="-1" aria-labelledby="zoomInModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="zoomInModalLabel">Add Section</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                           <form action="#">
+                            <div class="row gy-3">                  
+                                <div class="col-lg-12">
+                                    <label for="cleave-time-format" class="form-label">Location</label>
+                                    <select class="form-select mb-3" aria-label="Default select example">
+                                        <option value="select" selected>Select</option>
+                                        <option value="Kolkata">Kolkata</option>
+                                        <option value="Bangalore">Bangalore</option>
+                                        <option value="Hyderabad">Hyderabad</option>
+                                        <option value="Goa">Goa</option>
+                                    </select>                                        
+                                </div>
+                                <div class="col-lg-12">
+                                    <label for="cleave-time-format" class="form-label">Section display name</label>
+                                    <input type="text" class="form-control" />
+                                </div>
+                                <div class="col-lg-12">
+                                    <label for="cleave-time-format" class="form-label">Section key</label>
+                                    <input type="text" class="form-control" />
+                                </div>
+                            </div>
+                           </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary ">Add Section</button>
+                        </div>
+
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <div class="d-none code-view">
+                <pre class="language-markup">
+                    <code>&lt;!-- Animation Modals --&gt; &lt;div class=&quot;modal fade fadeInRight&quot;&gt;...&lt;/div&gt;</code>
+                    <code>&lt;div class=&quot;modal fade fadeInLeft&quot;&gt;...&lt;/div&gt;</code>
+                    <code>&lt;div class=&quot;modal fadeInUp&quot;&gt;...&lt;/div&gt;</code>
+                    <code>&lt;div class=&quot;modal flip&quot;&gt;...&lt;/div&gt;</code>
+                    <code>&lt;div class=&quot;modal zoomIn&quot;&gt;...&lt;/div&gt;</code>
+                </pre>
+            </div>
 
             <footer class="footer">
                 <div class="container-fluid">
@@ -1618,33 +1875,18 @@
      <script src="assets/libs/feather-icons/feather.min.js"></script>
      <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
      <script src="assets/js/plugins.js"></script>
- 
-     <!-- apexcharts -->
-     <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
 
-      <!-- core ui -->
-      <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.3/dist/js/coreui.bundle.min.js"></script>
- 
-     <!-- Vector map-->
-     <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
-     <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
- 
-     <!--Swiper slider js-->
-     <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+     <!-- gridjs js -->
+    <script src="assets/libs/gridjs/gridjs.umd.js"></script>
+    <!-- gridjs init -->
+    <script src="assets/js/pages/gridjs.init.js"></script>
 
-     <!-- ckeditor -->
-    <script src="assets/libs/%40ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
-
-    <!-- quill js -->
-    <script src="assets/libs/quill/quill.min.js"></script>
-
-    <!-- init js -->
-    <script src="assets/js/pages/form-editor.init.js"></script>
- 
-     <!-- Dashboard init -->
-     <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>
- 
-     <!-- App js -->
-     <script src="assets/js/app.js"></script>
+    <!--Swiper slider js-->
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+   
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+     <!-- Modal Js -->
+     <script src="assets/js/pages/modal.init.js"></script>
 </body>
 </html>

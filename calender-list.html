@@ -820,13 +820,22 @@
                                 <div class="card-body">
                                     <div id="table-gridjs">
                                         <div role="complementary" class="gridjs gridjs-container" style="width: 100%;">
-                                            <div class="d-flex justify-content-between mb-3">
-                                                <div class="gridjs-search">
+                                            <div class="d-md-flex justify-content-between mb-3">
+                                                <div class="gridjs-search mb-3">
                                                     <input type="search" placeholder="Type a keyword..." aria-label="Type a keyword..." class="gridjs-input gridjs-search-input">
                                                 </div>
                                                 <div>
-                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2 mb-1" data-text="Download"><span>Download</span></button>                                                                                                   
-                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2 mb-1" data-text="Show 10 rows"><span>Show 10 rows</span></button>
+                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light" data-text="Download"><span>Download</span></button>                                                                                                   
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-primary" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Show 10 row</button>
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item text-center" href="#">10</a>
+                                                            <a class="dropdown-item text-center" href="#">20</a>
+                                                            <a class="dropdown-item text-center" href="#">30</a>
+                                                            <a class="dropdown-item text-center" href="#">40</a>
+                                                            <a class="dropdown-item text-center" href="#">50</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="gridjs-wrapper" style="height: auto;">
@@ -847,7 +856,7 @@
                                                                 <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
                                                                     class="gridjs-sort gridjs-sort-neutral"></button>
                                                             </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 120px;">
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 180px;">
                                                                 <div class="gridjs-th-content">Action</div>
                                                                 <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
                                                                     class="gridjs-sort gridjs-sort-neutral"></button>
@@ -869,14 +878,12 @@
                                                             </td>
                                                             <td  class="gridjs-td">
                                                                 <div class="d-flex align-items-center">
-                                                                    <button type="button" class="bg-transparent border-0" data-bs-toggle="modal"
-                                                                        data-bs-target="#zoomInModal">
+                                                                    <a href="calender-list-edit.html" class="btn btn-ghost-secondary waves-effect">
                                                                     <img src="./assets/icons/edit.png" alt="edit"> Edit
-                                                                    </button>
+                                                                    </a>
                                                                     <div class="mini-horizontal-line"></div>
-                                                                    <button type="button" class="bg-transparent border-0" data-bs-toggle="modal"
-                                                                        data-bs-target="#zoomInModal">
-                                                                    <img src="./assets/icons/view.png" alt="view"> View
+                                                                    <button type="button" class="btn btn-ghost-secondary waves-effect">
+                                                                    <img src="./assets/icons/download.png" alt="download"> Download
                                                                     </button>
                                                                 </div>
                                                             </td>

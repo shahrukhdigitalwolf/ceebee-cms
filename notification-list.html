@@ -9,25 +9,24 @@
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
-
-    <!-- core ui -->
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.3/dist/css/coreui.min.css">
+    <!-- Layout config Js -->
+    <script src="assets/js/layout.js"></script>
 
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
     <!-- jsvectormap css -->
     <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
 
+    
     <!--Swiper slider css-->
     <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
 
-    <!-- quill css -->
-    <link href="assets/libs/quill/quill.core.css" rel="stylesheet" type="text/css" />
-    <link href="assets/libs/quill/quill.bubble.css" rel="stylesheet" type="text/css" />
-    <link href="assets/libs/quill/quill.snow.css" rel="stylesheet" type="text/css" />
+     <!-- gridjs css -->
+     <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css">
 
-    <!-- Layout config Js -->
-    <script src="assets/js/layout.js"></script>
-    <!-- Bootstrap Css -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
@@ -799,86 +798,140 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Add Memo</h4>
+                                <h4 class="mb-sm-0">Notification List</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
-                                        <li class="breadcrumb-item active">Add memo</li>
+                                        <li class="breadcrumb-item active">Notification list</li>
                                     </ol>
                                 </div>
 
                             </div>
                         </div>
                     </div>
-                    <form action="#">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title mb-0 flex-grow-1">Details of memo</h4>
-                                    </div><!-- end card header -->
-                                    
-                                    <div class="card-body">
-                                        <div class="mt-4">
-                                            <div class="row">
-                                                <div class="col-xl-6">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Department</label>
-                                                        <select class="form-multi-select" id="ms1" multiple data-coreui-search="true">
-                                                            <option value="0">Angular</option>
-                                                            <option value="1">Bootstrap</option>
-                                                            <option value="2">React.js</option>
-                                                            <option value="3">Vue.js</option>
-                                                            <optgroup label="backend">
-                                                                <option value="4">Django</option>
-                                                                <option value="5">Laravel</option>
-                                                                <option value="6">Node.js</option>
-                                                            </optgroup>
-                                                        </select>
-                                                    </div>
+                    
+                    <div class="row">
+                        
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title mb-0 flex-grow-1">Details of notification list</h4>
+                                </div><!-- end card header -->
 
-                                                </div><!-- end col -->
-                                                
-                                                <div class="col-xl-6">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Title</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div><!-- end col -->
-                                            
-                                                <div class="col-lg-12">
+                                <div class="card-body">
+                                    <div id="table-gridjs">
+                                        <div role="complementary" class="gridjs gridjs-container" style="width: 100%;">
 
-                                                    <div class="card">
-                                                        <div class="card-header">
-                                                            <h4 class="card-title mb-0">Description</h4>
-                                                        </div><!-- end card header -->
-                        
-                                                        <div class="card-body">
-                                                        
-                                                            <div class="snow-editor" style="height: 300px;">
-                                                                
-                        
-                                                            </div> <!-- end Snow-editor-->
-                                                        </div><!-- end card-body -->
-                                                    </div><!-- end card -->
-                        
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <div class="gridjs-search">
+                                                    <input type="search" placeholder="Type a keyword..." aria-label="Type a keyword..." class="gridjs-input gridjs-search-input">
                                                 </div>
+                                                <div>
+                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2" data-text="Download"><span>Download</span></button>                                                                                                   
+                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light" id="dropdownMenuOffset"
+                                                        data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+                                                        Show 10 row
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset" style="min-width: 50px; text-align: center;">
+                                                        <li><a class="dropdown-item" href="#">10</a></li>
+                                                        <div class="dropdown-divider"></div>
+                                                        <li><a class="dropdown-item" href="#">20</a></li>
+                                                        <div class="dropdown-divider"></div>
+                                                        <li><a class="dropdown-item" href="#">50</a></li>
+                                                        <div class="dropdown-divider"></div>
+                                                        <li><a class="dropdown-item" href="#">Show All</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="gridjs-wrapper" style="height: auto;">
+                                                <table role="grid" class="gridjs-table" style="height: auto;">
+                                                    <thead class="gridjs-thead">
+                                                        <tr class="gridjs-tr">
+                                                           
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 70px;">
+                                                                <div class="gridjs-th-content">Sr no.</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                                <div class="gridjs-th-content">Title</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 550px;">
+                                                                <div class="gridjs-th-content">Discription</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 250px;">
+                                                                <div class="gridjs-th-content">Create on</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 250px;">
+                                                                <div class="gridjs-th-content">Notification type</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
+                                                            </th>
+                                                            
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="gridjs-tbody">
+                                                        <tr class="gridjs-tr">
+                                                           
+                                                            <td  class="gridjs-td">
+                                                                1
+                                                            </td>
+                                                            <td class="gridjs-td">
+                                                                <a href="#" class="btn btn-ghost-secondary waves-effect" >
+                                                                    New Employee Added
+                                                                </a>
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                Employee: Syma Banu has been added
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                09-10-2023
+                                                            </td>
+                                                            <td  class="gridjs-td">
+                                                                cms
+                                                            </td>
+
+                                                        </tr>
                                                 
-                                               
-                                            </div><!-- end row -->
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="gridjs-footer">
+                                                <div class="gridjs-pagination">
+                                                    <div role="status" aria-live="polite" class="gridjs-summary" title="Page 1 of 2">
+                                                        Showing <b>1</b> to <b>5</b> of <b>10</b> results
+                                                    </div>
+                                                    <div class="gridjs-pages">
+                                                        <button tabindex="0" role="button" disabled="" title="Previous" aria-label="Previous" class="">
+                                                            Previous
+                                                        </button>
+                                                        <button tabindex="0" role="button" class="gridjs-currentPage" title="Page 1" aria-label="Page 1">
+                                                            1
+                                                        </button>
+                                                        <button tabindex="0" role="button" class="" title="Page 2" aria-label="Page 2">
+                                                            2
+                                                        </button>
+                                                        <button tabindex="0" role="button" title="Next" aria-label="Next" class="">
+                                                            Next
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="gridjs-temp" class="gridjs-temp"></div>
                                         </div>
-                                    </div><!-- end card-body -->
-                                </div><!-- end card -->
-                                <div class="mb-3 ms-1 d-flex">
-                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2" data-text="Save"><span>Save</span></button>
-                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light" data-text="Cancel"><span>Cancel</span></button>
-                                </div>
-                            </div>
-                            <!-- end col -->
+                                    </div>
+                                </div><!-- end card-body -->
+                            </div><!-- end card -->
                         </div>
-                    </form>
+                        <!-- end col -->
+                    </div>
+                    
                 </div>
                 <!-- container-fluid -->
             </div>
@@ -1618,33 +1671,22 @@
      <script src="assets/libs/feather-icons/feather.min.js"></script>
      <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
      <script src="assets/js/plugins.js"></script>
- 
-     <!-- apexcharts -->
-     <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.3/dist/js/coreui.bundle.min.js"></script>
 
-      <!-- core ui -->
-      <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.3/dist/js/coreui.bundle.min.js"></script>
- 
-     <!-- Vector map-->
-     <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
-     <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
- 
-     <!--Swiper slider js-->
-     <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
-
-     <!-- ckeditor -->
-    <script src="assets/libs/%40ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
-
-    <!-- quill js -->
-    <script src="assets/libs/quill/quill.min.js"></script>
-
-    <!-- init js -->
-    <script src="assets/js/pages/form-editor.init.js"></script>
- 
-     <!-- Dashboard init -->
-     <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>
- 
-     <!-- App js -->
-     <script src="assets/js/app.js"></script>
+     <!-- gridjs js -->
+    <script src="assets/libs/gridjs/gridjs.umd.js"></script>
+    <!-- gridjs init -->
+    <script src="assets/js/pages/gridjs.init.js"></script>
+    <!-- apexcharts -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+    <!-- Vector map-->
+    <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
+    <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
+    <!--Swiper slider js-->
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+    <!-- Dashboard init -->
+    <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
