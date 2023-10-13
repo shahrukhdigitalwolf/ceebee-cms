@@ -835,9 +835,25 @@
                                                 
                                             </div>
                                             <div class="border mb-3 border-dashed"></div>
-                                            <div class="gridjs-head">
-                                                <div class="gridjs-search">
+                                            <div class="d-lg-flex justify-content-between mb-3">
+                                                <div class="gridjs-search mb-2">
                                                     <input type="search" placeholder="Type a keyword..." aria-label="Type a keyword..." class="gridjs-input gridjs-search-input">
+                                                </div>
+                                                <div>
+                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2" data-text="Download"><span>Download</span></button>                                                                                                   
+                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light" id="dropdownMenuOffset"
+                                                        data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+                                                        Show 10 row
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset" style="min-width: 50px; text-align: center;">
+                                                        <li><a class="dropdown-item" href="#">10</a></li>
+                                                        <div class="dropdown-divider"></div>
+                                                        <li><a class="dropdown-item" href="#">20</a></li>
+                                                        <div class="dropdown-divider"></div>
+                                                        <li><a class="dropdown-item" href="#">50</a></li>
+                                                        <div class="dropdown-divider"></div>
+                                                        <li><a class="dropdown-item" href="#">Show All</a></li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                             <div class="gridjs-wrapper" style="height: auto;">
@@ -846,26 +862,21 @@
                                                         <tr class="gridjs-tr">
                                             
                                                             <th data-column-id="id" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 80px;">
-                                                                <div class="gridjs-th-content text-center">
-                                                                    <input class="form-check-input" type="checkbox" id="formCheck1">
-                                                                </div>
-                                                            </th>
-                                                            <th data-column-id="id" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 80px;">
                                                                 <div class="gridjs-th-content">Sr No.</div>
                                                                 <button tabindex="-1"
                                                                     aria-label="Sort column ascending" title="Sort column ascending"
                                                                     class="gridjs-sort gridjs-sort-neutral">
                                                                 </button>
                                                             </th>
-                                                            <th data-column-id="name" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 120px;">
-                                                                <div class="gridjs-th-content">Show key</div>
+                                                            <th data-column-id="name" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 180px;">
+                                                                <div class="gridjs-th-content">VIP type</div>
                                                                 <button tabindex="-1"
                                                                     aria-label="Sort column ascending" title="Sort column ascending"
                                                                     class="gridjs-sort gridjs-sort-neutral">
                                                                 </button>
                                                             </th>
-                                                            <th data-column-id="email" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 120px;">
-                                                                <div class="gridjs-th-content">Show value</div>
+                                                            <th data-column-id="email" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 200px;">
+                                                                <div class="gridjs-th-content">VIP name</div>
                                                                 <button tabindex="-1"
                                                                     aria-label="Sort column ascending" title="Sort column ascending"
                                                                     class="gridjs-sort gridjs-sort-neutral">
@@ -873,8 +884,8 @@
                                                             </th>
                     
                                                             <th data-column-id="company" class="gridjs-th gridjs-th-sort" tabindex="0"
-                                                                style="width: 520px;">
-                                                                <div class="gridjs-th-content">Description</div>
+                                                                style="width: 350px;">
+                                                                <div class="gridjs-th-content">Email</div>
                                                                 <button tabindex="-1"
                                                                     aria-label="Sort column ascending" title="Sort column ascending"
                                                                     class="gridjs-sort gridjs-sort-neutral">
@@ -882,22 +893,62 @@
                                                             </th>
                                                             <th data-column-id="company" class="gridjs-th gridjs-th-sort" tabindex="0"
                                                                 style="width: 150px;">
-                                                                <div class="gridjs-th-content">Create on</div>
+                                                                <div class="gridjs-th-content">Phone</div>
                                                                 <button tabindex="-1"
                                                                     aria-label="Sort column ascending" title="Sort column ascending"
                                                                     class="gridjs-sort gridjs-sort-neutral">
                                                                 </button>
                                                             </th>
                                                             <th data-column-id="company" class="gridjs-th gridjs-th-sort" tabindex="0"
-                                                                style="width: 180px;">
-                                                                <div class="gridjs-th-content">Status</div>
+                                                                style="width: 150px;">
+                                                                <div class="gridjs-th-content">Alt. phone</div>
                                                                 <button tabindex="-1"
                                                                     aria-label="Sort column ascending" title="Sort column ascending"
                                                                     class="gridjs-sort gridjs-sort-neutral">
                                                                 </button>
                                                             </th>
                                                             <th data-column-id="company" class="gridjs-th gridjs-th-sort" tabindex="0"
-                                                                style="width: 165px;">
+                                                                style="width: 150px;">
+                                                                <div class="gridjs-th-content">Date of birth</div>
+                                                                <button tabindex="-1"
+                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                </button>
+                                                            </th>
+                                                            <th data-column-id="company" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                style="width: 150px;">
+                                                                <div class="gridjs-th-content">Anniversary on</div>
+                                                                <button tabindex="-1"
+                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                </button>
+                                                            </th>
+                                                            <th data-column-id="company" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                style="width: 150px;">
+                                                                <div class="gridjs-th-content">Whatsapp</div>
+                                                                <button tabindex="-1"
+                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                </button>
+                                                            </th>
+                                                            <th data-column-id="company" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                style="width: 150px;">
+                                                                <div class="gridjs-th-content">Date created</div>
+                                                                <button tabindex="-1"
+                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                </button>
+                                                            </th>
+                                                            <th data-column-id="company" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                style="width: 150px;">
+                                                                <div class="gridjs-th-content">City</div>
+                                                                <button tabindex="-1"
+                                                                    aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral">
+                                                                </button>
+                                                            </th>
+                                                            <th data-column-id="company" class="gridjs-th gridjs-th-sort" tabindex="0"
+                                                                style="width: 185px;">
                                                                 <div class="gridjs-th-content">Action</div>
                                                                 <button tabindex="-1"
                                                                     aria-label="Sort column ascending" title="Sort column ascending"
@@ -909,41 +960,52 @@
                                                     </thead>
                                                     <tbody class="gridjs-tbody">
                                                         <tr class="gridjs-tr">
-                                                            
-                                                            <td data-column-id="id" class="gridjs-td text-center">
-                                                                <input class="form-check-input" type="checkbox" id="formCheck1">
-                                                            </td>
+
                                                             <td data-column-id="id" class="gridjs-td">
                                                                 <span><span class="fw-semibold">1</span></span>
                                                             </td>
                                                             <td data-column-id="name" class="gridjs-td">
-                                                                All
+                                                                Media
                                                             </td>
                                                             <td data-column-id="email" class="gridjs-td">
-                                                                All
+                                                                Raajhorshee De - Zee TV
                                                             </td>
                                                             <td data-column-id="email" class="gridjs-td">
-                                                                You all are requested to update your CMS profile from your cms login
+                                                                swapnaroy.ceebeedesignstudio@gmail.com
                                                             </td>
                                                     
                                                             <td data-column-id="company" class="gridjs-td">
-                                                                12-09-2023
+                                                                9674177222
                                                             </td>
                                                             <td data-column-id="company" class="gridjs-td">
-                                                                <button type="button" class="bg-transparent border-0" data-bs-toggle="modal"
-                                                                        data-bs-target="#zoomInModal">
-                                                                    <img src="./assets/icons/active.png" alt="edit">Active
-                                                                </button>
+                                                                9674177222
+                                                            </td>
+                                                            <td data-column-id="company" class="gridjs-td">
+                                                                08-11-2022
+                                                            </td>
+                                                            <td data-column-id="company" class="gridjs-td">
+                                                                08-11-2022
+                                                            </td>
+                                                            <td data-column-id="company" class="gridjs-td">
+                                                                9674177222
+                                                            </td>
+                                                            <td data-column-id="company" class="gridjs-td">
+                                                                08-11-2022
+                                                            </td>
+                                                            <td data-column-id="company" class="gridjs-td">
+                                                                Kolkata
                                                             </td>
                                                             <td data-column-id="company" class="gridjs-td">
                                                                 <div class="d-flex align-items-center">
-                                                                    <button type="button" class="bg-transparent border-0" data-bs-toggle="modal"
-                                                                        data-bs-target="#zoomInModal">
-                                                                    <img src="./assets/icons/delete.png" alt="delete"> Delete
-                                                                    </button>
+                                                                    <a href="edit-vip.html" class="bg-transparent border-0">
+                                                                    <img src="./assets/icons/edit.png" alt="edit"> Edit
+                                                                    </a>
+                                                                    <div class="mini-horizontal-line m-2"></div>
+                                                                    <a href="view-vip.html" class="bg-transparent border-0">
+                                                                    <img src="./assets/icons/view.png" alt="view"> View
+                                                                    </a>
                                                                 </div>
                                                             </td>
-
                                                         </tr>
 
                                                     </tbody>

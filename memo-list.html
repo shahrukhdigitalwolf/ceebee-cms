@@ -810,7 +810,7 @@
                     <!-- Modal Blur -->
                         <div id="zoomInModal" class="modal fade zoomIn" tabindex="-1"
                         aria-labelledby="zoomInModalLabel" aria-hidden="true" style="display: none;">
-                        <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="zoomInModalLabel">View Memo</h5>
@@ -819,25 +819,25 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="row">
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-12">
                                             <div class="mb-3">
                                                 <label for="cleave-time-format" class="form-label">Department</label>
                                                 <input type="text" class="form-control" value="All" disabled>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-12">
                                             <div class="mb-3">
                                                 <label for="cleave-time-format" class="form-label">Tile</label>
                                                 <input type="text" class="form-control" value="Demo" disabled>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-12">
                                             <div class="mb-3">
                                                 <label for="cleave-time-format" class="form-label">Status</label>
                                                 <input type="text" class="form-control" value="Pending" disabled>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-12">
                                             <div class="mb-3">
                                                 <label for="cleave-time-format" class="form-label">Description</label>
                                                 <input type="text" class="form-control" value="pfa" disabled>
@@ -867,9 +867,25 @@
                                 <div class="card-body">
                                     <div id="table-gridjs">
                                         <div role="complementary" class="gridjs gridjs-container" style="width: 100%;">
-                                            <div class="gridjs-head">
-                                                <div class="gridjs-search">
+                                            <div class="d-lg-flex justify-content-between mb-3">
+                                                <div class="gridjs-search mb-2">
                                                     <input type="search" placeholder="Type a keyword..." aria-label="Type a keyword..." class="gridjs-input gridjs-search-input">
+                                                </div>
+                                                <div>
+                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2" data-text="Download"><span>Download</span></button>                                                                                                   
+                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light" id="dropdownMenuOffset"
+                                                        data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+                                                        Show 10 row
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset" style="min-width: 50px; text-align: center;">
+                                                        <li><a class="dropdown-item" href="#">10</a></li>
+                                                        <div class="dropdown-divider"></div>
+                                                        <li><a class="dropdown-item" href="#">20</a></li>
+                                                        <div class="dropdown-divider"></div>
+                                                        <li><a class="dropdown-item" href="#">50</a></li>
+                                                        <div class="dropdown-divider"></div>
+                                                        <li><a class="dropdown-item" href="#">Show All</a></li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                             <div class="gridjs-wrapper" style="height: auto;">
