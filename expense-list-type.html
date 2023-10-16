@@ -975,17 +975,24 @@
                                         </form>
                                         <div role="complementary" class="gridjs gridjs-container" style="width: 100%;">
                                             <div class="d-lg-flex justify-content-between mb-3">
-                                                <div class="gridjs-search mb-3">
-                                                    <input type="search" placeholder="Type a keyword..." aria-label="Type a keyword..."
-                                                        class="gridjs-input gridjs-search-input">
+                                                <div class="gridjs-search mb-2">
+                                                    <input type="search" placeholder="Type a keyword..." aria-label="Type a keyword..." class="gridjs-input gridjs-search-input">
                                                 </div>
                                                 <div>
-                                                    <button type="button"
-                                                        class="btn btn-primary btn-animation waves-effect waves-light me-2 mb-1"
-                                                        data-text="Download"><span>Download</span></button>
-                                                    <button type="button"
-                                                        class="btn btn-primary btn-animation waves-effect waves-light me-2 mb-1"
-                                                        data-text="Show 10 rows"><span>Show 10 rows</span></button>
+                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2" data-text="Download"><span>Download</span></button>                                                                                                   
+                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light" id="dropdownMenuOffset"
+                                                        data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+                                                        Show 10 row
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset" style="min-width: 50px; text-align: center;">
+                                                        <li><a class="dropdown-item" href="#">10</a></li>
+                                                        <div class="dropdown-divider"></div>
+                                                        <li><a class="dropdown-item" href="#">20</a></li>
+                                                        <div class="dropdown-divider"></div>
+                                                        <li><a class="dropdown-item" href="#">50</a></li>
+                                                        <div class="dropdown-divider"></div>
+                                                        <li><a class="dropdown-item" href="#">Show All</a></li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                             <div class="gridjs-wrapper" style="height: auto;">

@@ -10,6 +10,7 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.3/dist/css/coreui.min.css">
     <!-- Layout config Js -->
     <script src="assets/js/layout.js"></script>
 
@@ -18,6 +19,7 @@
     
     <!-- jsvectormap css -->
     <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
+
     
     <!--Swiper slider css-->
     <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
@@ -31,6 +33,13 @@
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        .gridjs-container{
+            overflow: visible;
+            z-index: 2;
+        }
+    </style>
 
 </head>
 <body>
@@ -796,12 +805,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Employee List</h4>
+                                <h4 class="mb-sm-0">Edit Project List</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
-                                        <li class="breadcrumb-item active">Employee list</li>
+                                        <li class="breadcrumb-item active">Edit project list</li>
                                     </ol>
                                 </div>
 
@@ -810,225 +819,808 @@
                     </div>
                     
                     <div class="row">
-                        
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title mb-0 flex-grow-1">Details of employees</h4>
+                                    <h4 class="card-title mb-0 flex-grow-1">CEE BEE DESIGN STUDIO</h4>
+                                    <p>3045 Rajdanga main road, Kolkata - 700107</p>
+                                    <strong>Email: chitralekha@ceebeedesignstudio.com</strong>
                                 </div><!-- end card header -->
 
                                 <div class="card-body">
-                                    <div class="mb-3 mt-3">
-                                        <button type="button" class="btn btn-danger btn-animation waves-effect waves-light" data-text="Delete"><span>Delete</span></button>
-                                    </div>
                                     <div id="table-gridjs">
                                         <div role="complementary" class="gridjs gridjs-container" style="width: 100%;">
-                                            <div class="d-md-flex justify-content-between mb-3">
-                                                <div class="gridjs-search mb-3">
-                                                    <input type="search" placeholder="Type a keyword..." aria-label="Type a keyword..." class="gridjs-input gridjs-search-input">
-                                                </div>
-                                                <div>
-                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light" data-text="Download"><span>Download</span></button>                                                                                                   
-                                                    <div class="btn-group">
-                                                        <button type="button" class="btn btn-primary" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Show 10 row</button>
-                                                        <div class="dropdown-menu">
-                                                            <a class="dropdown-item text-center" href="#">10</a>
-                                                            <a class="dropdown-item text-center" href="#">20</a>
-                                                            <a class="dropdown-item text-center" href="#">30</a>
-                                                            <a class="dropdown-item text-center" href="#">40</a>
-                                                            <a class="dropdown-item text-center" href="#">50</a>
-                                                        </div>
+                                            <div class="mb-3">
+                                                <div class="row gy-3">
+                                                    <div class="col-lg-6">
+                                                        <label for="cleave-time" class="form-label">Client name</label>
+                                                        <select class="form-select mb-3" aria-label="Default select example">
+                                                            <option selected>Select</option>
+                                                        </select>                                            
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <label for="cleave-time" class="form-label">Site status</label>
+                                                        <select class="form-select mb-3" aria-label="Default select example">
+                                                            <option selected>Select</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <label for="cleave-time" class="form-label">Project value (Without GST)</label>
+                                                        <input type="text" class="form-control" /> 
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <label for="cleave-time" class="form-label">Date</label>
+                                                        <input type="date" class="form-control" /> 
+                                                    </div>
+                                                    <div class="col-lg-12 d-flex justify-content-end">
+                                                        <button type="button" class="btn btn-ghost-secondary">+ Add</button>
+                                                    </div>
+                                                    <div class="border mb-3 border-dashed"></div>
+                                                    <div class="col-lg-6">
+                                                        <p>
+                                                           <strong>Site Address:</strong> Devaloke Sonarcity, Garia, Shimultala, Sonarpur Station Rd, Kolkata,1117,, Kolkata - , ,
+                                                        </p>
+                                                        <p>
+                                                           <strong>Email Address:</strong> Dr.nalinakshi@gmail.com,
+                                                        </p>
+                                                        <p>
+                                                           <strong>Contact Number:</strong> 9433939176
+                                                        </p>
+                                                        <p>
+                                                           <strong>Are you happy with us email Send: </strong><input class="form-check-input" type="checkbox" value="" id="">
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <label for="cleave-time" class="form-label">Add team</label>
+                                                        <select class="form-multi-select" id="ms1" multiple data-coreui-search="true">
+                                                            <option value="0">Angular</option>
+                                                            <option value="1">Bootstrap</option>
+                                                            <option value="2">React.js</option>
+                                                            <option value="3">Vue.js</option>
+                                                            <optgroup label="backend">
+                                                                <option value="4">Django</option>
+                                                                <option value="5">Laravel</option>
+                                                                <option value="6">Node.js</option>
+                                                            </optgroup>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="gridjs-wrapper" style="height: auto;">
-                                                <table role="grid" class="gridjs-table" style="height: auto;">
-                                                    <thead class="gridjs-thead">
-                                                        <tr class="gridjs-tr">
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 100px;">
-                                                                <div class="gridjs-th-content">Check <br/>
-                                                                    <input class="form-check-input" type="checkbox">
-                                                                </div>
-                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
-                                                            </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 70px;">
-                                                                <div class="gridjs-th-content">Sr No.</div>
-                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
-                                                            </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
-                                                                <div class="gridjs-th-content">Emp code</div>
-                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
-                                                            </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
-                                                                <div class="gridjs-th-content">Name</div>
-                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
-                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
-                                                            </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 250px;">
-                                                                <div class="gridjs-th-content">Email</div>
-                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
-                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
-                                                            </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
-                                                                <div class="gridjs-th-content">Phone</div>
-                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
-                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
-                                                            </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
-                                                                <div class="gridjs-th-content">Alt. phone</div>
-                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
-                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
-                                                            </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
-                                                                <div class="gridjs-th-content">Type</div>
-                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
-                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
-                                                            </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
-                                                                <div class="gridjs-th-content">Designation</div>
-                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
-                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
-                                                            </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
-                                                                <div class="gridjs-th-content">Department<br> head</div>
-                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
-                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
-                                                            </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
-                                                                <div class="gridjs-th-content">Date of birth</div>
-                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
-                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
-                                                            </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
-                                                                <div class="gridjs-th-content">Date of joining</div>
-                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
-                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
-                                                            </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
-                                                                <div class="gridjs-th-content">ID proof</div>
-                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
-                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
-                                                            </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
-                                                                <div class="gridjs-th-content">Profile upload</div>
-                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
-                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
-                                                            </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
-                                                                <div class="gridjs-th-content">Status</div>
-                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
-                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
-                                                            </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
-                                                                <div class="gridjs-th-content">Action</div>
-                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
-                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
-                                                            </th>
-                                        
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody class="gridjs-tbody">
-                                                        <tr class="gridjs-tr">
-                                                            <td  class="gridjs-td">
-                                                                <input class="form-check-input" type="checkbox">
-                                                            </td>
-                                                            <td  class="gridjs-td">
-                                                                1
-                                                            </td>
-                                                            <td class="gridjs-td">
-                                                                281119
-                                                            </td>
-                                                            <td  class="gridjs-td">
-                                                                Sujay
-                                                            </td>
-                                                            <td  class="gridjs-td">
-                                                                sujay@ceebeedesignstudio.com
-                                                            </td>
-                                                            <td  class="gridjs-td">
-                                                                8240754952
-                                                            </td>
-                                                            <td  class="gridjs-td">
-                                                                8653508478
-                                                            </td>
-                                                            <td  class="gridjs-td">
-                                                                PROJECT
-                                                            </td>
-                                                            <td  class="gridjs-td">
-                                                                Project Coordinator
-                                                            </td>
-                                                            <td  class="gridjs-td">
-                                                                YES
-                                                            </td>
-                                                            <td  class="gridjs-td">
-                                                                27-11-1993
-                                                            </td>
-                                                            <td  class="gridjs-td">
-                                                                21-01-2015
-                                                            </td>
-                                                            <td  class="gridjs-td text-center">
-                                                                <button type="button" class="bg-transparent border-0">
-                                                                    <img src="./assets/icons/download.png" alt="download"> Download
-                                                                </button>
-                                                            </td>
-                                                            <td  class="gridjs-td">
-                                                                <button type="button" class="bg-transparent border-0">
-                                                                    <img src="./assets/icons/download.png" alt="download"> Download
-                                                                </button>
-                                                            </td>
-                                                            <td  class="gridjs-td">
-                                                                <button type="button" class="btn btn-soft-primary waves-effect waves-light custom-toggle" data-bs-toggle="button">
-                                                                    <span class="icon-on">
-                                                                        <img src="./assets/icons/active.png" alt="edit"> Active
-                                                                    </span>
-                                                                    <span class="icon-off">
-                                                                        <img src="./assets/icons/deactive.png" alt="edit"> Inactive
-                                                                    </span>
-                                                                </button>
-                                                            </td>
-                                                            <td  class="gridjs-td">
-                                                                <div class="d-flex align-items-center">
-                                                                    <a href="employee-list-edit.html" class="bg-transparent border-0">
-                                                                    <img src="./assets/icons/edit.png" alt="edit"> Edit
-                                                                    </a>
-                                                                    <div class="mini-horizontal-line"></div>
-                                                                    <a href="employee-list-view.html" class="bg-transparent border-0">
-                                                                        <img src="./assets/icons/eye.png" alt="view"> View
-                                                                    </a>
-                                                                </div>
-                                                            </td>
-                                                
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                            <div class="gridjs-footer">
-                                                <div class="gridjs-pagination">
-                                                    <div role="status" aria-live="polite" class="gridjs-summary" title="Page 1 of 2">
-                                                        Showing <b>1</b> to <b>5</b> of <b>10</b> results
-                                                    </div>
-                                                    <div class="gridjs-pages">
-                                                        <button tabindex="0" role="button" disabled="" title="Previous" aria-label="Previous" class="">
-                                                            Previous
-                                                        </button>
-                                                        <button tabindex="0" role="button" class="gridjs-currentPage" title="Page 1" aria-label="Page 1">
-                                                            1
-                                                        </button>
-                                                        <button tabindex="0" role="button" class="" title="Page 2" aria-label="Page 2">
-                                                            2
-                                                        </button>
-                                                        <button tabindex="0" role="button" title="Next" aria-label="Next" class="">
-                                                            Next
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="gridjs-temp" class="gridjs-temp"></div>
                                         </div>
                                     </div>
                                 </div><!-- end card-body -->
                             </div><!-- end card -->
                         </div>
                         <!-- end col -->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title mb-0 flex-grow-1">Accounts Department</h4>
+                                </div><!-- end card header -->
+
+                                <div class="card-body">
+                                    <div id="table-gridjs">
+                                        <div class="gridjs-wrapper" style="height: auto;">
+                                            <table role="grid" class="gridjs-table" style="height: auto;">
+                                                <tbody class="gridjs-tbody">
+                                                    <tr class="gridjs-tr">
+                                                        
+                                                        <td  class="gridjs-td" style="width: 100px;">
+                                                            1. Payment
+                                                        </td>
+                                                        <td class="gridjs-td" style="width: 200px;">
+                                                            <input type="date" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td" style="width: 200px;">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                    
+                                                    </tr>
+                                            
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="d-flex justify-content-end mt-2">
+                                            <button class="btn btn-ghost-secondary">+ Add</button>
+                                        </div>
+                                    </div>
+                                </div><!-- end card-body -->
+                            </div><!-- end card -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title mb-0 flex-grow-1">Documentation Department</h4>
+                                </div><!-- end card header -->
+
+                                <div class="card-body">
+                                    <div id="table-gridjs">
+                                        <div class="gridjs-wrapper" style="height: auto;">
+                                            <table role="grid" class="gridjs-table" style="height: auto;">
+                                                <tbody class="gridjs-tbody">
+                                                    <tr class="gridjs-tr">
+                                                        
+                                                        <td  class="gridjs-td" style="width: 70px;">
+                                                            Deed of agreement:
+                                                        </td>
+                                                        <td class="gridjs-td" style="width: 200px;">
+                                                            <input type="file" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td" style="width: 100px; text-align: center;">
+                                                            <button class="btn btn-soft-primary">
+                                                                <img src="./assets/icons/download.png" alt="download"> Download
+                                                            </button>
+                                                        </td>
+                                                    
+                                                    </tr>
+
+                                                    <tr class="gridjs-tr">
+                                                        
+                                                        <td  class="gridjs-td" style="width: 70px;">
+                                                            Interior quotation
+                                                        </td>
+                                                        <td class="gridjs-td" style="width: 200px;">
+                                                            <input type="file" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td" style="width: 100px; text-align: center;">
+                                                            <button class="btn btn-soft-primary">
+                                                                <img src="./assets/icons/download.png" alt="download"> Download
+                                                            </button>
+                                                        </td>
+                                                    
+                                                    </tr>
+
+                                                    <tr class="gridjs-tr">
+                                                        
+                                                        <td  class="gridjs-td" style="width: 70px;">
+                                                            Buyout quotation
+                                                        </td>
+                                                        <td class="gridjs-td" style="width: 200px;">
+                                                            <input type="file" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td" style="width: 100px; text-align: center;">
+                                                            <button class="btn btn-soft-primary">
+                                                                <img src="./assets/icons/download.png" alt="download"> Download
+                                                            </button>
+                                                        </td>
+                                                    
+                                                    </tr>
+
+                                                    <tr class="gridjs-tr">
+                                                        
+                                                        <td  class="gridjs-td" style="width: 70px;">
+                                                            Sow
+                                                        </td>
+                                                        <td class="gridjs-td" style="width: 200px;">
+                                                            <input type="file" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td" style="width: 100px; text-align: center;">
+                                                            <button class="btn btn-soft-primary">
+                                                                <img src="./assets/icons/download.png" alt="download"> Download
+                                                            </button>
+                                                        </td>
+                                                    
+                                                    </tr>
+                                                        
+                                                    <tr class="gridjs-tr">
+                                                        
+                                                        <td  class="gridjs-td" style="width: 70px;">
+                                                            Vendor penalty clause:
+                                                        </td>
+                                                        <td class="gridjs-td" style="width: 200px;">
+                                                            <input type="file" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td" style="width: 100px; text-align: center;">
+                                                            <button class="btn btn-soft-primary">
+                                                                <img src="./assets/icons/download.png" alt="download"> Download
+                                                            </button>
+                                                        </td>
+                                                    
+                                                    </tr>
+                                            
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div><!-- end card-body -->
+                            </div><!-- end card -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title mb-0 flex-grow-1">Accounts Department</h4>
+                                </div><!-- end card header -->
+
+                                <div class="card-body">
+                                    <form action="#">
+                                        <div class="mt-4">
+                                            <div class="row">
+                                                <div class="col-xl-3">
+                                                    <div class="mb-3">
+                                                        <label for="cleave-time" class="form-label">Mom upload</label>
+                                                        <input type="file" class="form-control">
+                                                    </div>
+
+                                                </div><!-- end col -->
+
+                                                <div class="col-xl-3">
+                                                    <div class="mb-3">
+                                                        <label for="cleave-time-format" class="form-label">Pre-site start meeting</label>
+                                                        <input type="date" class="form-control">
+                                                    </div>
+                                                </div><!-- end col -->
+
+                                                <div class="col-xl-3">
+                                                    <div class="mb-3">
+                                                        <label for="cleave-time-format" class="form-label">Project start date</label>
+                                                        <input type="date" class="form-control">
+                                                    </div>
+                                                </div><!-- end col -->
+
+                                                <div class="col-xl-3">
+                                                    <div class="mb-3">
+                                                        <label for="cleave-time-format" class="form-label">Project completion date</label>
+                                                        <input type="date" class="form-control">
+                                                    </div>
+                                                </div><!-- end col -->
+
+                                                <div class="col-xl-3">
+                                                    <div class="mb-3">
+                                                        <label for="cleave-time-format" class="form-label">Date change comment <img type="button" data-bs-toggle="modal" data-bs-target="#zoomInModal" src="./assets/icons/view.png" alt="view"></label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div><!-- end col -->
+
+                                                <div class="col-xl-3">
+                                                    <div class="mb-3">
+                                                        <label for="cleave-time-format" class="form-label">Weekly report feed</label>
+                                                        <textarea class="form-control" aria-label="With textarea" rows="1"></textarea>
+                                                    </div>
+                                                </div><!-- end col -->
+
+                                                <div class="col-xl-3">
+                                                    <div class="mb-3">
+                                                        <label for="cleave-time-format" class="form-label">Vendor penalty clause date</label>
+                                                        <input type="date" class="form-control">
+                                                    </div>
+                                                </div><!-- end col -->
+
+                                                <div class="col-xl-3">
+                                                    <div class="mb-3">
+                                                        <label for="cleave-time-format" class="form-label">Weekly report feed list</label>
+                                                        <input type="text" class="form-control" value="No record found" disabled>
+                                                    </div>
+                                                </div><!-- end col -->
+                                                <div class="col-xl-12">
+                                                    <div class="mb-3">
+                                                        <button type="button" class="btn btn-primary">Save weekly feed</button>
+                                                    </div>
+                                                </div><!-- end col -->
+                                               
+                                            </div><!-- end row -->
+                                        </div>
+                                    </form>
+                                </div><!-- end card-body -->
+                            </div><!-- end card -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+
+                    <div id="zoomInModal" class="modal fade zoomIn" tabindex="-1" aria-labelledby="zoomInModalLabel" aria-hidden="true" style="display: none;">
+                        <div class="modal-dialog modal-lg ">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="zoomInModalLabel">Coordinator Department Details</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    
+                                </div>
+        
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title mb-0 flex-grow-1">Vendor Department</h4>
+                                </div><!-- end card header -->
+
+                                <div class="card-body">
+                                    <div id="table-gridjs">
+                                        <div class="gridjs-wrapper" style="height: auto;">
+                                            <table role="grid" class="gridjs-table" style="height: auto;">
+                                                <thead class="gridjs-thead">
+                                                    <tr class="gridjs-tr">
+                                                           
+                                                        <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 100px;">
+                                                            <div class="gridjs-th-content">Type</div>
+                                                        </th>
+                                                        <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 300px;">
+                                                            <div class="gridjs-th-content">Vendor</div>
+                                                        </th>
+                                                        <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                            <div class="gridjs-th-content">Due amount (INR)</div>
+                                                        </th>
+                                                        <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                            <div class="gridjs-th-content">Completion date</div>
+                                                        </th>
+                                                        <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                            <div class="gridjs-th-content">Work done (%)</div>
+                                                        </th>
+                                                        <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                            <div class="gridjs-th-content">Payment done (%)</div>
+                                                        </th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="gridjs-tbody">
+                                                    <tr class="gridjs-tr">
+                                                        
+                                                        <td  class="gridjs-td">
+                                                            Carpentry:
+                                                        </td>
+                                                        <td class="gridjs-td">
+                                                            <select class="form-multi-select form-select" id="ms1" multiple data-coreui-search="true">
+                                                                <option value="0">Angular</option>
+                                                                <option value="1">Bootstrap</option>
+                                                                <option value="2">React.js</option>
+                                                                <option value="3">Vue.js</option>
+                                                                <optgroup label="backend">
+                                                                    <option value="4">Django</option>
+                                                                    <option value="5">Laravel</option>
+                                                                    <option value="6">Node.js</option>
+                                                                </optgroup>
+                                                            </select>
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="date" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                    
+                                                    </tr>
+
+                                                    <tr class="gridjs-tr">
+                                                        <td  class="gridjs-td">
+                                                            False celling:
+                                                        </td>
+                                                        <td class="gridjs-td">
+                                                            <select class="form-multi-select form-select" id="ms1" multiple data-coreui-search="true">
+                                                                <option value="0">Angular</option>
+                                                                <option value="1">Bootstrap</option>
+                                                                <option value="2">React.js</option>
+                                                                <option value="3">Vue.js</option>
+                                                                <optgroup label="backend">
+                                                                    <option value="4">Django</option>
+                                                                    <option value="5">Laravel</option>
+                                                                    <option value="6">Node.js</option>
+                                                                </optgroup>
+                                                            </select>
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="date" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="gridjs-tr">
+                                                        <td  class="gridjs-td">
+                                                            Grill work:
+                                                        </td>
+                                                        <td class="gridjs-td">
+                                                            <select class="form-multi-select form-select" id="ms1" multiple data-coreui-search="true">
+                                                                <option value="0">Angular</option>
+                                                                <option value="1">Bootstrap</option>
+                                                                <option value="2">React.js</option>
+                                                                <option value="3">Vue.js</option>
+                                                                <optgroup label="backend">
+                                                                    <option value="4">Django</option>
+                                                                    <option value="5">Laravel</option>
+                                                                    <option value="6">Node.js</option>
+                                                                </optgroup>
+                                                            </select>
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="date" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="gridjs-tr">
+                                                        <td  class="gridjs-td">
+                                                            Plumbing:
+                                                        </td>
+                                                        <td class="gridjs-td">
+                                                            <select class="form-multi-select form-select" id="ms1" multiple data-coreui-search="true">
+                                                                <option value="0">Angular</option>
+                                                                <option value="1">Bootstrap</option>
+                                                                <option value="2">React.js</option>
+                                                                <option value="3">Vue.js</option>
+                                                                <optgroup label="backend">
+                                                                    <option value="4">Django</option>
+                                                                    <option value="5">Laravel</option>
+                                                                    <option value="6">Node.js</option>
+                                                                </optgroup>
+                                                            </select>
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="date" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="gridjs-tr">
+                                                        <td  class="gridjs-td">
+                                                            Painting:
+                                                        </td>
+                                                        <td class="gridjs-td">
+                                                            <select class="form-multi-select form-select" id="ms1" multiple data-coreui-search="true">
+                                                                <option value="0">Angular</option>
+                                                                <option value="1">Bootstrap</option>
+                                                                <option value="2">React.js</option>
+                                                                <option value="3">Vue.js</option>
+                                                                <optgroup label="backend">
+                                                                    <option value="4">Django</option>
+                                                                    <option value="5">Laravel</option>
+                                                                    <option value="6">Node.js</option>
+                                                                </optgroup>
+                                                            </select>
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="date" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="gridjs-tr">
+                                                        <td  class="gridjs-td">
+                                                            Polishing:
+                                                        </td>
+                                                        <td class="gridjs-td">
+                                                            <select class="form-multi-select form-select" id="ms1" multiple data-coreui-search="true">
+                                                                <option value="0">Angular</option>
+                                                                <option value="1">Bootstrap</option>
+                                                                <option value="2">React.js</option>
+                                                                <option value="3">Vue.js</option>
+                                                                <optgroup label="backend">
+                                                                    <option value="4">Django</option>
+                                                                    <option value="5">Laravel</option>
+                                                                    <option value="6">Node.js</option>
+                                                                </optgroup>
+                                                            </select>
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="date" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="gridjs-tr">
+                                                        <td  class="gridjs-td">
+                                                            Tile flexing:
+                                                        </td>
+                                                        <td class="gridjs-td">
+                                                            <select class="form-multi-select form-select" id="ms1" multiple data-coreui-search="true">
+                                                                <option value="0">Angular</option>
+                                                                <option value="1">Bootstrap</option>
+                                                                <option value="2">React.js</option>
+                                                                <option value="3">Vue.js</option>
+                                                                <optgroup label="backend">
+                                                                    <option value="4">Django</option>
+                                                                    <option value="5">Laravel</option>
+                                                                    <option value="6">Node.js</option>
+                                                                </optgroup>
+                                                            </select>
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="date" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="gridjs-tr">
+                                                        <td  class="gridjs-td">
+                                                            Marvel flexing:
+                                                        </td>
+                                                        <td class="gridjs-td">
+                                                            <select class="form-multi-select form-select" id="ms1" multiple data-coreui-search="true">
+                                                                <option value="0">Angular</option>
+                                                                <option value="1">Bootstrap</option>
+                                                                <option value="2">React.js</option>
+                                                                <option value="3">Vue.js</option>
+                                                                <optgroup label="backend">
+                                                                    <option value="4">Django</option>
+                                                                    <option value="5">Laravel</option>
+                                                                    <option value="6">Node.js</option>
+                                                                </optgroup>
+                                                            </select>
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="date" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="gridjs-tr">
+                                                        <td  class="gridjs-td">
+                                                            Sticker working:
+                                                        </td>
+                                                        <td class="gridjs-td">
+                                                            <select class="form-multi-select form-select" id="ms1" multiple data-coreui-search="true">
+                                                                <option value="0">Angular</option>
+                                                                <option value="1">Bootstrap</option>
+                                                                <option value="2">React.js</option>
+                                                                <option value="3">Vue.js</option>
+                                                                <optgroup label="backend">
+                                                                    <option value="4">Django</option>
+                                                                    <option value="5">Laravel</option>
+                                                                    <option value="6">Node.js</option>
+                                                                </optgroup>
+                                                            </select>
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="date" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="gridjs-tr">
+                                                        <td  class="gridjs-td">
+                                                            Door paneling:
+                                                        </td>
+                                                        <td class="gridjs-td">
+                                                            <select class="form-multi-select form-select" id="ms1" multiple data-coreui-search="true">
+                                                                <option value="0">Angular</option>
+                                                                <option value="1">Bootstrap</option>
+                                                                <option value="2">React.js</option>
+                                                                <option value="3">Vue.js</option>
+                                                                <optgroup label="backend">
+                                                                    <option value="4">Django</option>
+                                                                    <option value="5">Laravel</option>
+                                                                    <option value="6">Node.js</option>
+                                                                </optgroup>
+                                                            </select>
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="date" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="gridjs-tr">
+                                                        <td  class="gridjs-td">
+                                                            Padding work:
+                                                        </td>
+                                                        <td class="gridjs-td">
+                                                            <select class="form-multi-select form-select" id="ms1" multiple data-coreui-search="true">
+                                                                <option value="0">Angular</option>
+                                                                <option value="1">Bootstrap</option>
+                                                                <option value="2">React.js</option>
+                                                                <option value="3">Vue.js</option>
+                                                                <optgroup label="backend">
+                                                                    <option value="4">Django</option>
+                                                                    <option value="5">Laravel</option>
+                                                                    <option value="6">Node.js</option>
+                                                                </optgroup>
+                                                            </select>
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="date" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="gridjs-tr">
+                                                        <td  class="gridjs-td">
+                                                            Civil work:
+                                                        </td>
+                                                        <td class="gridjs-td">
+                                                            <select class="form-multi-select form-select" id="ms1" multiple data-coreui-search="true">
+                                                                <option value="0">Angular</option>
+                                                                <option value="1">Bootstrap</option>
+                                                                <option value="2">React.js</option>
+                                                                <option value="3">Vue.js</option>
+                                                                <optgroup label="backend">
+                                                                    <option value="4">Django</option>
+                                                                    <option value="5">Laravel</option>
+                                                                    <option value="6">Node.js</option>
+                                                                </optgroup>
+                                                            </select>
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="date" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="gridjs-tr">
+                                                        <td  class="gridjs-td">
+                                                            Other work:
+                                                        </td>
+                                                        <td class="gridjs-td">
+                                                            <select class="form-multi-select form-select" id="ms1" multiple data-coreui-search="true">
+                                                                <option value="0">Angular</option>
+                                                                <option value="1">Bootstrap</option>
+                                                                <option value="2">React.js</option>
+                                                                <option value="3">Vue.js</option>
+                                                                <optgroup label="backend">
+                                                                    <option value="4">Django</option>
+                                                                    <option value="5">Laravel</option>
+                                                                    <option value="6">Node.js</option>
+                                                                </optgroup>
+                                                            </select>
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="date" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                        <td  class="gridjs-td">
+                                                            <input type="text" class="form-control" /> 
+                                                        </td>
+                                                    </tr>
+
+                                            
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div><!-- end card-body -->
+                            </div><!-- end card -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title mb-0 flex-grow-1">Purchase Department</h4>
+                                </div><!-- end card header -->
+
+                                <div class="card-body">
+                                    <form action="#">
+                                        <div class="mt-4">
+                                            <div class="row">
+                                                <div class="col-xl-6">
+                                                    <div class="mb-3">
+                                                        <label for="cleave-time" class="form-label">material list</label>
+                                                        <input type="file" class="form-control">
+                                                    </div>
+
+                                                </div><!-- end col -->
+
+                                                <div class="col-xl-6">
+                                                    <div class="mb-3">
+                                                        <label for="cleave-time-format" class="form-label">Sang list</label>
+                                                        <input type="file" class="form-control">
+                                                    </div>
+                                                </div><!-- end col -->
+
+                                            </div><!-- end row -->
+                                        </div>
+                                    </form>
+                                </div><!-- end card-body -->
+                            </div><!-- end card -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+
+                    <div class="mb-3">
+                        <button class="btn btn-primary">Save</button>
                     </div>
                     
                 </div>
@@ -1770,6 +2362,7 @@
      <script src="assets/libs/feather-icons/feather.min.js"></script>
      <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
      <script src="assets/js/plugins.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.3/dist/js/coreui.bundle.min.js"></script>
 
      <!-- gridjs js -->
     <script src="assets/libs/gridjs/gridjs.umd.js"></script>

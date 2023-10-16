@@ -821,22 +821,25 @@
                                             <div class="mb-3">
                                                 <button type="button" class="btn btn-danger btn-animation waves-effect waves-light" data-text="Delete"><span>Delete</span></button>
                                             </div>
-                                            <div class="d-md-flex justify-content-between mb-3">
-                                                <div class="gridjs-search mb-3">
+                                            <div class="d-lg-flex justify-content-between mb-3">
+                                                <div class="gridjs-search mb-2">
                                                     <input type="search" placeholder="Type a keyword..." aria-label="Type a keyword..." class="gridjs-input gridjs-search-input">
                                                 </div>
                                                 <div>
-                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light" data-text="Download"><span>Download</span></button>                                                                                                   
-                                                    <div class="btn-group">
-                                                        <button type="button" class="btn btn-primary" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Show 10 row</button>
-                                                        <div class="dropdown-menu">
-                                                            <a class="dropdown-item text-center" href="#">10</a>
-                                                            <a class="dropdown-item text-center" href="#">20</a>
-                                                            <a class="dropdown-item text-center" href="#">30</a>
-                                                            <a class="dropdown-item text-center" href="#">40</a>
-                                                            <a class="dropdown-item text-center" href="#">50</a>
-                                                        </div>
-                                                    </div>
+                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2" data-text="Download"><span>Download</span></button>                                                                                                   
+                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light" id="dropdownMenuOffset"
+                                                        data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+                                                        Show 10 row
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset" style="min-width: 50px; text-align: center;">
+                                                        <li><a class="dropdown-item" href="#">10</a></li>
+                                                        <div class="dropdown-divider"></div>
+                                                        <li><a class="dropdown-item" href="#">20</a></li>
+                                                        <div class="dropdown-divider"></div>
+                                                        <li><a class="dropdown-item" href="#">50</a></li>
+                                                        <div class="dropdown-divider"></div>
+                                                        <li><a class="dropdown-item" href="#">Show All</a></li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                             <div class="gridjs-wrapper" style="height: auto;">
@@ -919,9 +922,13 @@
                                                             </td>
                                                     
                                                             <td data-column-id="company" class="gridjs-td">
-                                                                <button type="button" class="bg-transparent border-0" data-bs-toggle="modal"
-                                                                        data-bs-target="#zoomInModal">
-                                                                    <img src="./assets/icons/active.png" alt="edit">Active
+                                                                <button type="button" class="btn btn-soft-primary waves-effect waves-light custom-toggle" data-bs-toggle="button">
+                                                                    <span class="icon-on">
+                                                                        <img src="./assets/icons/active.png" alt="edit"> Active
+                                                                    </span>
+                                                                    <span class="icon-off">
+                                                                        <img src="./assets/icons/deactive.png" alt="edit"> Inactive
+                                                                    </span>
                                                                 </button>
                                                             </td>
                                                             <td data-column-id="company" class="gridjs-td">
