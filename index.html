@@ -19,6 +19,10 @@
     <!-- gridjs css -->
     <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css">
 
+
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.green.css">
+
     <!--Swiper slider css-->
     <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
 
@@ -352,7 +356,7 @@
                         <a class="dropdown-item" href="pages-profile.html"><i class="mdi mdi-wallet text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Balance : <b>$5971.67</b></span></a>
                         <a class="dropdown-item" href="pages-profile-settings.html"><span class="badge bg-success-subtle text-success mt-1 float-end">New</span><i class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Settings</span></a>
                         <a class="dropdown-item" href="auth-lockscreen-basic.html"><i class="mdi mdi-lock text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Lock screen</span></a>
-                        <a class="dropdown-item" href="auth-logout-basic.html"><i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span class="align-middle" data-key="t-logout">Logout</span></a>
+                        <a class="dropdown-item" href="sign-in.html"><i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span class="align-middle" data-key="t-logout">Logout</span></a>
                     </div>
                 </div>
             </div>
@@ -692,6 +696,9 @@
                                                         <li class="nav-item">
                                                             <a href="employee-wise-monthly-attendane.html" class="nav-link"> Employee wise monthly Attendance Summary </a>
                                                         </li>
+                                                        <li class="nav-item">
+                                                            <a href="manage-cbds-holiday.html" class="nav-link"> Manage CBDS Holiday </a>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -844,7 +851,7 @@
                                                             </a>
                                                         </li>
                                                         <li class="nav-item">
-                                                            <a href="praposal-list.html" class="nav-link" > 
+                                                            <a href="proposal-list.html" class="nav-link" > 
                                                                 Proposal List Bangalore / Kolkata
                                                             </a>
                                                         </li>
@@ -956,224 +963,87 @@
                                 <!--end row-->
 
                                 <div class="row">
-                                    <div class="col-xl-3 col-md-6">
-                                        <!-- card -->
-                                        <div class="card card-animate">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                                            Potential Clients</p>
-                                                    </div>
-                                                    <div class="flex-shrink-0">
-                                                        <h5 class="text-success fs-14 mb-0">
-                                                            <i class="ri-arrow-right-up-line fs-13 align-middle"></i>
-                                                            +16.24 %
-                                                        </h5>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex align-items-end justify-content-between mt-4">
-                                                    <div>
-                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="86">0</span>
-                                                        </h4>
-                                                        <a href="#" class="text-decoration-underline text-muted">See details</a>
-                                                    </div>
-                                                    <div class="avatar-sm flex-shrink-0">
-                                                        <span class="avatar-title bg-success-subtle rounded fs-3">
-                                                            <i class="bx bx-dollar-circle text-success"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
+                                    <div class="col-xxl-12 order-xxl-0 order-first">
+                                        <div class="d-flex flex-column h-100">
+                                            <div class="row h-100">
+                                                <div class="col-lg-3 col-md-6">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="avatar-sm flex-shrink-0">
+                                                                    <span class="avatar-title bg-light text-danger rounded-circle fs-3">
+                                                                        <i class="ri-error-warning-fill align-middle"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="flex-grow-1 ms-3">
+                                                                    <p class="text-uppercase fw-medium fs-12 text-danger mb-1">Red Error</p>
+                                                                    <h4 class=" text-danger mb-0"><span class="counter-value" data-target="5">0</span></h4>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div><!-- end card body -->
+                                                    </div><!-- end card -->
+                                                </div><!-- end col -->
+                                                <div class="col-lg-3 col-md-6">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="avatar-sm flex-shrink-0">
+                                                                    <span class="avatar-title bg-light text-info rounded-circle fs-3">
+                                                                        <i class="ri-error-warning-fill align-middle"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="flex-grow-1 ms-3">
+                                                                    <p class="text-uppercase fw-medium fs-12 text-info mb-1">Normal Error</p>
+                                                                    <h4 class="text-info mb-0"><span class="counter-value" data-target="5">0</span></h4>
+                                                                </div>
+                                                               
+                                                            </div>
+                                                        </div><!-- end card body -->
+                                                    </div><!-- end card -->
+                                                </div><!-- end col -->
+                                                <div class="col-lg-3 col-md-6">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="avatar-sm flex-shrink-0">
+                                                                    <span class="avatar-title bg-light text-primary rounded-circle fs-3">
+                                                                        <i class="ri-cake-2-fill align-middle"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="flex-grow-1 ms-3">
+                                                                    <p class="text-uppercase fw-medium fs-12 text-muted mb-1">Today's Birthday</p>
+                                                                    <span class="badge bg-danger-subtle text-danger me-2">Amir</span >
+                                                                    <span class="badge bg-danger-subtle text-danger">Sohail</span>
+                                                                </div>
+                            
+                                                            </div>
+                                                        </div><!-- end card body -->
+                                                    </div><!-- end card -->
+                                                </div><!-- end col -->
+                                                <div class="col-lg-3 col-md-6">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="avatar-sm flex-shrink-0">
+                                                                    <span class="avatar-title bg-light text-primary rounded-circle fs-3">
+                                                                        <i class="ri-cake-2-fill align-middle"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="flex-grow-1 ms-3">
+                                                                    <p class="text-uppercase fw-medium fs-12 text-muted mb-1">Today's Anniversary</p>
+                                                                    <span class="badge bg-danger-subtle text-danger me-2">Amir gfhf fghgfhfghgfh</span >
+                                                                    <span class="badge bg-danger-subtle text-danger">Sohail</span>
+                                                                </div>
+                                                               
+                                                            </div>
+                                                        </div><!-- end card body -->
+                                                    </div><!-- end card -->
+                                                </div><!-- end col -->
+                                            </div><!-- end row -->
+                                        </div>
                                     </div><!-- end col -->
-
-                                    <div class="col-xl-3 col-md-6">
-                                        <!-- card -->
-                                        <div class="card card-animate">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                                            Talking To Clients</p>
-                                                    </div>
-                                                    <div class="flex-shrink-0">
-                                                        <h5 class="text-danger fs-14 mb-0">
-                                                            <i class="ri-arrow-right-down-line fs-13 align-middle"></i>
-                                                            -3.57 %
-                                                        </h5>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex align-items-end justify-content-between mt-4">
-                                                    <div>
-                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="63">0</span></h4>
-                                                        <a href="#" class="text-decoration-underline text-muted">View all</a>
-                                                    </div>
-                                                    <div class="avatar-sm flex-shrink-0">
-                                                        <span class="avatar-title bg-info-subtle rounded fs-3">
-                                                            <i class="bx bx-shopping-bag text-info"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end col -->
-
-                                    <div class="col-xl-3 col-md-6">
-                                        <!-- card -->
-                                        <div class="card card-animate">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <p class="text-uppercase fw-medium text-muted text-truncate mb-0">NA Clients</p>
-                                                    </div>
-                                                    <div class="flex-shrink-0">
-                                                        <h5 class="text-success fs-14 mb-0">
-                                                            <i class="ri-arrow-right-up-line fs-13 align-middle"></i>
-                                                            +29.08 %
-                                                        </h5>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex align-items-end justify-content-between mt-4">
-                                                    <div>
-                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="3861">0</span>
-                                                        </h4>
-                                                        <a href="#" class="text-decoration-underline text-muted">See
-                                                            details</a>
-                                                    </div>
-                                                    <div class="avatar-sm flex-shrink-0">
-                                                        <span class="avatar-title bg-warning-subtle rounded fs-3">
-                                                            <i class="bx bx-user-circle text-warning"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end col -->
-
-                                    <div class="col-xl-3 col-md-6">
-                                        <!-- card -->
-                                        <div class="card card-animate">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <p class="text-uppercase fw-medium text-muted text-truncate mb-0">3D Projects</p>
-                                                    </div>
-                                                    <div class="flex-shrink-0">
-                                                        <h5 class="text-muted fs-14 mb-0">
-                                                            +0.00 %
-                                                        </h5>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex align-items-end justify-content-between mt-4">
-                                                    <div>
-                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="305">0</span>
-                                                        </h4>
-                                                        <a href="#" class="text-decoration-underline text-muted">See details</a>
-                                                    </div>
-                                                    <div class="avatar-sm flex-shrink-0">
-                                                        <span class="avatar-title bg-primary-subtle rounded fs-3">
-                                                            <i class="bx bx-wallet text-primary"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end col -->
-
-                                    <div class="col-xl-3 col-md-6">
-                                        <!-- card -->
-                                        <div class="card card-animate">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                                            Projects</p>
-                                                    </div>
-                                                    <div class="flex-shrink-0">
-                                                        <h5 class="text-muted fs-14 mb-0">
-                                                            +0.00 %
-                                                        </h5>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex align-items-end justify-content-between mt-4">
-                                                    <div>
-                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="237">0</span>
-                                                        </h4>
-                                                        <a href="#" class="text-decoration-underline text-muted">See details</a>
-                                                    </div>
-                                                    <div class="avatar-sm flex-shrink-0">
-                                                        <span class="avatar-title bg-primary-subtle rounded fs-3">
-                                                            <i class="bx bx-wallet text-primary"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end col -->
-
-                                    <div class="col-xl-3 col-md-6">
-                                        <!-- card -->
-                                        <div class="card card-animate">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                                            Normal Error</p>
-                                                    </div>
-                                                    <div class="flex-shrink-0">
-                                                        <h5 class="text-muted fs-14 mb-0">
-                                                            +0.00 %
-                                                        </h5>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex align-items-end justify-content-between mt-4">
-                                                    <div>
-                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="0">0</span>
-                                                        </h4>
-                                                        <a href="#" class="text-decoration-underline text-muted">See details</a>
-                                                    </div>
-                                                    <div class="avatar-sm flex-shrink-0">
-                                                        <span class="avatar-title bg-primary-subtle rounded fs-3">
-                                                            <i class="bx bx-wallet text-primary"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end col -->
-
-                                    <div class="col-xl-3 col-md-6">
-                                        <!-- card -->
-                                        <div class="card card-animate">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-grow-1 overflow-hidden">
-                                                        <p class="text-uppercase fw-medium text-muted text-truncate mb-0">
-                                                            Red Error</p>
-                                                    </div>
-                                                    <div class="flex-shrink-0">
-                                                        <h5 class="text-muted fs-14 mb-0">
-                                                            +0.00 %
-                                                        </h5>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex align-items-end justify-content-between mt-4">
-                                                    <div>
-                                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="0">0</span>
-                                                        </h4>
-                                                        <a href="#" class="text-decoration-underline text-muted">See More</a>
-                                                    </div>
-                                                    <div class="avatar-sm flex-shrink-0">
-                                                        <span class="avatar-title bg-primary-subtle rounded fs-3">
-                                                            <i class="bx bx-wallet text-primary"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end col -->
-                                </div> <!-- end row-->
+                                </div>
 
                                 <div class="row">
                                     <div class="col-xl-4">
@@ -1210,32 +1080,28 @@
                                                 <div class="table-responsive table-card">
                                                     <table class="table table-borderless mb-0">
                                                         <tbody>
+                                                           <tr>
+                                                                <th class="fw-medium" scope="row">Key skills</th>
+                                                           </tr>
                                                             <tr>
-                                                                <td class="fw-medium" scope="row">Designation</td>
-                                                                <td>Lead Designer / Developer</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="fw-medium" scope="row">Email ID</td>
-                                                                <td>tonyanoble@velzon.com</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="fw-medium" scope="row">Phone No</td>
-                                                                <td>414-453-5725</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="fw-medium" scope="row">Lead Score</td>
-                                                                <td>154</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="fw-medium" scope="row">Tags</td>
                                                                 <td>
                                                                     <span class="badge bg-primary-subtle text-primary">Lead</span>
                                                                     <span class="badge bg-primary-subtle text-primary">Partner</span>
+                                                                    <span class="badge bg-primary-subtle text-primary">Partner</span>
+                                                                    <span class="badge bg-primary-subtle text-primary">Partner</span>
+                                                                    <span class="badge bg-primary-subtle text-primary">Partner</span>
+                                                                    <span class="badge bg-primary-subtle text-primary">Partner</span>
+                                                                    <span class="badge bg-primary-subtle text-primary">Partner</span>
+                                                                    <span class="badge bg-primary-subtle text-primary">Partner</span>
+                                                                    <span class="badge bg-primary-subtle text-primary">Partner</span>
+                                                                    <span class="badge bg-primary-subtle text-primary">Partner</span>
+                                                                    <span class="badge bg-primary-subtle text-primary">Partner</span>
+                                                                    <span class="badge bg-primary-subtle text-primary">Partner</span>
+                                                                    <span class="badge bg-primary-subtle text-primary">Partner</span>
+                                                                    <span class="badge bg-primary-subtle text-primary">Partner</span>
+                                                                    <span class="badge bg-primary-subtle text-primary">Partner</span>
+                                                                    <span class="badge bg-primary-subtle text-primary">Partner</span>
                                                                 </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="fw-medium" scope="row">Last Contacted</td>
-                                                                <td>15 Dec, 2021 <small class="text-muted">08:58AM</small></td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -1244,11 +1110,11 @@
                                         </div>
                                     </div><!-- end col -->
 
-                                    <div class="col-xl-8">
+                                    <div class="col-xl-4">
                                         <!-- card -->
                                         <div class="card card-height-100">
                                             <div class="card-header align-items-center d-flex">
-                                                <h4 class="card-title mb-0 flex-grow-1">Upcoming Activities</h4>
+                                                <h4 class="card-title mb-0 flex-grow-1">Recent Notification</h4>
                                                 <div class="flex-shrink-0">
                                                     <div class="dropdown card-header-dropdown">
                                                         <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1266,10 +1132,11 @@
                                                     <li class="list-group-item ps-0">
                                                         <div class="row align-items-center g-3">
                                                             <div class="col-auto">
-                                                                <div class="avatar-sm p-1 py-2 h-auto bg-light rounded-3">
+                                                                <div class="avatar-sm p-1 py-2 h-auto bg-success-subtle rounded-3">
                                                                     <div class="text-center">
-                                                                        <h5 class="mb-0">30</h5>
-                                                                        <div class="text-muted">Wed</div>
+                                                                        <span class="avatar-title bg-success-subtle rounded fs-3">
+                                                                            <i class="bx bx-bell text-success"></i>
+                                                                        </span> 
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1284,28 +1151,11 @@
                                                     <li class="list-group-item ps-0">
                                                         <div class="row align-items-center g-3">
                                                             <div class="col-auto">
-                                                                <div class="avatar-sm p-1 py-2 h-auto bg-light rounded-3">
+                                                                <div class="avatar-sm p-1 py-2 h-auto bg-success-subtle rounded-3">
                                                                     <div class="text-center">
-                                                                        <h5 class="mb-0">30</h5>
-                                                                        <div class="text-muted">Wed</div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col">
-                                                                <h5 class="text-muted mt-0 mb-1 fs-12 fw-semibold">12:00am - 03:30pm</h5>
-                                                                <a href="#" class="text-reset fs-14 mb-0">Meeting for campaign with sales team</a>
-                                                            </div>
-                                                           
-                                                        </div>
-                                                        <!-- end row -->
-                                                    </li><!-- end -->
-                                                    <li class="list-group-item ps-0">
-                                                        <div class="row align-items-center g-3">
-                                                            <div class="col-auto">
-                                                                <div class="avatar-sm p-1 py-2 h-auto bg-light rounded-3">
-                                                                    <div class="text-center">
-                                                                        <h5 class="mb-0">25</h5>
-                                                                        <div class="text-muted">Tue</div>
+                                                                        <span class="avatar-title bg-success-subtle rounded fs-3">
+                                                                            <i class="bx bx-bell text-success"></i>
+                                                                        </span> 
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1320,10 +1170,11 @@
                                                     <li class="list-group-item ps-0">
                                                         <div class="row align-items-center g-3">
                                                             <div class="col-auto">
-                                                                <div class="avatar-sm p-1 py-2 h-auto bg-light rounded-3">
+                                                                <div class="avatar-sm p-1 py-2 h-auto bg-success-subtle rounded-3">
                                                                     <div class="text-center">
-                                                                        <h5 class="mb-0">20</h5>
-                                                                        <div class="text-muted">Wed</div>
+                                                                        <span class="avatar-title bg-success-subtle rounded fs-3">
+                                                                            <i class="bx bx-bell text-success"></i>
+                                                                        </span> 
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1338,10 +1189,11 @@
                                                     <li class="list-group-item ps-0">
                                                         <div class="row align-items-center g-3">
                                                             <div class="col-auto">
-                                                                <div class="avatar-sm p-1 py-2 h-auto bg-light rounded-3">
+                                                                <div class="avatar-sm p-1 py-2 h-auto bg-success-subtle rounded-3">
                                                                     <div class="text-center">
-                                                                        <h5 class="mb-0">17</h5>
-                                                                        <div class="text-muted">Wed</div>
+                                                                        <span class="avatar-title bg-success-subtle rounded fs-3">
+                                                                            <i class="bx bx-bell text-success"></i>
+                                                                        </span> 
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1356,10 +1208,11 @@
                                                     <li class="list-group-item ps-0">
                                                         <div class="row align-items-center g-3">
                                                             <div class="col-auto">
-                                                                <div class="avatar-sm p-1 py-2 h-auto bg-light rounded-3">
+                                                                <div class="avatar-sm p-1 py-2 h-auto bg-success-subtle rounded-3">
                                                                     <div class="text-center">
-                                                                        <h5 class="mb-0">12</h5>
-                                                                        <div class="text-muted">Tue</div>
+                                                                        <span class="avatar-title bg-success-subtle rounded fs-3">
+                                                                            <i class="bx bx-bell text-success"></i>
+                                                                        </span> 
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1399,13 +1252,336 @@
                                                 </div>
                                             </div><!-- end card body -->
                                         </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-xl-4">
+                                        <!-- card -->
+                                        <div class="card card-height-100">
+                                            <div class="card-header align-items-center d-flex">
+                                                <h4 class="card-title mb-0 flex-grow-1">Team Cee Bee</h4>
+                                                <div class="flex-shrink-0">
+                                                    <div class="dropdown card-header-dropdown">
+                                                        <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <span class="text-muted fs-18"><i class="mdi mdi-dots-vertical"></i></span>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#">Edit</a>
+                                                            <a class="dropdown-item" href="#">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!-- end card header -->
+                                            <div class="card-body pt-2">
+                                                <div id="table-gridjs">
+                                                    <div role="complementary" class="gridjs gridjs-container" style="width: 100%;">
+                                                        
+                                                        <div class="d-flex justify-content-between mb-3">
+                                                            <div class="gridjs-search">
+                                                                <input type="search" placeholder="Type a keyword..." aria-label="Type a keyword..." class="gridjs-input gridjs-search-input">
+                                                            </div>
+                                                            <div>
+                                                                <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2" data-text="Download"><span>Download</span></button>                                                                                                   
+                                                            </div>
+                                                        </div>
+                                                        <div class="gridjs-wrapper" style="height: auto;">
+                                                            <table role="grid" class="gridjs-table" style="height: auto;">
+                                                                <thead class="gridjs-thead">
+                                                                    <tr class="gridjs-tr">
+                                                                       
+                                                                        <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 100px;">
+                                                                            <div class="gridjs-th-content">Employee name</div>
+                                                                            <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
+                                                                        </th>
+                                                                        <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 100px;">
+                                                                            <div class="gridjs-th-content">Profile</div>
+                                                                            <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
+                                                                        </th>
+                                                                        <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 70px;">
+                                                                            <div class="gridjs-th-content">Status</div>
+                                                                            <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
+                                                                        </th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody class="gridjs-tbody">
+                                                                    <tr class="gridjs-tr">
+                                                                        
+                                                                        <td  class="gridjs-td">
+                                                                            Vidushi Bajpai
+                                                                        </td>
+                                                                        <td class="gridjs-td">
+                                                                            <a href="#" class="btn btn-ghost-secondary waves-effect">
+                                                                                View Profile
+                                                                            </a>
+                                                                        </td>
+                                                                        <td  class="gridjs-td">
+                                                                            Present
+                                                                        </td>
+                                                                       
+                                                                    </tr>
+                                                                    <tr class="gridjs-tr">
+                                                                        
+                                                                        <td  class="gridjs-td">
+                                                                            Vidushi Bajpai
+                                                                        </td>
+                                                                        <td class="gridjs-td">
+                                                                            <a href="#" class="btn btn-ghost-secondary waves-effect">
+                                                                                View Profile
+                                                                            </a>
+                                                                        </td>
+                                                                        <td  class="gridjs-td">
+                                                                            Absent
+                                                                        </td>
+                                                                       
+                                                                    </tr>
+                                                                    <tr class="gridjs-tr">
+                                                                        
+                                                                        <td  class="gridjs-td">
+                                                                            Vidushi Bajpai
+                                                                        </td>
+                                                                        <td class="gridjs-td">
+                                                                            <a href="#" class="btn btn-ghost-secondary waves-effect">
+                                                                                View Profile
+                                                                            </a>
+                                                                        </td>
+                                                                        <td  class="gridjs-td">
+                                                                            Present
+                                                                        </td>
+                                                                       
+                                                                    </tr>
+                                                                    <tr class="gridjs-tr">
+                                                                        
+                                                                        <td  class="gridjs-td">
+                                                                            Vidushi Bajpai
+                                                                        </td>
+                                                                        <td class="gridjs-td">
+                                                                            <a href="#" class="btn btn-ghost-secondary waves-effect">
+                                                                                View Profile
+                                                                            </a>
+                                                                        </td>
+                                                                        <td  class="gridjs-td">
+                                                                            Present
+                                                                        </td>
+                                                                       
+                                                                    </tr>
+            
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="gridjs-footer">
+                                                            <div class="gridjs-pagination">
+                                                                <div role="status" aria-live="polite" class="gridjs-summary" title="Page 1 of 2">
+                                                                    Showing <b>1</b> to <b>5</b> of <b>10</b> results
+                                                                </div>
+                                                                <div class="gridjs-pages">
+                                                                    <button tabindex="0" role="button" disabled="" title="Previous" aria-label="Previous" class="">
+                                                                        Previous
+                                                                    </button>
+                                                                    <button tabindex="0" role="button" class="gridjs-currentPage" title="Page 1" aria-label="Page 1">
+                                                                        1
+                                                                    </button>
+                                                                    <button tabindex="0" role="button" class="" title="Page 2" aria-label="Page 2">
+                                                                        2
+                                                                    </button>
+                                                                    <button tabindex="0" role="button" title="Next" aria-label="Next" class="">
+                                                                        Next
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="gridjs-temp" class="gridjs-temp"></div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div><!-- end card body -->
+                                        </div>
+                                    </div>
                                     <!-- end col -->
                                 </div>
 
-                               
-
-                                
-
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="card crm-widget">
+                                            <div class="card-body p-0">
+                                                <div class="row row-cols-xxl-5 row-cols-md-3 row-cols-1 g-0">
+                                                    <div class="col">
+                                                        <div class="py-4 px-3">
+                                                            <h5 class="text-muted text-uppercase fs-13">POTENTIAL CLIENTS <i class="ri-arrow-up-circle-line text-success fs-18 float-end align-middle"></i></h5>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="flex-shrink-0">
+                                                                    <i class="ri-pulse-line display-6 text-muted"></i>
+                                                                </div>
+                                                                <div class="flex-grow-1 ms-3">
+                                                                    <h2 class="mb-0"><span class="counter-value" data-target="197">0</span></h2>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- end col -->
+                                                    <div class="col">
+                                                        <div class="mt-3 mt-md-0 py-4 px-3">
+                                                            <h5 class="text-muted text-uppercase fs-13">TALKING TO CLIENTS <i class="ri-arrow-up-circle-line text-success fs-18 float-end align-middle"></i></h5>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="flex-shrink-0">
+                                                                    <i class="ri-pulse-line display-6 text-muted"></i>
+                                                                </div>
+                                                                <div class="flex-grow-1 ms-3">
+                                                                    <h2 class="mb-0"><span class="counter-value" data-target="489.4">0</span></h2>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- end col -->
+                                                    <div class="col">
+                                                        <div class="mt-3 mt-md-0 py-4 px-3">
+                                                            <h5 class="text-muted text-uppercase fs-13">NA CLIENTS <i class="ri-arrow-down-circle-line text-danger fs-18 float-end align-middle"></i></h5>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="flex-shrink-0">
+                                                                    <i class="ri-pulse-line display-6 text-muted"></i>
+                                                                </div>
+                                                                <div class="flex-grow-1 ms-3">
+                                                                    <h2 class="mb-0"><span class="counter-value" data-target="32.89">0</span></h2>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- end col -->
+                                                    <div class="col">
+                                                        <div class="mt-3 mt-lg-0 py-4 px-3">
+                                                            <h5 class="text-muted text-uppercase fs-13">3D PROJECTS <i class="ri-arrow-up-circle-line text-success fs-18 float-end align-middle"></i></h5>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="flex-shrink-0">
+                                                                    <i class="ri-pulse-line display-6 text-muted"></i>
+                                                                </div>
+                                                                <div class="flex-grow-1 ms-3">
+                                                                    <h2 class="mb-0"><span class="counter-value" data-target="1596.5">0</span></h2>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- end col -->
+                                                    <div class="col">
+                                                        <div class="mt-3 mt-lg-0 py-4 px-3">
+                                                            <h5 class="text-muted text-uppercase fs-13">PROJECTS <i class="ri-arrow-down-circle-line text-danger fs-18 float-end align-middle"></i></h5>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="flex-shrink-0">
+                                                                    <i class="ri-pulse-line display-6 text-muted"></i>
+                                                                </div>
+                                                                <div class="flex-grow-1 ms-3">
+                                                                    <h2 class="mb-0"><span class="counter-value" data-target="2659">0</span></h2>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- end col -->
+                                                </div><!-- end row -->
+                                            </div><!-- end card body -->
+                                        </div><!-- end card -->
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                              
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4 class="card-title mb-0 flex-grow-1">Cee Bee Moments</h4>
+                                            </div><!-- end card header -->
+            
+                                            <div class="card-body">
+                                                <div class="pt-3 pb-3">
+                                                    <div class="owl-carousel owl-theme">
+                                                        <div class="item">
+                                                            <img class="img-fluid" src="./assets/images/about.jpg" alt="">
+                                                            <div class="pt-2">
+                                                                <h5>This is demo name</h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <img class="img-fluid" src="./assets/images/about.jpg" alt="">
+                                                            <div class="pt-2">
+                                                                <h5>This is demo name</h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <img class="img-fluid" src="./assets/images/about.jpg" alt="">
+                                                            <div class="pt-2">
+                                                                <h5>This is demo name</h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <img class="img-fluid" src="./assets/images/about.jpg" alt="">
+                                                            <div class="pt-2">
+                                                                <h5>This is demo name</h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <img class="img-fluid" src="./assets/images/about.jpg" alt="">
+                                                            <div class="pt-2">
+                                                                <h5>This is demo name</h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <img class="img-fluid" src="./assets/images/about.jpg" alt="">
+                                                            <div class="pt-2">
+                                                                <h5>This is demo name</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                        <div class="col-lg-4">
+                                            <div class="card card-height-100">
+                                                <div class="card-header align-items-center d-flex">
+                                                    <h4 class="card-title mb-0 flex-grow-1">Clients By Location</h4>
+                                                </div><!-- end card header -->
+                                                <div class="card-body">
+                                                    <div id="user_device_pie_charts" data-colors='["--vz-primary", "--vz-warning", "--vz-info"]' class="apex-charts" dir="ltr"></div>
+                
+                                                    <div class="table-responsive mt-3">
+                                                        <table class="table table-borderless table-sm table-centered align-middle table-nowrap mb-0">
+                                                            <tbody class="border-0">
+                                                                <tr>
+                                                                    <td>
+                                                                        <h4 class="text-truncate fs-14 fs-medium mb-0"><i class="ri-stop-fill align-middle fs-18 text-primary me-2"></i>Bangalore Clients</h4>
+                                                                    </td>
+                                                                    <td>
+                                                                        <p class="text-muted mb-0"><i data-feather="users" class="me-2 icon-sm"></i>78.56k</p>
+                                                                    </td>
+                                                                    <td class="text-end">
+                                                                        <p class="text-success fw-medium fs-12 mb-0"><i class="ri-arrow-up-s-fill fs-5 align-middle"></i>2.08%
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <h4 class="text-truncate fs-14 fs-medium mb-0"><i class="ri-stop-fill align-middle fs-18 text-warning me-2"></i>Kolkata Clients</h4>
+                                                                    </td>
+                                                                    <td>
+                                                                        <p class="text-muted mb-0"><i data-feather="users" class="me-2 icon-sm"></i>105.02k</p>
+                                                                    </td>
+                                                                    <td class="text-end">
+                                                                        <p class="text-danger fw-medium fs-12 mb-0"><i class="ri-arrow-down-s-fill fs-5 align-middle"></i>10.52%
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <h4 class="text-truncate fs-14 fs-medium mb-0"><i class="ri-stop-fill align-middle fs-18 text-info me-2"></i>Others Clients</h4>
+                                                                    </td>
+                                                                    <td>
+                                                                        <p class="text-muted mb-0"><i data-feather="users" class="me-2 icon-sm"></i>42.89k</p>
+                                                                    </td>
+                                                                    <td class="text-end">
+                                                                        <p class="text-danger fw-medium fs-12 mb-0"><i class="ri-arrow-down-s-fill fs-5 align-middle"></i>7.36%
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div><!-- end card body -->
+                                            </div><!-- end card -->
+                                        </div><!-- end col -->
+            
+                                </div><!-- end row -->
                             </div> <!-- end .h-100-->
 
                         </div> <!-- end col -->
@@ -2145,6 +2321,7 @@
     </div>
 
      <!-- JAVASCRIPT -->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
      <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
      <script src="assets/libs/simplebar/simplebar.min.js"></script>
      <script src="assets/libs/node-waves/waves.min.js"></script>
@@ -2172,8 +2349,31 @@
  
      <!-- Dashboard init -->
      <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>
- 
+     <script src="assets/js/owl.carousel.min.js"></script>
+
+     <!-- Dashboard init -->
+    <script src="assets/js/pages/dashboard-analytics.init.js"></script>
+
      <!-- App js -->
      <script src="assets/js/app.js"></script>
+
+     <script>
+            $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    })
+     </script>
 </body>
 </html>
