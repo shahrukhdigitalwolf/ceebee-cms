@@ -9,23 +9,17 @@
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.3/dist/css/coreui.min.css">
+    <!-- Layout config Js -->
+    <script src="assets/js/layout.js"></script>
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
      <!-- gridjs css -->
      <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css">
 
-     <!-- core ui -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.3/dist/css/coreui.min.css">
-
-    <!-- jsvectormap css -->
-    <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
-
-    <!--Swiper slider css-->
-    <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
-
-    <!-- Layout config Js -->
-    <script src="assets/js/layout.js"></script>
-    <!-- Bootstrap Css -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
@@ -34,20 +28,9 @@
     <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
 
     <style>
-        #project3dBody{
-            display: none;
-        }
-        #project2dBody{
-            display: none;
-        }
-        #otherBudget{
-            display: none;
-        }
-        #meetingDate{
-            display: none;
-        }
-        #momFile{
-            display: none;
+        .gridjs-container{
+            overflow: visible;
+            z-index: 2;
         }
     </style>
 
@@ -815,852 +798,201 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">View Clients Detals</h4>
+                                <h4 class="mb-sm-0">View Project List</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
-                                        <li class="breadcrumb-item active">Clients details</li>
+                                        <li class="breadcrumb-item active">View project list</li>
                                     </ol>
                                 </div>
 
                             </div>
                         </div>
                     </div>
-                    <form action="#">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title mb-0">Personal information</h4>
-                                </div><!-- end card header -->
-
-                                <div class="card-body">
-                                   
-                                        <div>
-                                            <!-- <h5 class="fs-14 mb-3 text-muted">Date Formatting</h5> -->
-                                            <div class="row">
-                                                <div class="col-xl-6">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-date" class="form-label">Client Category</label>
-                                                        <select class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
-                                                        </select>
-                                                    </div>
-
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-6">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-date" class="form-label">Lead Status</label>
-                                                        <select class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="2D">2D</option>
-                                                            <option value="3D">3D</option>
-                                                            <option value="3D Hold">3D Hold</option>
-                                                            <option value="3D Design and Consultancy">3D Design and Consultancy</option>
-                                                            <option value="3D Potential">3D Potential</option>
-                                                            <option value="Converted">Converted</option>
-                                                            <option value="Follow Up">Follow Up</option>
-                                                            <option value="NA">NA</option>
-                                                            <option value="Outsource">Outsource</option>
-                                                            <option value="Potential">Potential</option>
-                                                            <option value="Project Potential">Project Potential</option>
-                                                            <option value="Project Hold">Project Hold</option>
-                                                            <option value="Talking To">Talking To</option>
-                                                            <option value="Talking To Hold">Talking To Hold</option>
-                                                            <option value="Token Amount Paid">Token Amount Paid</option>
-                                                        </select>
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-12 d-xl-flex justify-content-between">
-                                                    <div class="mb-3">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" id="formCheck2" checked="">
-                                                            <label class="form-check-label" for="formCheck2">
-                                                                Send Status Related Mails
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" id="formCheck2" checked="">
-                                                            <label class="form-check-label" for="formCheck2">
-                                                                Send Soft Closure Email
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" id="formCheck2" checked="">
-                                                            <label class="form-check-label" for="formCheck2">
-                                                                Send Commercial Email
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" id="formCheck2" checked="">
-                                                            <label class="form-check-label" for="formCheck2">
-                                                                Send Purchase Email
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" id="formCheck2" checked="">
-                                                            <label class="form-check-label" for="formCheck2">
-                                                                Send Residential Email
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col -->
-                                            </div><!-- end row -->
-                                        </div>
-
-                                        <div class="border mt-3 border-dashed"></div>
-
-                                        <div class="mt-4">
-                                            <div class="row">
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-date" class="form-label">Token Amount</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div><!-- end col -->
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Client Name</label>
-                                                        <input type="text" class="form-control" placeholder="Enter client name" id="cleave-time">
-                                                    </div>
-
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Residential Address</label>
-                                                        <input type="text" class="form-control" placeholder="Enter residential address" id="cleave-time-format">
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Country</label>
-                                                        <input type="text" class="form-control" placeholder="Country of residence" id="cleave-time-format">
-                                                    </div>
-                                                </div><!-- end col -->
-                                            
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Owner</label>
-                                                        <select class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">Chitralekha Biswas</option>
-                                                            <option value="2">Ankit</option>
-                                                            <option value="3">Sneha</option>
-                                                        </select>
-                                                    </div>
-
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Add Interior Team Member</label>
-                                                        <select class="form-multi-select" id="ms1" multiple data-coreui-search="true">
-                                                            <option value="0">Angular</option>
-                                                            <option value="1">Bootstrap</option>
-                                                            <option value="2">React.js</option>
-                                                            <option value="3">Vue.js</option>
-                                                            <optgroup label="backend">
-                                                                <option value="4">Django</option>
-                                                                <option value="5">Laravel</option>
-                                                                <option value="6">Node.js</option>
-                                                            </optgroup>
-                                                        </select>
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Add Home Consultant</label>
-                                                        <select class="form-multi-select" id="ms1" multiple data-coreui-search="true">
-                                                            <option value="0">Angular</option>
-                                                            <option value="1">Bootstrap</option>
-                                                            <option value="2">React.js</option>
-                                                            <option value="3">Vue.js</option>
-                                                            <optgroup label="backend">
-                                                                <option value="4">Django</option>
-                                                                <option value="5">Laravel</option>
-                                                                <option value="6">Node.js</option>
-                                                            </optgroup>
-                                                        </select>
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Add 3D Designer Team Member</label>
-                                                        <select class="form-multi-select" id="ms1" multiple data-coreui-search="true">
-                                                            <option value="0">Angular</option>
-                                                            <option value="1">Bootstrap</option>
-                                                            <option value="2">React.js</option>
-                                                            <option value="3">Vue.js</option>
-                                                            <optgroup label="backend">
-                                                                <option value="4">Django</option>
-                                                                <option value="5">Laravel</option>
-                                                                <option value="6">Node.js</option>
-                                                            </optgroup>
-                                                        </select>
-                                                    </div>
-                                                </div><!-- end col -->
-                                            
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Team Leader</label>
-                                                        <select class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">Chitralekha Biswas</option>
-                                                            <option value="2">Ankit</option>
-                                                            <option value="3">Sneha</option>
-                                                        </select>
-                                                    </div>
-
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Property Name</label>
-                                                        <input type="text" class="form-control" placeholder="Enter property name" id="cleave-time-format">
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Lead Source</label>
-                                                        <select class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">CMS</option>
-                                                            <option value="1">Direct Call</option>
-                                                            <option value="2">Email</option>
-                                                            <option value="3">Facebook</option>
-                                                            <option value="3">Google Adwords</option>
-                                                        </select>
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Source Name</label>
-                                                        <input type="text" class="form-control" placeholder="Referral source name" id="cleave-time-format">
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Date Created</label>
-                                                        <input type="date" class="form-control" id="exampleInputdate">
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Complete Project Handover Date</label>
-                                                        <input type="date" class="form-control" id="exampleInputdate">
-                                                    </div>
-                                                </div><!-- end col -->
-                                           
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Property Location</label>
-                                                        <select class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">Bnahalore</option>
-                                                            <option value="1">Kolkata</option>
-                                                            <option value="2">Hyderabad</option>
-                                                            <option value="3">Goa</option>
-                                                            <option value="3">Others</option>
-                                                        </select>
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">Initial Client Call Sheet</label>
-                                                        <input class="form-control" type="file" id="formFile">
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time-format" class="form-label">3D Proposal File</label>
-                                                        <input class="form-control" type="file" id="formFile">
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                            </div><!-- end row -->
-                                        </div>
-
-                                        
-
-                                        <div class="mt-4">
-                                            <div class="row">
-                                                <div class="col-xl-4">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Budget</label>
-                                                        <select onchange="budget1(this)" id="budget" class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">Not yet decided</option>
-                                                            <option value="2">Below 10 Lakhs</option>
-                                                            <option value="3">10 Lakhs</option>
-                                                            <option value="4">10 - 20 Lakhs</option>
-                                                            <option value="5">20 Lakhs Or Above</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="mb-3" id="otherBudget">
-                                                        <label for="cleave-time-format" class="form-label">Enter Your Budget</label>
-                                                        <input type="text" class="form-control" placeholder="" id="cleave-time-format">
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-4">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">Meeting Status</label>
-                                                        <select onchange="meetStatus(this)" id="meetingStatus" class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">Not yet decided</option>
-                                                            <option value="2">Yes</option>
-                                                            <option value="3">No</option>
-                                                            <option value="4">NA/Outsource</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="mb-3" id="meetingDate">
-                                                        <label for="cleave-time-format" class="form-label">Meeting Date</label>
-                                                        <input type="date" class="form-control" id="exampleInputdate">
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-4">
-                                                    <div class="mb-3">
-                                                        <label for="cleave-time" class="form-label">MOM</label>
-                                                        <select class="form-select mb-3" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">Yes</option>
-                                                            <option value="2">No</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="mb-3" id="momFile">
-                                                        <label for="cleave-time-format" class="form-label">MOM Upload File</label>
-                                                        <input class="form-control" type="file" id="formFile"> 
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                            </div><!-- end row -->
-                                        </div>
-                                        <div class="mt-4">
-                                            <div class="row">
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" id="project3d">
-                                                                <label class="form-check-label" for="formCheck2">
-                                                                    3D/Consultation Project Information
-                                                                </label>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                                <div class="col-xl-3">
-                                                    <div class="mb-3">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" id="project2d">
-                                                            <label class="form-check-label" for="formCheck2">
-                                                                2D/Consultation Project Information
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- end col -->
-
-                                            </div><!-- end row -->
-                                        </div>
-                                </div><!-- end card-body -->
-                            </div><!-- end card -->
-                        </div>
-
-                        <div class="col-lg-12" id="project3dBody">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title mb-0">3D/Consultation Project Information</h4>
-                                </div><!-- end card header -->
-                        
-                                <div class="card-body">
-                                    <h5 class="fs-14 mb-3 text-muted">3D/Consultation Project Information</h5>
-                                    <div class="mt-4">
-                                        <div class="row">
-                                            <div class="col-xl-4">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time" class="form-label">Project type</label>
-                                                    <select class="form-select mb-3" aria-label="Default select example">
-                                                        <option selected>Select</option>
-                                                        <option value="1">Yes</option>
-                                                        <option value="2">No</option>
-                                                    </select>
-                                                </div>
-                        
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-4">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Site Status</label>
-                                                    <select class="form-select mb-3" aria-label="Default select example">
-                                                        <option selected>Select</option>
-                                                        <option value="1">Yes</option>
-                                                        <option value="2">No</option>
-                                                    </select>
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-4">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Add Team</label>
-                                                    <select class="form-select mb-3" aria-label="Default select example">
-                                                        <option selected>Select</option>
-                                                        <option value="1">Super Admin</option>
-                                                        <option value="1">Chitralekha Biswas</option>
-                                                        <option value="2">Ankit</option>
-                                                        <option value="3">Sneha</option>
-                                                        <option value="3">Sujoy</option>
-                                                    </select>
-                                                </div>
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">3D Project Value</label>
-                                                    <input type="text" class="form-control" placeholder="Value"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Token Amount Paid</label>
-                                                    <input type="text" class="form-control" placeholder="Amount"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-
-
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Date of Birth</label>
-                                                    <input type="date" class="form-control" id="exampleInputdate">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Date of Anniversary</label>
-                                                    <input type="date" class="form-control" id="exampleInputdate">
-                                                </div>
-                                            </div><!-- end col -->
-                                        </div><!-- end row -->
-                                    </div>
-                                </div><!-- end card -->
-
-                                <div class="card-body">
-                                    <h5 class="fs-14 mb-3 text-muted">3D Project Accounts Department</h5>
-                                    <div class="mt-4">
-                                        <div class="row">
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time" class="form-label">Payment Date</label>
-                                                    <input type="date" class="form-control" id="exampleInputdate">
-                                                </div>
-                        
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">xyz</label>
-                                                    <input type="text" class="form-control" placeholder="Amount"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-                                        </div><!-- end row -->
-                                        <div>
-                                            <button type="button" class="btn btn-ghost-primary waves-effect waves-light">+ Add Row</button>
-                                        </div>
-                                    </div>
-                                </div><!-- end card -->
-
-                                <div class="card-body">
-                                    <h5 class="fs-14 mb-3 text-muted">3D Project Documentation Department</h5>
-                                    <div class="mt-4">
-                                        <div class="row">
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <input class="form-control" type="file" id="formFile">
-                                                </div>
-                                            </div><!-- end col -->
-                                        </div><!-- end row -->
-                                        <div>
-                                            <button type="button" class="btn btn-ghost-primary waves-effect waves-light">+ Add Row</button>
-                                        </div>
-                                    </div>
-                                </div><!-- end card -->
-                            </div>
-                            <!-- end col -->
-                        </div>
-
-                        <div class="col-lg-12" id="project2dBody">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title mb-0">2D/Consultation Project Information</h4>
-                                </div><!-- end card header -->
-                        
-                                <div class="card-body">
-                                    <h5 class="fs-14 mb-3 text-muted">2D/Consultation Project Information</h5>
-                                    <div class="mt-4">
-                                        <div class="row">
-                                            <div class="col-xl-4">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time" class="form-label">Project type</label>
-                                                    <select class="form-select mb-3" aria-label="Default select example">
-                                                        <option selected>Select</option>
-                                                        <option value="1">Yes</option>
-                                                        <option value="2">No</option>
-                                                    </select>
-                                                </div>
-                        
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-4">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Site Status</label>
-                                                    <select class="form-select mb-3" aria-label="Default select example">
-                                                        <option selected>Select</option>
-                                                        <option value="1">Yes</option>
-                                                        <option value="2">No</option>
-                                                    </select>
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-4">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Add Team</label>
-                                                    <select class="form-select mb-3" aria-label="Default select example">
-                                                        <option selected>Select</option>
-                                                        <option value="1">Super Admin</option>
-                                                        <option value="1">Chitralekha Biswas</option>
-                                                        <option value="2">Ankit</option>
-                                                        <option value="3">Sneha</option>
-                                                        <option value="3">Sujoy</option>
-                                                    </select>
-                                                </div>
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">3D Project Value</label>
-                                                    <input type="text" class="form-control" placeholder="Value"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Token Amount Paid</label>
-                                                    <input type="text" class="form-control" placeholder="Amount"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-                                        </div><!-- end row -->
-                                    </div>
-                                </div><!-- end card -->
-
-                                <div class="card-body">
-                                    <h5 class="fs-14 mb-3 text-muted">2D Project Accounts Department</h5>
-                                    <div class="mt-4">
-                                        <div class="row">
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time" class="form-label">Payment Date</label>
-                                                    <input type="date" class="form-control" id="exampleInputdate">
-                                                </div>
-                        
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">xyz</label>
-                                                    <input type="text" class="form-control" placeholder="Amount"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-                                        </div><!-- end row -->
-                                        <div>
-                                            <button type="button" class="btn btn-ghost-primary waves-effect waves-light">+ Add Row</button>
-                                        </div>
-                                    </div>
-                                </div><!-- end card -->
-
-                                <div class="card-body">
-                                    <h5 class="fs-14 mb-3 text-muted">2D Project Documentation Department</h5>
-                                    <div class="mt-4">
-                                        <div class="row">
-                                            <div class="col-xl-6">
-                                                <div class="mb-3">
-                                                    <input class="form-control" type="file" id="formFile">
-                                                </div>
-                                            </div><!-- end col -->
-                                        </div><!-- end row -->
-                                        <div>
-                                            <button type="button" class="btn btn-ghost-primary waves-effect waves-light">+ Add Row</button>
-                                        </div>
-                                    </div>
-                                </div><!-- end card -->
-                            </div>
-                            <!-- end col -->
-                        </div>
-
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title mb-0">Project information</h4>
-                                </div><!-- end card header -->
-                        
-                                <div class="card-body">
-                                    <div class="mt-4">
-                                        <div class="row">
-                                            <div class="col-xl-3">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time" class="form-label">Site status</label>
-                                                    <select class="form-select mb-3" aria-label="Default select example">
-                                                        <option selected>Select</option>
-                                                        <option value="1">Super Admin</option>
-                                                        <option value="1">Chitralekha Biswas</option>
-                                                        <option value="2">Ankit</option>
-                                                        <option value="3">Sneha</option>
-                                                        <option value="3">Sujoy</option>
-                                                    </select>
-                                                </div>
-                        
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-3">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Project Value <span class="text-muted">(Without GST)</span></label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-3">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Add Team</label>
-                                                    <select class="form-multi-select" id="ms1" multiple data-coreui-search="true">
-                                                        <option value="0">Angular</option>
-                                                        <option value="1">Bootstrap</option>
-                                                        <option value="2">React.js</option>
-                                                        <option value="3">Vue.js</option>
-                                                        <optgroup label="backend">
-                                                            <option value="4">Django</option>
-                                                            <option value="5">Laravel</option>
-                                                            <option value="6">Node.js</option>
-                                                        </optgroup>
-                                                    </select>
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-3">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Interior Quotation</label>
-                                                    <input type="file" class="form-control">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-3">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Project Completion Date</label>
-                                                    <input type="date" class="form-control">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-3">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Date of birth</label>
-                                                    <input type="date" class="form-control">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-3">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Anniversary</label>
-                                                    <input type="date" class="form-control">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                        </div><!-- end row -->
-                                    </div>
-                                </div><!-- end card -->
-                            </div>
-                            <!-- end col -->
-                        </div>
-
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title mb-0">Referral user information</h4>
-                                </div><!-- end card header -->
-                        
-                                <div class="card-body">
-                                    <div class="mt-4">
-                                        <div class="row">
-                                            <div class="col-xl-3">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time" class="form-label">Referral type</label>
-                                                    <select class="form-select mb-3" aria-label="Default select example">
-                                                        <option selected>Select</option>
-                                                        <option value="1">Super Admin</option>
-                                                        <option value="1">Chitralekha Biswas</option>
-                                                        <option value="2">Ankit</option>
-                                                        <option value="3">Sneha</option>
-                                                        <option value="3">Sujoy</option>
-                                                    </select>
-                                                </div>
-                        
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-3">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Name (Referred By)</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-3">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Email</label>
-                                                    <input type="email" class="form-control">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-3">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Phone No.</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-3">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Address</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-3">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Pincode</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                        </div><!-- end row -->
-                                    </div>
-                                </div><!-- end card -->
-                            </div>
-                            <!-- end col -->
-                        </div>
-
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title mb-0">Site information</h4>
-                                </div><!-- end card header -->
-                        
-                                <div class="card-body">
-                                    <div class="mt-4">
-                                        <div class="row">
-                                            <div class="col-xl-12">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time" class="form-label">Site Address</label>
-                                                    <input type="text" class="form-control" placeholder="Enter site address" id="cleave-time">
-                                                </div>
-                        
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-3">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">City</label>
-                                                    <input type="text" class="form-control" placeholder="Enter city name"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-3">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Phone Number</label>
-                                                    <input type="text" class="form-control" placeholder="Enter phone number"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-3">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Alt. Number <span class="text-muted">(optional)</span></label>
-                                                    <input type="text" class="form-control" placeholder="phone number"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-3">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">WhatsApp</label>
-                                                    <input type="text" class="form-control" placeholder="Enter WhatsApp number"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-12">
-                                                <div class="mb-3">
-                                                    <label for="cleave-time-format" class="form-label">Email Address</label>
-                                                    <input type="text" class="form-control" placeholder="Email id"
-                                                        id="cleave-time-format">
-                                                </div>
-                                            </div><!-- end col -->
-
-                                            <div class="col-xl-12">
-                                                <div class="mb-3">
-                                                    <button type="button" class="btn btn-ghost-primary waves-effect waves-light">+ Add More Email</button>
-                                                </div>
-                                            </div><!-- end col -->
-                                        </div><!-- end row -->
-                                    </div>
-                                </div><!-- end card -->
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        
-                    </div>
                     
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title mb-0 flex-grow-1">IQ and BQ details</h4>
+                                    <h4 class="card-title mb-0 flex-grow-1">Personal information</h4>
                                 </div><!-- end card header -->
 
                                 <div class="card-body">
                                     <div id="table-gridjs">
                                         <div role="complementary" class="gridjs gridjs-container" style="width: 100%;">
-                                        
-                                            
+                                            <div class="mb-3">
+                                                <div class="row gy-3">
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Client category</label>
+                                                        <input type="text" class="form-control" value="A" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Lead status</label>
+                                                        <input type="text" class="form-control" value="Converted" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Property name</label>
+                                                        <input type="text" class="form-control" value="Devaloke Sonarcity" disabled/>  
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Client Name</label>
+                                                        <input type="text" class="form-control" value="Mr Arunabha  and Dr Nalinakshi" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Residencial address</label>
+                                                        <input type="text" class="form-control" value="Kasba" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Country of residence</label>
+                                                        <input type="text" class="form-control" value="India" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Lead source</label>
+                                                        <input type="text" class="form-control" value="DIRECT CALL" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Referral source name</label>
+                                                        <input type="text" class="form-control" value="" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Date created</label>
+                                                        <input type="text" class="form-control" value="06-06-2022" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Complete project handover date</label>
+                                                        <input type="text" class="form-control" value="" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Property location</label>
+                                                        <input type="text" class="form-control" value="Kolkata" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Initial client call sheet</label>
+                                                        <input type="text" class="form-control" value="" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Owner</label>
+                                                        <input type="text" class="form-control" value="Sneha" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Interior team member</label>
+                                                        <input type="text" class="form-control" value="Rituparna 2," disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Home Consultant</label>
+                                                        <input type="text" class="form-control" value="Shweta," disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">3D designer team member</label>
+                                                        <input type="text" class="form-control" value="Mousumi ," disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">3D proposal file</label>
+                                                        <input type="button" class="btn btn-ghost-primary" value="Download The Uploaded File"/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Budget</label>
+                                                        <input type="text" class="form-control" value="10-20 Lakhs" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Meeting status</label>
+                                                        <input type="text" class="form-control" value="yes" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">MOM</label>
+                                                        <input type="text" class="form-control" value="No" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">MOM upload file:</label>
+                                                        <input type="text" class="form-control" value="" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Request page name/URL from frontend</label>
+                                                        <input type="text" class="form-control" value="NA" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Request form name frontend</label>
+                                                        <input type="text" class="form-control" value="NA" disabled/> 
+                                                    </div>
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- end card-body -->
+                            </div><!-- end card -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title mb-0 flex-grow-1">Site information</h4>
+                                </div><!-- end card header -->
+
+                                <div class="card-body">
+                                    <div id="table-gridjs">
+                                        <div role="complementary" class="gridjs gridjs-container" style="width: 100%;">
+                                            <div class="mb-3">
+                                                <div class="row gy-3">
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Date of birth</label>
+                                                        <input type="text" class="form-control" value="06-06-2022" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Anniversary</label>
+                                                        <input type="text" class="form-control" value="06-06-2022" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Site Address</label>
+                                                        <textarea class="form-control" disabled>Devaloke Sonarcity, Garia, Shimultala, Sonarpur Station Rd, Kolkata,1117,</textarea> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Site city</label>
+                                                        <input type="text" class="form-control" value="Kolkata" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Email</label>
+                                                        <input type="text" class="form-control" value="Dr.nalinakshi@gmail.com" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Phone</label>
+                                                        <input type="text" class="form-control" value="9433939176" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">Alt. phone no</label>
+                                                        <input type="text" class="form-control" value="9433939176" disabled/> 
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <label for="cleave-time" class="form-label">WhatApp No</label>
+                                                        <input type="text" class="form-control" value="9433939176" disabled/> 
+                                                    </div>
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- end card-body -->
+                            </div><!-- end card -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title mb-0 flex-grow-1">IQ and BQ Details</h4>
+                                </div><!-- end card header -->
+
+                                <div class="card-body">
+                                    <div id="table-gridjs">
+                                        <div role="complementary" class="gridjs gridjs-container" style="width: 100%;">
+                                                                                        
                                             <div class="d-lg-flex justify-content-between mb-3">
-                                                <div class="gridjs-search mb-3">
+                                                <div class="gridjs-search mb-2">
                                                     <input type="search" placeholder="Type a keyword..." aria-label="Type a keyword..." class="gridjs-input gridjs-search-input">
                                                 </div>
                                                 <div>
@@ -1686,64 +1018,78 @@
                                                         <tr class="gridjs-tr">
                                                            
                                                             <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 70px;">
-                                                                Sr no.
+                                                                <div class="gridjs-th-content">Sr No.</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
                                                             </th>
                                                             <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
                                                                 <div class="gridjs-th-content">Quote type</div>
                                                                 <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
                                                             </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 350px;">
                                                                 <div class="gridjs-th-content">IQ/BQ code</div>
-                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
                                                             </th>
                                                             <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
                                                                 <div class="gridjs-th-content">Quotation date</div>
                                                                 <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
                                                                     class="gridjs-sort gridjs-sort-neutral"></button>
                                                             </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 250px;">
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 350px;">
                                                                 <div class="gridjs-th-content">Quote status</div>
                                                                 <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
                                                                     class="gridjs-sort gridjs-sort-neutral"></button>
                                                             </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 250px;">
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
                                                                 <div class="gridjs-th-content">Quote amount</div>
                                                                 <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
                                                                     class="gridjs-sort gridjs-sort-neutral"></button>
                                                             </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 220px;">
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 400px;">
                                                                 <div class="gridjs-th-content">Action</div>
                                                                 <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
                                                                     class="gridjs-sort gridjs-sort-neutral"></button>
                                                             </th>
-                                                                                                         
+                                                           
+                                                            
                                                         </tr>
                                                     </thead>
                                                     <tbody class="gridjs-tbody">
                                                         <tr class="gridjs-tr">
                                                             
                                                             <td  class="gridjs-td">
-                                                                
-                                                            </td>
-                                                            <td  class="gridjs-td">
-                                                                
+                                                                1
                                                             </td>
                                                             <td class="gridjs-td">
-                                                               
+                                                                Interior
                                                             </td>
                                                             <td  class="gridjs-td">
-                                                                
+                                                                DN-K-DSG-IQ-
                                                             </td>
                                                             <td  class="gridjs-td">
-                                                               
+                                                                11-07-2022
                                                             </td>
                                                             <td  class="gridjs-td">
-                                                                
+                                                                Confirmed by Client
                                                             </td>
                                                             <td  class="gridjs-td">
-                                                                
+                                                                1490753
                                                             </td>
-                                                            
+                                                            <td  class="gridjs-td">
+                                                                <div class="d-flex align-items-center">
+                                                                    <a href="quotationinteriornew.html" class="btn btn-ghost-secondary waves-effect">
+                                                                        <img src="./assets/icons/edit.png" alt="edit"> Edit
+                                                                    </a>
+                                                                    <div class="mini-horizontal-line"></div>
+                                                                    <button type="button" class="btn btn-ghost-secondary waves-effect">
+                                                                        Download Excell
+                                                                    </button>
+                                                                    <div class="mini-horizontal-line"></div>
+                                                                    <button type="button" class="btn btn-ghost-secondary waves-effect">
+                                                                        Download PDF
+                                                                    </button>
+                                                                </div> 
+                                                            </td>
                                                         </tr>
 
                                                     </tbody>
@@ -1783,16 +1129,15 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title mb-0 flex-grow-1">Project and 3D/Consultation project details</h4>
+                                    <h4 class="card-title mb-0 flex-grow-1">Project and 3D/Consultation Project Details</h4>
                                 </div><!-- end card header -->
 
                                 <div class="card-body">
                                     <div id="table-gridjs">
                                         <div role="complementary" class="gridjs gridjs-container" style="width: 100%;">
-                                        
-                                            
+                                                                                        
                                             <div class="d-lg-flex justify-content-between mb-3">
-                                                <div class="gridjs-search mb-3">
+                                                <div class="gridjs-search mb-2">
                                                     <input type="search" placeholder="Type a keyword..." aria-label="Type a keyword..." class="gridjs-input gridjs-search-input">
                                                 </div>
                                                 <div>
@@ -1818,64 +1163,70 @@
                                                         <tr class="gridjs-tr">
                                                            
                                                             <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 70px;">
-                                                                Sr no.
+                                                                <div class="gridjs-th-content">Sr No.</div>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
                                                             </th>
                                                             <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
                                                                 <div class="gridjs-th-content">Project type</div>
                                                                 <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
                                                             </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 350px;">
                                                                 <div class="gridjs-th-content">Project value</div>
-                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
+                                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
+                                                                    class="gridjs-sort gridjs-sort-neutral"></button>
                                                             </th>
                                                             <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
                                                                 <div class="gridjs-th-content">Start date</div>
                                                                 <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
                                                                     class="gridjs-sort gridjs-sort-neutral"></button>
                                                             </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 250px;">
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 350px;">
                                                                 <div class="gridjs-th-content">End date</div>
                                                                 <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
                                                                     class="gridjs-sort gridjs-sort-neutral"></button>
                                                             </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 250px;">
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
                                                                 <div class="gridjs-th-content">Project status</div>
                                                                 <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
                                                                     class="gridjs-sort gridjs-sort-neutral"></button>
                                                             </th>
-                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 220px;">
+                                                            <th class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 150px;">
                                                                 <div class="gridjs-th-content">Action</div>
                                                                 <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending"
                                                                     class="gridjs-sort gridjs-sort-neutral"></button>
                                                             </th>
-                                                                                                         
+                                                           
+                                                            
                                                         </tr>
                                                     </thead>
                                                     <tbody class="gridjs-tbody">
                                                         <tr class="gridjs-tr">
                                                             
                                                             <td  class="gridjs-td">
-                                                                
-                                                            </td>
-                                                            <td  class="gridjs-td">
-                                                                
+                                                                1
                                                             </td>
                                                             <td class="gridjs-td">
-                                                               
+                                                                Interior
                                                             </td>
                                                             <td  class="gridjs-td">
-                                                                
+                                                                DN-K-DSG-IQ-
                                                             </td>
                                                             <td  class="gridjs-td">
-                                                               
+                                                                11-07-2022
                                                             </td>
                                                             <td  class="gridjs-td">
-                                                                
+                                                                Confirmed by Client
                                                             </td>
                                                             <td  class="gridjs-td">
-                                                                
+                                                                1490753
                                                             </td>
-                                                            
+                                                            <td  class="gridjs-td">
+                                                                <div class="d-flex align-items-center">
+                                                                    <a href="project-list-edit.html" class="btn btn-ghost-secondary waves-effect">
+                                                                        <img src="./assets/icons/edit.png" alt="edit"> Edit
+                                                                    </a>
+                                                                </div> 
+                                                            </td>
                                                         </tr>
 
                                                     </tbody>
@@ -1910,6 +1261,7 @@
                         </div>
                         <!-- end col -->
                     </div>
+
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="card">
@@ -1918,20 +1270,57 @@
                                 </div><!-- end card header -->
 
                                 <div class="card-body">
-
+                                   
                                     <div class="mx-n3">
-                                        <div data-simplebar style="max-height: 220px;" class="px-3">
-                                            <p>Log 1 : Create New Task</p>
-                                            <h6>Changes Field :</h6>
-                                            <p>Task Name: Meeting</p>
-                                            <p>Description: Initial meeting</p>
-                                            <p>Start Date: 2023-10-10 00:00:00</p>
-                                            <p>End Date: 2023-10-12 23:59:59</p>
-                                            <p>Priority: NORMAL</p>
-                                            <p>Status: OPEN</p>
-                                            <p>Task Created On: 2023-10-09 14:31:46</p>
-                                            <p>Assigned To: Abhijit Honnatti</p>
-                                            <p>Log Created on Mon, 09 Oct 23 14:31</p>
+                                        <div data-simplebar style="max-height: 420px;" class="px-3">
+                                            <div>
+                                                <ul>
+                                                    <li>Log 1 : Update Task</li>
+                                                    <li class="fw-bold">Changes Field :</li>
+                                                    <li>Task Name: Meeting</li>
+                                                    <li>Description: Initial meeting</li>
+                                                    <li>Start Date: 2022-06-16 00:00:00</li>
+                                                    <li>End Date: 2022-06-16 23:59:59</li>
+                                                    <li>Priority: NORMAL</li>
+                                                    <li>Status: CLOSE</li>
+                                                    <li>Task Created On:</li>
+                                                    <li>Assigned To: Anisa</li>
+                                                    <li class="text-muted">Log Created on Sat, 18 Jun 22 15:04</li>
+                                                </ul>
+                                                <hr>
+                                            </div>
+                                            <div>
+                                                <ul>
+                                                    <li>Log 1 : Update Task</li>
+                                                    <li class="fw-bold">Changes Field :</li>
+                                                    <li>Task Name: Meeting</li>
+                                                    <li>Description: Initial meeting</li>
+                                                    <li>Start Date: 2022-06-16 00:00:00</li>
+                                                    <li>End Date: 2022-06-16 23:59:59</li>
+                                                    <li>Priority: NORMAL</li>
+                                                    <li>Status: CLOSE</li>
+                                                    <li>Task Created On:</li>
+                                                    <li>Assigned To: Anisa</li>
+                                                    <li class="text-muted">Log Created on Sat, 18 Jun 22 15:04</li>
+                                                </ul>
+                                                <hr>
+                                            </div>
+                                            <div>
+                                                <ul>
+                                                    <li>Log 1 : Update Task</li>
+                                                    <li class="fw-bold">Changes Field :</li>
+                                                    <li>Task Name: Meeting</li>
+                                                    <li>Description: Initial meeting</li>
+                                                    <li>Start Date: 2022-06-16 00:00:00</li>
+                                                    <li>End Date: 2022-06-16 23:59:59</li>
+                                                    <li>Priority: NORMAL</li>
+                                                    <li>Status: CLOSE</li>
+                                                    <li>Task Created On:</li>
+                                                    <li>Assigned To: Anisa</li>
+                                                    <li class="text-muted">Log Created on Sat, 18 Jun 22 15:04</li>
+                                                </ul>
+                                                <hr>
+                                            </div>
                                         </div>
                                     </div>
                                 </div><!-- end card-body -->
@@ -1941,60 +1330,104 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-xl-12">
+                        <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title mb-0">Task logs</h4>
+                                    <h4 class="card-title mb-0 flex-grow-1">Post Comments</h4>
                                 </div><!-- end card header -->
 
                                 <div class="card-body">
-
-                                    <div class="mt-4">
-                                        <div class="row">
-                                            <div class="col-xl-4">
-                                                <div class="mb-3">
-                                                    <select class="form-select mb-3" aria-label="Default select example">
-                                                        <option selected>Select</option>
-                                                        <option value="1">Super Admin</option>
-                                                        <option value="1">Chitralekha Biswas</option>
-                                                        <option value="2">Ankit</option>
-                                                        <option value="3">Sneha</option>
-                                                        <option value="3">Sujoy</option>
-                                                    </select>
-                                                </div>
-                        
-                                            </div><!-- end col -->
-                        
-                                            <div class="col-xl-3">
-                                                <div class="mb-3 ms-1 d-flex">
-                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2" data-text="Search"><span>Search</span></button>
-                                                    <button type="button" class="btn btn-primary btn-animation waves-effect waves-light" data-text="Clear"><span>Clear</span></button>
-                                                </div>
-                                            </div><!-- end col -->
-
-                                        </div><!-- end row -->
-                                    </div>
-                                    <div class="border mt-3 border-dashed"></div>
-                                    <div class="mt-3">
-                                        <h4>Comments Box</h4>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="mb-3">
-                                                <textarea class="form-control" name="#" id="#" cols="30" rows="10"></textarea>
-                                            </div>
+                                   <div class="row">
+                                        <div class="col-lg-6">
+                                            <select class="form-select mb-3 mb-md-0" aria-label="Default select example">
+                                                <option selected>Select</option>
+                                            </select>
                                         </div>
-                                        <div class="col-lg-12">
-                                            <button type="button" class="btn btn-primary btn-animation waves-effect waves-light me-2" data-text="Comments"><span>Comments</span></button>
+                                        <div class="col-lg-6 d-flex gap-2">
+                                            <button class="btn btn-primary">Search</button>
+                                            <button class="btn btn-primary">Clear</button>
                                         </div>
+                                   </div> 
+                                   <div class="row mt-3">
+                                    <div class="col-xl-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4 class="card-title mb-0">Comments box</h4>
+                                            </div><!-- end card header -->
+            
+                                            <div class="card-body">
+                                               
+                                                <div class="mx-n3">
+                                                    <div data-simplebar style="max-height: 420px;" class="px-3">
+                                                       <ul class="comment-box47 ps-2">
+                                                        <li class="d-flex gap-2 align-items-baseline mb-3 border-bottom">
+                                                            <div>
+                                                                <img class="img-fluid" src="./assets/icons/user.png" alt="user" width="40">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <p class="mb-1">Now, fHandover file shared to audit.1</p>
+                                                                <small class="text-muted">on Sat, 14 Oct 23 15:57</small><br>
+                                                                <small class="text-muted">Posted By: Debapriya Bhowmick</small>
+                                                            </div>
+                                                        </li>
+                                                        <li class="d-flex gap-2 align-items-baseline mb-3 border-bottom">
+                                                            <div>
+                                                                <img class="img-fluid" src="./assets/icons/user.png" alt="user" width="40">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <p class="mb-1">Now, fHandover file shared to audit.2</p>
+                                                                <small class="text-muted">on Sat, 14 Oct 23 15:57</small><br>
+                                                                <small class="text-muted">Posted By: Debapriya Bhowmick</small>
+                                                            </div>
+                                                        </li>
+                                                        <li class="d-flex gap-2 align-items-baseline mb-3 border-bottom">
+                                                            <div>
+                                                                <img class="img-fluid" src="./assets/icons/user.png" alt="user" width="40">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <p class="mb-1">Now, fHandover file shared to audit.3</p>
+                                                                <small class="text-muted">on Sat, 14 Oct 23 15:57</small><br>
+                                                                <small class="text-muted">Posted By: Debapriya Bhowmick</small>
+                                                            </div>
+                                                        </li>
+                                                        <li class="d-flex gap-2 align-items-baseline mb-3 border-bottom">
+                                                            <div>
+                                                                <img class="img-fluid" src="./assets/icons/user.png" alt="user" width="40">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <p class="mb-1">Now, fHandover file shared to audit.4</p>
+                                                                <small class="text-muted">on Sat, 14 Oct 23 15:57</small><br>
+                                                                <small class="text-muted">Posted By: Debapriya Bhowmick</small>
+                                                            </div>
+                                                        </li>
+                                                        <li class="d-flex gap-2 align-items-baseline mb-3 border-bottom">
+                                                            <div>
+                                                                <img class="img-fluid" src="./assets/icons/user.png" alt="user" width="40">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <p class="mb-1">Now, fHandover file shared to audit.5</p>
+                                                                <small class="text-muted">on Sat, 14 Oct 23 15:57</small><br>
+                                                                <small class="text-muted">Posted By: Debapriya Bhowmick</small>
+                                                            </div>
+                                                        </li>
+                                                       </ul> 
+                                                    </div>
+                                                    <div class="p-3">
+                                                        <textarea class="form-control" name="" id="" rows="10"></textarea>
+                                                        <button class="btn btn-secondary mt-3">Comment</button>
+                                                    </div>
+                                                </div>
+                                            </div><!-- end card-body -->
+                                        </div><!-- end card -->
                                     </div>
+                                    <!-- end col -->
+                                </div>
                                 </div><!-- end card-body -->
                             </div><!-- end card -->
                         </div>
                         <!-- end col -->
                     </div>
-                    <!-- end row -->
-                    </form><!-- end form -->
+                </div>
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
@@ -2003,11 +1436,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Cee Bee Design Studio.
+                            <script>document.write(new Date().getFullYear())</script> © Velzon.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Digitalwolf
+                                Design & Develop by Themesbrand
                             </div>
                         </div>
                     </div>
@@ -2726,8 +2159,6 @@
         </div>
     </div>
 
-
-
      <!-- JAVASCRIPT -->
      <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
      <script src="assets/libs/simplebar/simplebar.min.js"></script>
@@ -2735,46 +2166,13 @@
      <script src="assets/libs/feather-icons/feather.min.js"></script>
      <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
      <script src="assets/js/plugins.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.3/dist/js/coreui.bundle.min.js"></script>
 
-      <!-- gridjs js -->
+     <!-- gridjs js -->
     <script src="assets/libs/gridjs/gridjs.umd.js"></script>
     <!-- gridjs init -->
     <script src="assets/js/pages/gridjs.init.js"></script>
- 
-     <!-- apexcharts -->
-     <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-
-     <!-- core ui -->
-     <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.6.3/dist/js/coreui.bundle.min.js"></script>
- 
-     <!-- Vector map-->
-     <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
-     <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
- 
-     <!--Swiper slider js-->
-     <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
- 
-     <!-- Dashboard init -->
-     <script src="assets/js/pages/dashboard-ecommerce.init.js"></script>
- 
-     <!-- App js -->
-     <script src="assets/js/app.js"></script>
-     <script>
-        var project3d = document.getElementById('project3d').onchange = function(){
-            var project3dBody = document.getElementById('project3dBody').style.display = this.checked ? 'block' : 'none';
-        };
-        var project2d = document.getElementById('project2d').onchange = function(){
-            var project2dBody = document.getElementById('project2dBody').style.display = this.checked ? 'block' : 'none';
-        };
-
-        function budget1(select){
-            document.getElementById('otherBudget').style.display = select.value !== '2' ? 'none' : 'block';
-        }
-
-        function meetStatus(select){
-            document.getElementById('meetingDate').style.display = select.value == '3' ? 'block' : 'none';
-            document.getElementById('momFile').style.display = select.value == '2' ? 'block' : 'none';
-        }
-     </script>
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
